@@ -9,6 +9,20 @@
    <frame tileid="10" duration="100"/>
   </animation>
  </tile>
+ <tile id="31">
+  <animation>
+   <frame tileid="31" duration="100"/>
+   <frame tileid="32" duration="100"/>
+   <frame tileid="33" duration="100"/>
+  </animation>
+ </tile>
+ <tile id="53">
+  <animation>
+   <frame tileid="53" duration="100"/>
+   <frame tileid="54" duration="100"/>
+   <frame tileid="55" duration="100"/>
+  </animation>
+ </tile>
  <tile id="75">
   <animation>
    <frame tileid="75" duration="100"/>

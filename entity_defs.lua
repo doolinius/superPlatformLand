@@ -8,6 +8,8 @@ playerDefs = {
     facing = 1, -- 1 for facing right, -1 for facing left
     jump_force = 3.2,
     y_speed = 3.2,
+    maxHp = 3,
+    hp = 1,
     frame_width = 16,
     frame_height = 16,
     animations = {
@@ -15,10 +17,22 @@ playerDefs = {
       idle = {frames = {'1-3',1}, duration = 0.2},
       jump = {frames = {'1-1',3}, duration = 0.1},
       swim = {frames = {'1-6',4}, duration = 0.1},
-      death = {frames = {'5-5',1}, duration = 0.1}
+      death = {frames = {'5-5',1}, duration = 0.1},
+      punch = {frames = {'1-2',5,'4-5',5}, duration = 0.1, onLoop='pauseAtEnd'}
     },
-    states = {"idle", "run", "jump", "death"},
+    states = {"idle", "run", "jump", "death","punch"},
     default_state = "idle"
+  }
+}
+
+gProjectileDefs = {
+  punch = {
+    type = "punch",
+    x = 0,
+    y = 0,
+    facing = 1,
+    x_speed = 2.5,
+    distance = 100
   }
 }
 
@@ -31,6 +45,7 @@ gEnemyDefs = {
     facing = -1,
     jump_force = 2.75,
     y_speed = 2.75,
+    maxHp = 1,
     frame_width = 16,
     frame_height = 16,
     animations = {
@@ -48,6 +63,7 @@ gEnemyDefs = {
     facing = -1,
     jump_force = 0.5,
     y_speed = 0.5,
+    maxHp = 2,
     frame_width = 16,
     frame_height = 16,
     animations = {
@@ -65,6 +81,7 @@ gEnemyDefs = {
     facing = -1,
     jump_force = 1.75,
     y_speed = 1.75,
+    maxHp = 1,
     frame_width = 16,
     frame_height = 16,
     animations = {
@@ -83,6 +100,7 @@ gEnemyDefs = {
     facing = 1,
     jump_force = 0,
     y_speed = 0,
+    maxHp = 3,
     frame_width = 16,
     frame_height = 16,
     animations = {

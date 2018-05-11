@@ -15,6 +15,8 @@ function Character:Create(def, map) -- definition table
     facing = def.facing, -- 1 for facing right, -1 for facing left
     jump_force = def.jump_force,  -- initial y speed when taking off from a jump
     y_speed = def.y_speed,
+    maxHp = def.maxHp,
+    hp = def.hp,
     controller = StateMachine:Create()  -- Finite State Machine for controlling character state
   }
 
@@ -62,5 +64,5 @@ function Character:draw()
     offset = 16
   end
   self.animation:draw(self.image, self.x, self.y, 0, self.facing, 1, offset, 0)
-
+  self.controller:draw()
 end

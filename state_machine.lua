@@ -95,6 +95,8 @@ function IdleState:update(dt)
 	if (love.keyboard.isDown('space')) then
 		-- leave the Idle state and enter the Jump state
 		self.character.controller:change("jump")
+	elseif love.keyboard.isDown('f') then
+		self.character.controller:change("punch")
 	else
 		-- otherwise, check for left/right movement
 		if (love.keyboard.isDown('a')) then
@@ -202,7 +204,7 @@ function RunState:update(dt)
 end
 
 function RunState:draw()
-	self.character.animation:draw(dt)
+	--self.character.animation:draw()
 end
 
 function RunState:enter()
@@ -223,6 +225,7 @@ function JumpState:Create(character, map)
 		map = map,
 		parachuteImage = love.graphics.newImage("graphics/hero.png")
 	}
+	this.parachuteImage:setFilter("nearest", "nearest")
 	this.paraQuad = love.graphics.newQuad(5*16, 0, 16, 16, this.parachuteImage:getDimensions())
 	setmetatable(this, self)
 	return(this)
@@ -285,8 +288,8 @@ function JumpState:update(dt)
 end
 
 function JumpState:draw()
-	self.character.animation:draw()
-	love.graphics.draw(self.parachuteImage, 0, 0)
+	--self.character.animation:draw()
+	--love.graphics.draw(self.parachuteImage, self.paraQuad, self.character.x, self.character.y-14)
 end
 
 function JumpState:enter()
@@ -333,6 +336,55 @@ function DeathState:enter()
 end
 
 function DeathState:exit()
+end
+
+PunchState = {name="punch"}
+PunchState.__index = PunchState
+function PunchState:Create(character, map)
+	local this = {
+		character = character, -- all states must have a reference to the character
+		map = map							 -- and the map
+	}
+	setmetatable(this, self)
+	return(this)
+end
+
+function PunchState:update(dt)
+	self.character.animation:update(dt)
+	-- if the player presses the jump key/button...
+	--self.character.y_speed = self.character.y_speed - gravity * 2 * dt
+	--self.character.y = self.character.y - self.character.y_speed
+	if self.character.animation.position == 4 then
+		if love.keyboard.isDown('a') then
+			self.character.facing = -1
+			self.character.controller:change("run")
+		elseif love.keyboard.isDown('d') then
+			self.character.facing = 1
+			self.character.controller:change("run")
+		else
+			self.character.controller:change("idle")
+		end
+	end
+end
+
+function PunchState:draw()
+	--self.character.animation:draw(dt)
+end
+
+function PunchState:enter()
+	--print(inspect(self.character))
+	self.character.speed = 0
+	--self.character.y_speed = self.character.jump_force
+	self.character.animation = self.character.animations.punch
+	sounds.punch:play()
+
+	if self.character.hp >= 2 then
+		makePunch(hero)
+	end
+end
+
+function PunchState:exit()
+	self.character.animation:gotoFrame(1)
 end
 
 -- The Roll state for our "rollyGuy" enemy
@@ -569,6 +621,7 @@ charStates = {
 	idle = IdleState,
 	jump = JumpState,
 	death = DeathState,
+	punch = PunchState,
 	roll = RollState,
 	rest = RestState,
 	active = ActiveState,

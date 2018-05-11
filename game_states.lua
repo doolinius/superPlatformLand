@@ -61,6 +61,13 @@ end
 function startScreen:leave()
 end
 
+function makePunch(hero)
+  local p = Projectile:Create(gProjectileDefs.punch, hero.x, hero.y)
+  p.facing = hero.facing
+  p.distance = (hero.hp - 1) * 50
+  table.insert(projectiles, p)
+end
+
 function playLevel:enter(previous, heroName, level)
   log.trace("Entering PlayLevel state")
   -- get the correct map definition
@@ -74,6 +81,7 @@ function playLevel:enter(previous, heroName, level)
   self.bgMusic:play()
   collectibles = {}
   enemies = {}
+  projectiles = {}
 
   local cLayer = self.map.layers[5]
   for y=1, cLayer.height do
@@ -125,6 +133,13 @@ function playLevel:updateEntities(dt)
   for _, c in ipairs(collectibles) do
     c.animation:update(dt)
   end
+  for i=#projectiles,1,-1 do
+    if not projectiles[i].enabled then
+        table.remove(projectiles, i)
+    else
+        projectiles[i]:update(dt)
+    end
+  end
 end
 
 function takeHeart(heart)
@@ -135,7 +150,8 @@ function takeHeart(heart)
     end
   end
 
-  hearts = math.min(3, hearts + 1)
+  --hearts = math.min(3, hearts + 1)
+  hero.hp = math.min(hero.maxHp, hero.hp + 1)
   sounds.heart:play()
 end
 
@@ -157,8 +173,15 @@ function takeCoin(coin)
   end
 end
 
+function playLevel:keypressed(k)
+  if (k == 'p') then
+    Gamestate.push(pausePlay)
+  end
+end
+
 function playLevel:update(dt)
   --log.trace("PlayLevel UPDATE")
+
   self.time = self.time - dt
   self.map:update(dt)
   self:updateEntities(dt)
@@ -179,10 +202,10 @@ end
 -- show score, health, number of lives, coins and timer
 function playLevel:drawHUD()
   printWithShadow("LIVES x " .. lives, 1, 1)
-  for i=1, hearts do
+  for i=1, hero.hp do
     love.graphics.draw(hudImage, hud.fullHeart, i*8, 9)
   end
-  for i=hearts, 3 do
+  for i=hero.hp, hero.maxHp do
     love.graphics.draw(hudImage, hud.emptyHeart, i*8, 9)
   end
   --love.graphics.draw(hudImage, hud.emptyHeart, 16, 9)
@@ -203,6 +226,9 @@ function playLevel:drawEntities()
   for _,c in pairs(collectibles) do -- loop through and draw collectibles
     c.animation:draw(clcImages[c.type], c.x, c.y)
   end
+  for _, p in ipairs(projectiles) do
+    p:draw()
+  end
 end
 
 function playLevel:draw()
@@ -215,4 +241,37 @@ function playLevel:draw()
   hero:draw()                     -- draw the hero
   love.graphics.pop()              -- go back to previous graphics parameters
   self:drawHUD()                   -- draw heads up display outside
+end
+
+function playLevel:resume()
+  self.bgMusic:play()
+end
+
+function pausePlay:enter(from)
+  self.from = from
+  self.from.bgMusic:pause()
+  self.w = 150
+  self.h = 60
+end
+
+function pausePlay:keypressed(k)
+  if (k == 'p') then
+    Gamestate.pop()
+  end
+end
+
+function pausePlay:update(dt)
+end
+
+function pausePlay:draw()
+  love.graphics.setColor(0.8,0.8,0.8,1)
+  self.from:draw()
+  love.graphics.setColor(1, 1, 1, 1)
+  love.graphics.rectangle("fill", (wWidth/(scale*2) - self.w/2), (wHeight/(scale*2)- self.h/2), self.w, self.h)
+  love.graphics.setColor(0, 0, 0, 1)
+  love.graphics.rectangle("fill", (wWidth/(scale*2) - self.w/2 + 5), (wHeight/(scale*2)- self.h/2+5), self.w-10, self.h-10)
+  love.graphics.setColor(1, 1, 1, 1)
+end
+
+function pausePlay:exit()
 end
