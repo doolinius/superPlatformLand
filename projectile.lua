@@ -6,6 +6,7 @@ function Projectile:Create(def, x, y)
     type = def.type, -- punch, kick, bullet, etc.
     x = x,
     y = y,
+    entityType = "projectile",
     facing = def.facing or 1,
     x_speed = def.x_speed,
     distance = def.distance,

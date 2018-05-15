@@ -112,7 +112,7 @@ function IdleState:update(dt)
 	--self.character.y_speed = self.character.jump_force
 	self.character.y = self.character.y + gravity
 	-- check for collisions
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, heroFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
 	--log.trace("Attempted X:" .. self.character.x .. " Y:" .. self.character.y)
 	--log.trace("ACTUAL    X:" .. actualX .. " Y:" .. actualY)
 	self.character.x = actualX
@@ -176,7 +176,7 @@ function RunState:update(dt)
 		--self.character.y_speed = self.character.jump_force
 		self.character.y = self.character.y + gravity
 
-		local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, heroFilter)
+		local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
 
 	  -- if there was a collision
 	  if (len > 0) then
@@ -216,6 +216,87 @@ function RunState:exit()
 
 end
 
+
+-- The hero's jump state
+FallState = {name="fall"}
+FallState.__index = FallState
+function FallState:Create(character, map)
+	local this = {
+		character = character,
+		map = map,
+		parachuteImage = love.graphics.newImage("graphics/hero.png")
+	}
+	this.parachuteImage:setFilter("nearest", "nearest")
+	this.paraQuad = love.graphics.newQuad(5*16, 0, 16, 16, this.parachuteImage:getDimensions())
+	setmetatable(this, self)
+	return(this)
+end
+
+function FallState:update(dt)
+	self.character.px = self.character.x
+	self.character.py = self.character.y
+
+	self.character.animation:update(dt)
+	self.character.y_speed = self.character.y_speed - gravity * dt
+	self.character.y = self.character.y - self.character.y_speed
+
+	if (love.keyboard.isDown('a')) then
+		self.character.speed = math.max(-self.character.top_speed, self.character.speed - 6 * dt)
+		self.character.x = self.character.x + self.character.speed
+		self.character.facing = -1
+	elseif (love.keyboard.isDown('d')) then
+		self.character.speed = math.min(self.character.top_speed, self.character.speed + 6 * dt)
+		self.character.x = self.character.x + self.character.speed
+		self.character.facing = 1
+	end
+
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
+	self.character.x = actualX
+	self.character.y = actualY
+	if len > 0 then
+		log.trace("# Collisions: " .. len)
+	end
+	for i=1,len do
+		local c = cols[i]
+		-- if the hero collides with a platform
+		-- change the state to either idle or run
+		if c.type == "cross" then
+			--local instance = map:getInstanceByPixel(c.other.x, c.other.y, 3)
+			--map:removeInstance(instance)
+			if c.other.type == "coin" then
+				takeCoin(c.other)
+			elseif c.other.type == "heart" then
+				takeHeart(c.other)
+			end
+		elseif c.type == "touch"  and c.other.type == "instadeath" then
+			self.character.controller:change("death")
+		elseif c.type == "slide" and c.normal.y == -1 then
+			if (love.keyboard.isDown('a') or love.keyboard.isDown('d')) then
+				self.character.controller:change("run")
+			else
+				self.character.controller:change("idle")
+			end
+		-- if the hero collides with a tile above, set y_speed to 0 to allow
+		-- immediate falling
+		elseif c.type == "slide" and c.normal.y == 1 then
+			self.character.y_speed = 0
+		end
+	end
+end
+
+function FallState:draw()
+	--self.character.animation:draw()
+	--love.graphics.draw(self.parachuteImage, self.paraQuad, self.character.x, self.character.y-14)
+end
+
+function FallState:enter()
+	self.character.y_speed = 0
+	self.character.animation = self.character.animations.fall
+end
+
+function FallState:exit()
+end
+
 -- The hero's jump state
 JumpState = {name="jump"}
 JumpState.__index = JumpState
@@ -253,7 +334,7 @@ function JumpState:update(dt)
 		self.character.y_speed = 0
 	end
 
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, heroFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
 	self.character.x = actualX
 	self.character.y = actualY
 	if len > 0 then
@@ -286,6 +367,8 @@ function JumpState:update(dt)
 		end
 	end
 end
+
+
 
 function JumpState:draw()
 	--self.character.animation:draw()
@@ -403,7 +486,7 @@ end
 function RollState:update(dt)
 	self.character.animation:update(dt)
 	self.character.x = self.character.x + self.character.speed * self.character.facing
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
 	for i=1,len do
 		if cols[i].normal.x + self.character.facing == 0 then
 			self.character.facing = self.character.facing * -1
@@ -445,7 +528,7 @@ function FlyState:update(dt)
 	end
 	self.character.animation:update(dt)
 	self.character.x = self.character.x + self.character.speed * self.character.facing
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
 	self.character.x = actualX
 end
 
@@ -544,7 +627,7 @@ function HopState:update(dt)
 	self.character.x = self.character.x + self.character.speed * self.character.facing
 	self.character.y_speed = self.character.y_speed - gravity * dt
 	self.character.y = self.character.y - self.character.y_speed
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
 	self.character.x = actualX
 	self.character.y = actualY
 	for i=1,len do
@@ -622,6 +705,7 @@ charStates = {
 	jump = JumpState,
 	death = DeathState,
 	punch = PunchState,
+	fall = FallState,
 	roll = RollState,
 	rest = RestState,
 	active = ActiveState,

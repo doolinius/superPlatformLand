@@ -21,7 +21,7 @@
  </tile>
  <tile id="3">
   <properties>
-   <property name="blockType" value="invisible"/>
+   <property name="blockType" value="ledge"/>
    <property name="colType" value="bounce"/>
   </properties>
  </tile>

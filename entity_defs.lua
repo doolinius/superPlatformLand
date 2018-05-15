@@ -10,6 +10,7 @@ playerDefs = {
     y_speed = 3.2,
     maxHp = 3,
     hp = 1,
+    entityType = "hero",
     frame_width = 16,
     frame_height = 16,
     animations = {
@@ -18,9 +19,10 @@ playerDefs = {
       jump = {frames = {'1-1',3}, duration = 0.1},
       swim = {frames = {'1-6',4}, duration = 0.1},
       death = {frames = {'5-5',1}, duration = 0.1},
-      punch = {frames = {'1-2',5,'4-5',5}, duration = 0.1, onLoop='pauseAtEnd'}
+      punch = {frames = {'1-2',5,'4-5',5}, duration = 0.1, onLoop='pauseAtEnd'},
+      fall = {frames = {'2-2',3}, duration = 0.1}
     },
-    states = {"idle", "run", "jump", "death","punch"},
+    states = {"idle", "run", "jump", "death","punch","fall"},
     default_state = "idle"
   }
 }
@@ -46,6 +48,7 @@ gEnemyDefs = {
     jump_force = 2.75,
     y_speed = 2.75,
     maxHp = 1,
+    entityType = "enemy",
     frame_width = 16,
     frame_height = 16,
     animations = {
@@ -64,6 +67,8 @@ gEnemyDefs = {
     jump_force = 0.5,
     y_speed = 0.5,
     maxHp = 2,
+    ledgeBounce = true,
+    entityType = "enemy",
     frame_width = 16,
     frame_height = 16,
     animations = {
@@ -82,6 +87,7 @@ gEnemyDefs = {
     jump_force = 1.75,
     y_speed = 1.75,
     maxHp = 1,
+    entityType = "enemy",
     frame_width = 16,
     frame_height = 16,
     animations = {
@@ -101,6 +107,7 @@ gEnemyDefs = {
     jump_force = 0,
     y_speed = 0,
     maxHp = 3,
+    entityType = "enemy",
     frame_width = 16,
     frame_height = 16,
     animations = {

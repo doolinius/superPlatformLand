@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="moreSprites" tilewidth="16" tileheight="16" tilecount="432" columns="24">
  <image source="../graphics/moreSprites.png" width="384" height="288"/>
+ <tile id="0">
+  <animation>
+   <frame tileid="0" duration="150"/>
+   <frame tileid="1" duration="150"/>
+   <frame tileid="2" duration="150"/>
+  </animation>
+ </tile>
+ <tile id="3">
+  <animation>
+   <frame tileid="3" duration="400"/>
+   <frame tileid="4" duration="400"/>
+  </animation>
+ </tile>
+ <tile id="5">
+  <animation>
+   <frame tileid="6" duration="1000"/>
+   <frame tileid="5" duration="2000"/>
+  </animation>
+ </tile>
  <tile id="20">
   <animation>
    <frame tileid="20" duration="150"/>
    <frame tileid="21" duration="150"/>
    <frame tileid="22" duration="150"/>
+  </animation>
+ </tile>
+ <tile id="24">
+  <animation>
+   <frame tileid="24" duration="100"/>
+   <frame tileid="25" duration="100"/>
+   <frame tileid="26" duration="100"/>
+   <frame tileid="27" duration="100"/>
+   <frame tileid="28" duration="100"/>
+   <frame tileid="29" duration="100"/>
+   <frame tileid="30" duration="100"/>
+  </animation>
+ </tile>
+ <tile id="25">
+  <animation>
+   <frame tileid="24" duration="150"/>
+   <frame tileid="25" duration="150"/>
+   <frame tileid="73" duration="200"/>
+   <frame tileid="30" duration="150"/>
   </animation>
  </tile>
  <tile id="31">
@@ -28,10 +66,29 @@
    <frame tileid="42" duration="100"/>
   </animation>
  </tile>
+ <tile id="48">
+  <animation>
+   <frame tileid="48" duration="200"/>
+   <frame tileid="49" duration="200"/>
+  </animation>
+ </tile>
+ <tile id="52">
+  <animation>
+   <frame tileid="52" duration="400"/>
+   <frame tileid="53" duration="400"/>
+  </animation>
+ </tile>
  <tile id="68">
   <animation>
    <frame tileid="69" duration="100"/>
    <frame tileid="70" duration="100"/>
+  </animation>
+ </tile>
+ <tile id="73">
+  <animation>
+   <frame tileid="73" duration="100"/>
+   <frame tileid="74" duration="100"/>
+   <frame tileid="75" duration="100"/>
   </animation>
  </tile>
  <tile id="79">

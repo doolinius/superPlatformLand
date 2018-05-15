@@ -11,9 +11,14 @@
    <property name="blockType" value="pushable"/>
   </properties>
  </tile>
+ <tile id="21">
+  <properties>
+   <property name="blockType" value="solid"/>
+  </properties>
+ </tile>
  <tile id="23">
   <properties>
-   <property name="blockType" value="instadeath"/>
+   <property name="blockType" value="death"/>
   </properties>
  </tile>
  <tile id="32">

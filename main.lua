@@ -10,6 +10,7 @@ function love.load()
   log = require('libs/log')
   sti = require('libs/sti')
   bump = require('libs/bump')
+  require('collision')
   require('map')
   require('map_defs')
   --world = bump.newWorld()
@@ -33,64 +34,6 @@ function love.load()
   coins = 99
 
 
-end
-
--- This filter applies only to collisions that result from moving
--- the hero
-function heroFilter(hero, other)
-  -- handle collision with collectibles and enemies
-  if other.type then
-    if other.type == "coin" or other.type == "heart" then
-      return("cross")
-    else
-      return("touch")
-    end
-
-  -- handle collision with blocks
-  elseif other.properties then
-    -- if it's solid, just return slide, no questions asked
-    if other.properties.blockType == "solid" then
-      return("slide")
-    -- if it's a passthrough block, check to see if the hero was previously
-    -- above the block.  If so, it's a slide collision, otherwise allow him
-    -- to cross through
-    elseif other.properties.blockType == "passthrough" then
-      if math.floor(hero.py) + 16 >= other.y then
-        return("cross")
-      else
-        return("slide")
-      end
-    -- if it's a breakable block, check to see if hero is hitting it from
-    -- the bottom
-    elseif other.properties.blockType == "breakable" then
-      return("slide")
-    elseif other.properties.blockType == "invisible" then
-      return("cross")
-    else
-      return(other.properties.colType)
-    end
-  else
-    --log.trace("UGH... DEFAULT")
-    return("slide")
-  end
-end
-
--- this function determines the type of collision between two objects
--- it is used any time something is moved in the collision world
-function colFilter(item, other)
-  if other.type then
-    if other.type == "coin" or other.type == "heart" then
-      return("cross")
-    end
-  elseif other.properties then
-    if item == hero and other.properties.colType == "bounce" then
-      return("cross")
-    else
-      return(other.properties.colType)
-    end
-  else
-    return("slide")
-  end
 end
 
 -- the love.update(dt) function has an option argument called 'dt'

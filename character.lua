@@ -10,6 +10,7 @@ function Character:Create(def, map) -- definition table
     y = def.y, -- y position on screen
     px = def.x,
     py = def.y,
+    entityType = def.entityType, -- type of entity (enemy, hero, npc, etc.)
     top_speed = def.speed, -- fastest possible X speed
     speed = 0, -- current speed of the Character
     facing = def.facing, -- 1 for facing right, -1 for facing left
@@ -17,6 +18,7 @@ function Character:Create(def, map) -- definition table
     y_speed = def.y_speed,
     maxHp = def.maxHp,
     hp = def.hp,
+    ledgeBounce = def.ledgeBounce or false,
     controller = StateMachine:Create()  -- Finite State Machine for controlling character state
   }
 

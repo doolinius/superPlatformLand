@@ -68,6 +68,25 @@ function makePunch(hero)
   table.insert(projectiles, p)
 end
 
+-- this function determines the type of collision between two objects
+-- it is used any time something is moved in the collision world
+function colFilter(item, other)
+  if other.type then
+    if other.type == "coin" or other.type == "heart" then
+      return("cross")
+    end
+  elseif other.properties then
+    if item == hero and other.properties.colType == "bounce" then
+      return("cross")
+    else
+      return(other.properties.colType)
+    end
+  else
+    return("slide")
+  end
+end
+
+
 function playLevel:enter(previous, heroName, level)
   log.trace("Entering PlayLevel state")
   -- get the correct map definition
@@ -79,6 +98,8 @@ function playLevel:enter(previous, heroName, level)
   self.time = mapDef.time
   self.bgMusic = sounds[mapDef.bgMusic]
   self.bgMusic:play()
+  self.coinColor = 1
+
   collectibles = {}
   enemies = {}
   projectiles = {}
@@ -91,6 +112,7 @@ function playLevel:enter(previous, heroName, level)
         local c = {}
         c.x = (x-1) * 16
         c.y = (y-1) * 16
+        c.entityType = "collectible"
         c.type = tile.properties.type
         local anim = clcTables[c.type]
         c.animation = anim8.newAnimation(anim.grid(unpack(anim.frames)),anim.duration)
@@ -116,6 +138,9 @@ function playLevel:enter(previous, heroName, level)
       end
     end
   end
+
+  self.map:removeLayer(6)
+  self.map:removeLayer(5)
 
   hero = Character:Create(playerDefs[heroName], self.map)
   log.trace("Created here: " .. playerDefs[heroName].image)
@@ -209,7 +234,9 @@ function playLevel:drawHUD()
     love.graphics.draw(hudImage, hud.emptyHeart, i*8, 9)
   end
   --love.graphics.draw(hudImage, hud.emptyHeart, 16, 9)
+  --love.graphics.setColor(0.3, 0.3, 0.3, 1)
   love.graphics.draw(hudImage, hud.coin, 16*8, 1)
+  --love.graphics.setColor(1, 1, 1, 1)
   love.graphics.draw(hudImage, hud.x, 17*8, 1)
   printWithShadow(coins, 18*8, 1)
   love.graphics.draw(hudImage, hud.clock, (wWidth/scale)-6*8, 1)
