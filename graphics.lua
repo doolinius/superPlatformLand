@@ -1,6 +1,5 @@
 hudQuads = {}
 hudImage = love.graphics.newImage("graphics/hud.png")
-hudImage:setFilter("nearest", "nearest")
 quadCount = 1
 for j=0,1 do
   for i=0,9 do
@@ -19,7 +18,6 @@ hud = {
 }
 
 tileImage = love.graphics.newImage("maps/platform_tiles.png")
-tileImage:setFilter("nearest", "nearest")
 local tg = anim8.newGrid(16, 16, tileImage:getDimensions())
 local g = anim8.newGrid(8, 8, hudImage:getDimensions())
 
@@ -34,12 +32,9 @@ clcImages = {
 }
 
 titleImage = love.graphics.newImage("graphics/title.png")
-titleImage:setFilter("nearest","nearest")
 startImage = love.graphics.newImage("graphics/pressStart.png")
-startImage:setFilter("nearest", "nearest")
 
 heroImage = love.graphics.newImage("graphics/hero.png")
-heroImage:setFilter("nearest", "nearest")
 gProjectileGraphics = {
   punch = {image = heroImage, quad = love.graphics.newQuad(3*16, 5*16, 16, 16, heroImage:getDimensions())},
   kick = {image = heroImage, quad = love.graphics.newQuad(4*16, 5*16, 16, 16, heroImage:getDimensions())}

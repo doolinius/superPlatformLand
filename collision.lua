@@ -1,5 +1,4 @@
 
-
 function colFilter(char, other)
   if char.entityType == "projectile" then
     return("cross")

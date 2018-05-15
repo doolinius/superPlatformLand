@@ -1,8 +1,8 @@
 
 function love.load()
   inspect = require('libs/inspect')
+  love.graphics.setDefaultFilter("nearest", "nearest")
   gameFont = love.graphics.newFont('pressStart2p.ttf', 8)
-  gameFont:setFilter("nearest", "nearest")
   love.graphics.setFont(gameFont)
   scale = 4
   love.window.setMode(320 * scale, 192 * scale)
