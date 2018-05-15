@@ -68,25 +68,6 @@ function makePunch(hero)
   table.insert(projectiles, p)
 end
 
--- this function determines the type of collision between two objects
--- it is used any time something is moved in the collision world
-function colFilter(item, other)
-  if other.type then
-    if other.type == "coin" or other.type == "heart" then
-      return("cross")
-    end
-  elseif other.properties then
-    if item == hero and other.properties.colType == "bounce" then
-      return("cross")
-    else
-      return(other.properties.colType)
-    end
-  else
-    return("slide")
-  end
-end
-
-
 function playLevel:enter(previous, heroName, level)
   log.trace("Entering PlayLevel state")
   -- get the correct map definition

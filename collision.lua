@@ -1,13 +1,15 @@
 
-function characterFilter(char, other)
 
-  if other.entityType == "collectible" then
+function colFilter(char, other)
+  if char.entityType == "projectile" then
+    return("cross")
+  elseif other.entityType == "collectible" then
     return("cross")
   elseif other.entityType == "enemy" or other.entityType == "hero" then
     return("cross")
   elseif other.entityType == "projectile" then
     return("cross")
-  else -- if it's a block
+  else -- if colliding with a block
     if other.properties then
       if other.properties.blockType == "passthrough" then
         if math.floor(char.py) + 16 >= other.y then

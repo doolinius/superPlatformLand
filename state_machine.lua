@@ -112,7 +112,7 @@ function IdleState:update(dt)
 	--self.character.y_speed = self.character.jump_force
 	self.character.y = self.character.y + gravity
 	-- check for collisions
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	--log.trace("Attempted X:" .. self.character.x .. " Y:" .. self.character.y)
 	--log.trace("ACTUAL    X:" .. actualX .. " Y:" .. actualY)
 	self.character.x = actualX
@@ -176,7 +176,7 @@ function RunState:update(dt)
 		--self.character.y_speed = self.character.jump_force
 		self.character.y = self.character.y + gravity
 
-		local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
+		local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 
 	  -- if there was a collision
 	  if (len > 0) then
@@ -250,7 +250,7 @@ function FallState:update(dt)
 		self.character.facing = 1
 	end
 
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	self.character.x = actualX
 	self.character.y = actualY
 	if len > 0 then
@@ -334,7 +334,7 @@ function JumpState:update(dt)
 		self.character.y_speed = 0
 	end
 
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	self.character.x = actualX
 	self.character.y = actualY
 	if len > 0 then
@@ -486,7 +486,7 @@ end
 function RollState:update(dt)
 	self.character.animation:update(dt)
 	self.character.x = self.character.x + self.character.speed * self.character.facing
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	for i=1,len do
 		if cols[i].normal.x + self.character.facing == 0 then
 			self.character.facing = self.character.facing * -1
@@ -528,7 +528,7 @@ function FlyState:update(dt)
 	end
 	self.character.animation:update(dt)
 	self.character.x = self.character.x + self.character.speed * self.character.facing
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	self.character.x = actualX
 end
 
@@ -627,7 +627,7 @@ function HopState:update(dt)
 	self.character.x = self.character.x + self.character.speed * self.character.facing
 	self.character.y_speed = self.character.y_speed - gravity * dt
 	self.character.y = self.character.y - self.character.y_speed
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, characterFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	self.character.x = actualX
 	self.character.y = actualY
 	for i=1,len do
