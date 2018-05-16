@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="platform_tiles" tilewidth="16" tileheight="16" tilecount="418" columns="22">
  <image source="platform_tiles.png" width="352" height="304"/>
+ <tile id="7">
+  <animation>
+   <frame tileid="7" duration="100"/>
+   <frame tileid="6" duration="100"/>
+  </animation>
+ </tile>
  <tile id="9">
   <animation>
    <frame tileid="9" duration="100"/>

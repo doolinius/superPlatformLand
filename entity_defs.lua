@@ -1,7 +1,7 @@
 playerDefs = {
   hero = {
     -- use the hero.png spritesheet for the graphics
-    image = "hero.png",
+    image = "characters.png",
     x = 16, -- x position on screen
     y = 8 * 16, -- y position on screen
     speed = 2, -- speed of the hero
@@ -14,13 +14,13 @@ playerDefs = {
     frame_width = 16,
     frame_height = 16,
     animations = {
-      run =  {frames = {'1-6',2}, duration = 0.1},
-      idle = {frames = {'1-3',1}, duration = 0.2},
-      jump = {frames = {'1-1',3}, duration = 0.1},
-      swim = {frames = {'1-6',4}, duration = 0.1},
-      death = {frames = {'5-5',1}, duration = 0.1},
-      punch = {frames = {'1-2',5,'4-5',5}, duration = 0.1, onLoop='pauseAtEnd'},
-      fall = {frames = {'2-2',3}, duration = 0.1}
+      run =  {frames = {'1-6',20}, duration = 0.1},
+      idle = {frames = {'1-3',19}, duration = 0.2},
+      jump = {frames = {'1-1',21}, duration = 0.1},
+      swim = {frames = {'1-6',22}, duration = 0.1},
+      death = {frames = {'5-5',19}, duration = 0.1},
+      punch = {frames = {'1-2',23,'4-5',23}, duration = 0.1, onLoop='pauseAtEnd'},
+      fall = {frames = {'2-2',21}, duration = 0.1}
     },
     states = {"idle", "run", "jump", "death","punch","fall"},
     default_state = "idle"
@@ -79,7 +79,7 @@ gEnemyDefs = {
   },
 
   hopper = {
-    image = "enemies.png",
+    image = "characters.png",
     x = 0,
     y = 0,
     speed = 1.5,
@@ -91,15 +91,15 @@ gEnemyDefs = {
     frame_width = 16,
     frame_height = 16,
     animations = {
-      start_hop = {frames = {'1-4',1}, duration = 0.1},
-      hop = {frames = {'4-5', 1}, duration = 0.1, onLoop = 'pauseAtStart'}
+      start_hop = {frames = {'9-12',17}, duration = 0.1},
+      hop = {frames = {'11-12', 17}, duration = 0.1, onLoop = 'pauseAtStart'}
     },
     states = {"start_hop", "hop"},
     default_state = "start_hop"
   },
 
   popup = {
-    image = "enemies.png",
+    image = "characters.png",
     x = 0,
     y = 0,
     speed = 0,
@@ -111,8 +111,8 @@ gEnemyDefs = {
     frame_width = 16,
     frame_height = 16,
     animations = {
-      rest = {frames = {'1-1',5}, duration = 0.1},
-      active = {frames = {'5-2',5,'3-4',5}, duration = 0.1}
+      rest = {frames = {'8-8',21}, duration = 0.1},
+      active = {frames = {'12-9',21,'10-12',21}, duration = 0.1}
     },
     states = {"rest", "active"},
     default_state = "rest"
