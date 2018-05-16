@@ -16,3 +16,15 @@ function Block:Create(def)
   setmetatable(this, self)
   return(this)
 end
+
+function Block:update(dt)
+
+end
+
+function Block:draw()
+
+end
+
+function Block:collide(object)
+
+end
