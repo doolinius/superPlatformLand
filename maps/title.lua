@@ -12,325 +12,8 @@ return {
   properties = {},
   tilesets = {
     {
-      name = "moreSprites",
-      firstgid = 1,
-      filename = "moreSprites.tsx",
-      tilewidth = 16,
-      tileheight = 16,
-      spacing = 0,
-      margin = 0,
-      image = "../graphics/moreSprites.png",
-      imagewidth = 384,
-      imageheight = 288,
-      tileoffset = {
-        x = 0,
-        y = 0
-      },
-      grid = {
-        orientation = "orthogonal",
-        width = 16,
-        height = 16
-      },
-      properties = {},
-      terrains = {},
-      tilecount = 432,
-      tiles = {
-        {
-          id = 20,
-          animation = {
-            {
-              tileid = 20,
-              duration = 150
-            },
-            {
-              tileid = 21,
-              duration = 150
-            },
-            {
-              tileid = 22,
-              duration = 150
-            }
-          }
-        },
-        {
-          id = 31,
-          animation = {
-            {
-              tileid = 31,
-              duration = 100
-            },
-            {
-              tileid = 32,
-              duration = 100
-            },
-            {
-              tileid = 33,
-              duration = 100
-            },
-            {
-              tileid = 34,
-              duration = 100
-            },
-            {
-              tileid = 35,
-              duration = 100
-            },
-            {
-              tileid = 36,
-              duration = 100
-            }
-          }
-        },
-        {
-          id = 37,
-          animation = {
-            {
-              tileid = 37,
-              duration = 100
-            },
-            {
-              tileid = 38,
-              duration = 100
-            },
-            {
-              tileid = 39,
-              duration = 100
-            },
-            {
-              tileid = 40,
-              duration = 100
-            },
-            {
-              tileid = 41,
-              duration = 100
-            },
-            {
-              tileid = 42,
-              duration = 100
-            }
-          }
-        },
-        {
-          id = 79,
-          animation = {
-            {
-              tileid = 79,
-              duration = 100
-            },
-            {
-              tileid = 80,
-              duration = 100
-            },
-            {
-              tileid = 81,
-              duration = 100
-            },
-            {
-              tileid = 82,
-              duration = 100
-            },
-            {
-              tileid = 83,
-              duration = 100
-            },
-            {
-              tileid = 84,
-              duration = 100
-            }
-          }
-        },
-        {
-          id = 85,
-          animation = {
-            {
-              tileid = 85,
-              duration = 100
-            },
-            {
-              tileid = 86,
-              duration = 100
-            },
-            {
-              tileid = 87,
-              duration = 100
-            },
-            {
-              tileid = 88,
-              duration = 100
-            },
-            {
-              tileid = 89,
-              duration = 100
-            },
-            {
-              tileid = 90,
-              duration = 100
-            }
-          }
-        },
-        {
-          id = 109,
-          animation = {
-            {
-              tileid = 109,
-              duration = 200
-            },
-            {
-              tileid = 110,
-              duration = 200
-            },
-            {
-              tileid = 111,
-              duration = 200
-            },
-            {
-              tileid = 112,
-              duration = 200
-            },
-            {
-              tileid = 113,
-              duration = 200
-            },
-            {
-              tileid = 114,
-              duration = 200
-            }
-          }
-        },
-        {
-          id = 127,
-          animation = {
-            {
-              tileid = 127,
-              duration = 100
-            },
-            {
-              tileid = 128,
-              duration = 100
-            },
-            {
-              tileid = 129,
-              duration = 100
-            },
-            {
-              tileid = 130,
-              duration = 100
-            },
-            {
-              tileid = 131,
-              duration = 100
-            },
-            {
-              tileid = 132,
-              duration = 100
-            }
-          }
-        },
-        {
-          id = 133,
-          animation = {
-            {
-              tileid = 133,
-              duration = 100
-            },
-            {
-              tileid = 134,
-              duration = 200
-            },
-            {
-              tileid = 135,
-              duration = 500
-            },
-            {
-              tileid = 136,
-              duration = 200
-            }
-          }
-        },
-        {
-          id = 157,
-          animation = {
-            {
-              tileid = 157,
-              duration = 100
-            },
-            {
-              tileid = 158,
-              duration = 100
-            },
-            {
-              tileid = 159,
-              duration = 100
-            },
-            {
-              tileid = 160,
-              duration = 100
-            },
-            {
-              tileid = 161,
-              duration = 100
-            },
-            {
-              tileid = 162,
-              duration = 100
-            }
-          }
-        },
-        {
-          id = 271,
-          animation = {
-            {
-              tileid = 271,
-              duration = 100
-            },
-            {
-              tileid = 272,
-              duration = 100
-            },
-            {
-              tileid = 273,
-              duration = 100
-            },
-            {
-              tileid = 274,
-              duration = 100
-            },
-            {
-              tileid = 275,
-              duration = 100
-            },
-            {
-              tileid = 276,
-              duration = 100
-            }
-          }
-        },
-        {
-          id = 288,
-          animation = {
-            {
-              tileid = 288,
-              duration = 100
-            },
-            {
-              tileid = 289,
-              duration = 100
-            },
-            {
-              tileid = 290,
-              duration = 100
-            },
-            {
-              tileid = 291,
-              duration = 100
-            }
-          }
-        }
-      }
-    },
-    {
       name = "platform_tiles",
-      firstgid = 433,
+      firstgid = 1,
       filename = "platform_tiles.tsx",
       tilewidth = 16,
       tileheight = 16,
@@ -353,6 +36,19 @@ return {
       tilecount = 418,
       tiles = {
         {
+          id = 7,
+          animation = {
+            {
+              tileid = 7,
+              duration = 100
+            },
+            {
+              tileid = 6,
+              duration = 100
+            }
+          }
+        },
+        {
           id = 9,
           animation = {
             {
@@ -374,6 +70,40 @@ return {
           }
         },
         {
+          id = 31,
+          animation = {
+            {
+              tileid = 31,
+              duration = 100
+            },
+            {
+              tileid = 32,
+              duration = 100
+            },
+            {
+              tileid = 33,
+              duration = 100
+            }
+          }
+        },
+        {
+          id = 53,
+          animation = {
+            {
+              tileid = 53,
+              duration = 100
+            },
+            {
+              tileid = 54,
+              duration = 100
+            },
+            {
+              tileid = 55,
+              duration = 100
+            }
+          }
+        },
+        {
           id = 75,
           animation = {
             {
@@ -387,6 +117,90 @@ return {
           }
         },
         {
+          id = 79,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 80,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 81,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 82,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 83,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 84,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 85,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 86,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 101,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 102,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 103,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 105,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 106,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 107,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
           id = 114,
           animation = {
             {
@@ -397,6 +211,162 @@ return {
               tileid = 115,
               duration = 100
             }
+          }
+        },
+        {
+          id = 123,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 124,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 125,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 126,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 127,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 128,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 129,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 130,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 132,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 133,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 134,
+          properties = {
+            ["blockType"] = "breakable"
+          }
+        },
+        {
+          id = 135,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 136,
+          properties = {
+            ["blockType"] = "breakable"
+          }
+        },
+        {
+          id = 137,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 145,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 146,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 147,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 148,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 149,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 150,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 151,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 152,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 154,
+          properties = {
+            ["blockType"] = "breakable"
+          }
+        },
+        {
+          id = 155,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 156,
+          properties = {
+            ["blockType"] = "breakable"
+          }
+        },
+        {
+          id = 157,
+          properties = {
+            ["blockType"] = "passthrough"
           }
         },
         {
@@ -467,6 +437,54 @@ return {
           }
         },
         {
+          id = 167,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 168,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 169,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 170,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 171,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 172,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 173,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 174,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
           id = 176,
           animation = {
             {
@@ -490,12 +508,120 @@ return {
               duration = 100
             }
           }
+        },
+        {
+          id = 185,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 186,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 187,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 188,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 189,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 190,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 191,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 192,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 193,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 194,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 195,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 196,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 207,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 208,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 209,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 210,
+          properties = {
+            ["blockType"] = "passthrough"
+          }
+        },
+        {
+          id = 214,
+          properties = {
+            ["blockType"] = "solid"
+          }
+        },
+        {
+          id = 218,
+          properties = {
+            ["blockType"] = "solid"
+          }
         }
       }
     },
     {
       name = "collision",
-      firstgid = 851,
+      firstgid = 419,
       filename = "collision.tsx",
       tilewidth = 16,
       tileheight = 16,
@@ -520,24 +646,28 @@ return {
         {
           id = 0,
           properties = {
+            ["blockType"] = "solid",
             ["colType"] = "slide"
           }
         },
         {
           id = 1,
           properties = {
+            ["blockType"] = "solid",
             ["colType"] = "touch"
           }
         },
         {
           id = 2,
           properties = {
+            ["blockType"] = "solid",
             ["colType"] = "cross"
           }
         },
         {
           id = 3,
           properties = {
+            ["blockType"] = "ledge",
             ["colType"] = "bounce"
           }
         }
@@ -559,18 +689,18 @@ return {
       properties = {},
       encoding = "lua",
       data = {
-        675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684,
-        697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706,
-        719, 720, 721, 722, 723, 724, 725, 726, 699, 728, 719, 720, 721, 699, 723, 724, 725, 726, 727, 728,
-        697, 698, 699, 721, 723, 724, 725, 704, 721, 706, 723, 724, 725, 721, 701, 702, 703, 704, 705, 706,
-        723, 724, 725, 743, 723, 724, 725, 699, 743, 701, 723, 724, 725, 743, 706, 723, 724, 725, 700, 701,
-        741, 742, 743, 744, 745, 746, 747, 748, 749, 750, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750,
-        763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772,
-        785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794,
-        807, 808, 809, 810, 811, 812, 813, 814, 815, 816, 807, 808, 809, 810, 811, 812, 813, 814, 815, 816,
-        829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838,
-        535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535, 535,
-        557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557, 557
+        243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252,
+        265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274,
+        287, 288, 289, 290, 291, 292, 293, 294, 267, 296, 287, 288, 289, 267, 291, 292, 293, 294, 295, 296,
+        265, 266, 267, 289, 291, 292, 293, 272, 289, 274, 291, 292, 293, 289, 269, 270, 271, 272, 273, 274,
+        291, 292, 293, 311, 291, 292, 293, 267, 311, 269, 291, 292, 293, 311, 274, 291, 292, 293, 268, 269,
+        309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318,
+        331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340,
+        353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362,
+        375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384,
+        397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406,
+        103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103, 103,
+        125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125, 125
       }
     }
   }
