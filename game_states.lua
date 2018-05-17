@@ -85,7 +85,7 @@ function playLevel:enter(previous, heroName, level)
   enemies = {}
   projectiles = {}
 
-  local cLayer = self.map.layers[5]
+  local cLayer = self.map.layers[6]
   for y=1, cLayer.height do
     for x=1, cLayer.width do
       local tile = cLayer.data[y][x]
@@ -105,7 +105,7 @@ function playLevel:enter(previous, heroName, level)
   end
 
   -- add all of the enemies
-  local eLayer = self.map.layers[6]
+  local eLayer = self.map.layers[7]
   for y=1, eLayer.height do
     for x=1, eLayer.width do
       local tile = eLayer.data[y][x]
@@ -120,8 +120,8 @@ function playLevel:enter(previous, heroName, level)
     end
   end
 
+  self.map:removeLayer(7)
   self.map:removeLayer(6)
-  self.map:removeLayer(5)
 
   hero = Character:Create(playerDefs[heroName], self.map)
   log.trace("Created here: " .. playerDefs[heroName].image)

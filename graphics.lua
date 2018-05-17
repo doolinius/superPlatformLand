@@ -17,18 +17,18 @@ hud = {
   x = hudQuads[9]
 }
 
-tileImage = love.graphics.newImage("maps/platform_tiles.png")
-local tg = anim8.newGrid(16, 16, tileImage:getDimensions())
+itemsImage = love.graphics.newImage("maps/items.png")
+local tg = anim8.newGrid(16, 16, itemsImage:getDimensions())
 local g = anim8.newGrid(8, 8, hudImage:getDimensions())
 
 clcTables = {
   heart = {grid=g,frames={'9-10',2,'10-10',1,'10-10',2}, duration=0.2},
-  coin = {grid=tg,frames={'5-8',8}, duration=0.25}
+  coin = {grid=tg,frames={'2-5',6}, duration=0.25}
 }
 
 clcImages = {
   heart = hudImage,
-  coin = tileImage
+  coin = itemsImage
 }
 
 titleImage = love.graphics.newImage("graphics/title.png")
