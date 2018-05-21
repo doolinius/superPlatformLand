@@ -38,6 +38,18 @@ gProjectileDefs = {
   }
 }
 
+gEffectDefs = {
+  coinSparkle = {
+    image = itemsImage,
+    animation = clcTables.coinSparkle,
+    x_speed = 0,
+    y_speed = 0,
+    facing = 1,
+    gravity = false,
+    duration = 0.4
+  }
+}
+
 gEnemyDefs = {
   bird = {
     image = "enemies.png",

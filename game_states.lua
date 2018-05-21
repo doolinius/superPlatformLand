@@ -84,6 +84,7 @@ function playLevel:enter(previous, heroName, level)
   collectibles = {}
   enemies = {}
   projectiles = {}
+  effects = {}
 
   local cLayer = self.map.layers[6]
   for y=1, cLayer.height do
@@ -146,6 +147,13 @@ function playLevel:updateEntities(dt)
         projectiles[i]:update(dt)
     end
   end
+  for i=#effects, 1, -1 do
+    if not effects[i].enabled then
+      table.remove(effects, i)
+    else
+      effects[i]:update(dt)
+    end
+  end
 end
 
 function takeHeart(heart)
@@ -177,6 +185,10 @@ function takeCoin(coin)
     coins = 0
     sounds.oneup:play()
   end
+  local e = Entity:Create(gEffectDefs.coinSparkle)
+  e.x = coin.x
+  e.y = coin.y
+  table.insert(effects, e)
 end
 
 function playLevel:keypressed(k)
@@ -236,6 +248,9 @@ function playLevel:drawEntities()
   end
   for _, p in ipairs(projectiles) do
     p:draw()
+  end
+  for _, effect in ipairs(effects) do
+    effect:draw()
   end
 end
 
