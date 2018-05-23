@@ -8,6 +8,15 @@ function colFilter(char, other)
     return("cross")
   elseif other.entityType == "projectile" then
     return("cross")
+  elseif other.entityType == "block" then
+    if other.type == "invisible" then
+      if math.floor(char.py) >= other.y + 16 then
+        return("slide")
+      else
+        return("cross")
+      end
+    end
+    return("slide")
   else -- if colliding with a block
     if other.properties then
       if other.properties.blockType == "passthrough" then

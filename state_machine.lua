@@ -337,22 +337,41 @@ function JumpState:update(dt)
 	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	self.character.x = actualX
 	self.character.y = actualY
-	if len > 0 then
-		log.trace("# Collisions: " .. len)
-	end
 	for i=1,len do
 		local c = cols[i]
-		-- if the hero collides with a platform
-		-- change the state to either idle or run
-		if c.type == "cross" then
-			--local instance = map:getInstanceByPixel(c.other.x, c.other.y, 3)
-			--map:removeInstance(instance)
+		log.trace("# collisions: " .. len)
+		log.trace("Normal: " .. c.normal.y)
+
+		-- Handle collectible collisions
+		if c.other.entityType == "collectible" then
 			if c.other.type == "coin" then
 				takeCoin(c.other)
 			elseif c.other.type == "heart" then
 				takeHeart(c.other)
 			end
-		elseif c.type == "touch"  and c.other.type == "instadeath" then
+		-- Handle enemy collisions
+		elseif c.other.entityType == "enemy" then
+
+		-- Handle interactive block collision
+		elseif c.other.entityType == "block" then
+			print("HIT A " .. c.other.type .. " BLOCK")
+			if c.other.type == "death" then
+				self.character.controller:change("death")
+			elseif c.other.type == "breakable" and c.normal.y == 1 then
+					breakBlock(c.other)
+			elseif c.other.type == "bonkable" and c.normal.y == 1 then
+				if not c.other.inBonk then
+					print("BONK")
+					c.other:bonk()
+				end
+				self.character.y_speed = -self.character.y_speed / 4
+			end
+
+		-- Handle collision with a projectile
+		elseif c.other.entityType == "projectile" then
+
+		end
+		if c.type == "touch"  and c.other.type == "instadeath" then
 			self.character.controller:change("death")
 		elseif c.type == "slide" and c.normal.y == -1 then
 			if (love.keyboard.isDown('a') or love.keyboard.isDown('d')) then

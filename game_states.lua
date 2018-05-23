@@ -85,19 +85,20 @@ function playLevel:enter(previous, heroName, level)
   enemies = {}
   projectiles = {}
   effects = {}
+  blocks = {}
 
   local cLayer = self.map.layers[6]
   for y=1, cLayer.height do
     for x=1, cLayer.width do
       local tile = cLayer.data[y][x]
       if tile then
-        local c = {}
+        local c = Collectible:Create(gCollectibleDefs[tile.properties.type])--{}
         c.x = (x-1) * 16
         c.y = (y-1) * 16
-        c.entityType = "collectible"
-        c.type = tile.properties.type
-        local anim = clcTables[c.type]
-        c.animation = anim8.newAnimation(anim.grid(unpack(anim.frames)),anim.duration)
+        --c.entityType = "collectible"
+        --c.type = tile.properties.type
+        --local anim = clcTables[c.type]
+        --c.animation = anim8.newAnimation(anim.grid(unpack(anim.frames)),anim.duration)
         --print("Adding " .. c.type .. " at x:" .. c.x .. " y:" .. c.y)
         table.insert(collectibles, c)
         world:add(c, c.x, c.y, c.animation:getDimensions())
@@ -121,8 +122,26 @@ function playLevel:enter(previous, heroName, level)
     end
   end
 
+  -- add all interactive blocks
+  local bLayer = self.map.layers[5]
+  for y=1, bLayer.height do
+    for x=1, bLayer.width do
+      local tile = bLayer.data[y][x]
+      if tile then
+        local b = Block:Create(gBlockDefs[tile.properties.blockType])
+        b:setPosition((x-1) * 16, (y-1)*16)
+        --b.x = (x-1) * 16
+        --b.y = (y-1) * 16
+        --b.type = tile.properties.enemyType
+        table.insert(blocks, b)
+        world:add(b, b.x, b.y, b.animation:getDimensions())
+      end
+    end
+  end
+
   self.map:removeLayer(7)
   self.map:removeLayer(6)
+  self.map:removeLayer(5)
 
   hero = Character:Create(playerDefs[heroName], self.map)
   log.trace("Created here: " .. playerDefs[heroName].image)
@@ -138,7 +157,7 @@ function playLevel:updateEntities(dt)
     e:update(dt)
   end
   for _, c in ipairs(collectibles) do
-    c.animation:update(dt)
+    c:update(dt)
   end
   for i=#projectiles,1,-1 do
     if not projectiles[i].enabled then
@@ -149,10 +168,30 @@ function playLevel:updateEntities(dt)
   end
   for i=#effects, 1, -1 do
     if not effects[i].enabled then
+      --world:remove(effects[i])
       table.remove(effects, i)
     else
       effects[i]:update(dt)
     end
+  end
+  for i=#blocks, 1, -1 do
+    if not blocks[i].enabled then
+      table.remove(blocks, i)
+    else
+      blocks[i]:update(dt)
+    end
+  end
+end
+
+function breakBlock(block)
+  world:remove(block)
+  block.enabled = false
+
+    -- create break effect
+  local breakFrames = block:makeBreakFrames()
+  for _, f in pairs(breakFrames) do
+    --world:add(f, f.x, f.y, 8, 8)
+    table.insert(effects, f)
   end
 end
 
@@ -177,6 +216,7 @@ function takeCoin(coin)
     end
   end
 
+  score = score + coin.points
   coins = coins + 1
   sounds.coin:stop() -- stop coin sound if already playing
   sounds.coin:play()
@@ -244,7 +284,7 @@ function playLevel:drawEntities()
     e:draw()
   end
   for _,c in pairs(collectibles) do -- loop through and draw collectibles
-    c.animation:draw(clcImages[c.type], c.x, c.y)
+    c:draw()
   end
   for _, p in ipairs(projectiles) do
     p:draw()
@@ -252,14 +292,23 @@ function playLevel:drawEntities()
   for _, effect in ipairs(effects) do
     effect:draw()
   end
+  for _, block in ipairs(blocks) do
+    block:draw()
+  end
 end
 
 function playLevel:draw()
   --log.trace("PlayLevel DRAW")
   love.graphics.scale(scale,scale) -- set the proper scale
   love.graphics.push()             -- save current graphics parameters
-  love.graphics.translate(self.tx,0)    -- translate the camera
-  self.map:draw(self.tx, 0, scale, scale)    -- draw the map based on the translation
+  love.graphics.translate(self.tx/4,0)    -- translate the camera
+  --self.map:draw(self.tx, 0, scale, scale)    -- draw the map based on the translation
+  self.map.layers[1]:draw(self.tx/4, 0, scale, scale)
+  self.map.layers[2]:draw(self.tx/4, 0, scale, scale)
+  love.graphics.translate(self.tx-self.tx/4,0)
+  for i=3, #self.map.layers-2 do
+    self.map.layers[i]:draw(self.tx, 0, scale, scale)
+  end
   self:drawEntities()
   hero:draw()                     -- draw the hero
   love.graphics.pop()              -- go back to previous graphics parameters

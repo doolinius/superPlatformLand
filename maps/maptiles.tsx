@@ -350,7 +350,7 @@
  </tile>
  <tile id="463">
   <properties>
-   <property name="blockType" value="solid"/>
+   <property name="blockType" value="greenBrick"/>
   </properties>
  </tile>
  <tile id="464">

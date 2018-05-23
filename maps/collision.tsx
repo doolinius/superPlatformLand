@@ -15,7 +15,7 @@
  </tile>
  <tile id="2">
   <properties>
-   <property name="blockType" value="solid"/>
+   <property name="blockType" value="invisible"/>
    <property name="colType" value="cross"/>
   </properties>
  </tile>

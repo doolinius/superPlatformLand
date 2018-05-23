@@ -32,13 +32,13 @@ function inheritsFrom( baseClass )
     return new_class
 end
 
-Entity = {}
+Entity = {entityType = "effect"}
 Entity.__index = Entity
 
 function Entity:Create(def)
   local this = {
-    x = def.x,
-    y = def.y,
+    x = def.x or 0,
+    y = def.y or 0,
     x_speed = def.x_speed or 0,
     y_speed = def.y_speed or 0,
     image = def.image,
@@ -56,6 +56,7 @@ function Entity:Create(def)
   return(this)
 end
 
+
 function Entity:update(dt)
   self.animation:update(dt)
   if self.duration == 0 then
@@ -68,7 +69,7 @@ function Entity:update(dt)
         self.y = self.y + self.y_speed
       end
       self.x = self.x + self.x_speed * self.facing
-      local actualX, actualY, cols, len = world:move(self, self.x, self.y)
+      --local actualX, actualY, cols, len = world:move(self, self.x, self.y)
       -- dammit, have to collide this thing
     end
   end
@@ -82,36 +83,111 @@ function Entity:draw()
   self.animation:draw(self.image, self.x, self.y, 0, self.facing, 1, offset, 0)
 end
 
+
 --Block = inheritsFrom(Entity)
 
-Block = {}
+Block = {entityType = "block"}
 Block.__index = Block
 
 function Block:Create(def)
   local this = {
-    x = def.x,
-    y = def.y,
-    x_speed = def.x_speed or nil,
-    y_speed = def.y_speed or nil,
+    x = def.x or 0,
+    y = def.y or 0,
+    ox = def.x or 0,
+    oy = def.y or 0,
+    x_speed = def.x_speed or 0,
+    y_speed = def.y_speed or 0,
+    image = def.image,
     animation = nil,
     gravity = def.gravity or false,
+    gravityFactor = def.gravityFactor or 1,
     friction = def.friction or 1,
     points = def.points or 0,
     inside = nil, -- somehow add collectibles to blocks
-    type = def.type or "breakable"
+    type = def.type or "breakable",
+    breakFrames = def.breakFrames or nil,
+    moveable = def.moveable or false,
+    enabled = true,
+    inBonk = false
   }
+  local a = def.animation
+  this.animation = anim8.newAnimation(a.grid(unpack(a.frames)), a.duration)
 
   setmetatable(this, self)
-  --self.__index = self
   return(this)
+end
+
+function Block:makeBreakFrames()
+  local breakEffects = {}
+  local def = {
+    x = self.x,
+    y = self.y,
+    x_speed = -0.75,
+    y_speed = -2.5,
+    image = self.image,
+    gravity = true,
+    duration = 3,
+    animation = self.breakFrames[1]
+  }
+  local upperLeft = Entity:Create(def)
+
+  def.x = self.x + 8
+  def.x_speed = 0.75
+  def.animation = self.breakFrames[2]
+
+  local upperRight = Entity:Create(def)
+
+  def.x = self.x
+  def.y = self.y + 8
+  def.x_speed = -0.75
+  def.y_speed = -1.5
+  def.animation = self.breakFrames[3]
+
+  local lowerLeft = Entity:Create(def)
+
+  def.x = self.x + 8
+  def.x_speed = 0.75
+  def.animation = self.breakFrames[4]
+
+  local lowerRight = Entity:Create(def)
+
+  table.insert(breakEffects, upperLeft)
+  table.insert(breakEffects, upperRight)
+  table.insert(breakEffects, lowerLeft)
+  table.insert(breakEffects, lowerRight)
+
+  return(breakEffects)
+
+end
+
+function Block:setPosition(x, y)
+  self.x = x
+  self.y = y
+  self.ox = x
+  self.oy = y
+end
+
+function Block:bonk()
+  self.inBonk = true
+  self.y_speed = -0.65
 end
 
 function Block:update(dt)
   self.animation:update(dt)
+  if self.inBonk then
+    self.y_speed = self.y_speed + gravity * dt * self.gravityFactor
+  end
   if self.x_speed ~= 0 or self.y_speed ~= 0 then
     self.x = self.x + self.x_speed
     self.y = self.y + self.y_speed
-    local actualX, actualY, cols, len = world:move(self, self.x, self.y)
+    if self.y >= self.oy then
+      self.y = self.oy
+      self.inBonk = false
+      self.y_speed = 0
+    end
+    local actualX, actualY, cols, len = world:move(self, self.x, self.y, colFilter)
+    --self.x = actualX
+    --self.y = actualY
   end
 end
 
@@ -127,7 +203,7 @@ function Block:collide(object)
 
 end
 
-Collectible = {}
+Collectible = {entityType = "collectible"}
 Collectible.__index = Collectible
 
 function Collectible:Create(def)
@@ -136,12 +212,18 @@ function Collectible:Create(def)
     y = def.y,
     x_speed = def.x_speed or 0,
     y_speed = def.y_speed or 0,
-    entityType = def.entityType,
-    animation = gCollectibleAnims[def.collectibleType],
-    points = def.points or 0
+    type = def.type,
+    image = def.image,
+    animation = gCollectibleGraphics[def.type],
+    points = def.points or 0,
+    enabled = true
   }
-
-  --local g = anim8.newGrid(def.frames, def.duration)
+  -- create animation.  grid not necessary.
+  -- so in graphics.lua, create Images and Grids
+  -- in entity_defs.lua, create definition tables with information to create
+  -- new instances of the animation
+  local a = def.animation
+  this.animation = anim8.newAnimation(a.grid(unpack(a.frames)), a.duration)
 
   setmetatable(this, self)
   return(this)

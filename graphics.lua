@@ -10,6 +10,9 @@ hudGrid = anim8.newGrid(8, 8, hudImage:getDimensions())
 characterImage = love.graphics.newImage("graphics/characters.png")
 characterGrid = anim8.newGrid(16, 16, characterImage:getDimensions())
 characterGrid8 = anim8.newGrid(8, 8, characterImage:getDimensions())
+-- block tiles
+tilesImage = love.graphics.newImage("maps/maptiles.png")
+tilesGrid = anim8.newGrid(16, 16, tilesImage:getDimensions())
 -- Title screen graphics
 titleImage = love.graphics.newImage("graphics/title.png")
 startImage = love.graphics.newImage("graphics/pressStart.png")
@@ -36,22 +39,37 @@ hud = {
 local tg = anim8.newGrid(16, 16, itemsImage:getDimensions())
 local g = anim8.newGrid(8, 8, hudImage:getDimensions())
 
-collectibleAnims = {}
+gBlockGraphics = {
+  greenBrick = {grid=tilesGrid, frames = {'13-13', 12}, duration=0.1},
+  greenBreak = {grid=itemsGrid, frames = {'1-1', 5}, duration=0.1},
+  box = {grid=itemsGrid, frames = {'1-1', 3}, duration=0.1},
+  redMove = {grid=itemsGrid, frames = {'4-4', 3}, duration=0.1},
+  spikes = {grid=itemsGrid, frames = {'8-8', 3}, duration=0.1},
+  invisible = {grid=itemsGrid, frames = {'6-6', 1}, duration=0.1}
+}
 
-clcTables = {
-  heart = {grid=g,frames={'9-10',2,'10-10',1,'10-10',2}, duration=0.2},
-  coin = {grid=tg,frames={'2-5',6}, duration=0.25},
+gBreakFrames = {
+  box = {
+    {grid=itemsGrid8, frames = {'3-3',5}, duration=0.1},
+    {grid=itemsGrid8, frames = {'4-4',5}, duration=0.1},
+    {grid=itemsGrid8, frames = {'3-3',6}, duration=0.1},
+    {grid=itemsGrid8, frames = {'4-4',6}, duration=0.1}
+  },
+  greenBreak = {
+    {grid=itemsGrid8, frames = {'3-3',9}, duration=0.1},
+    {grid=itemsGrid8, frames = {'4-4',9}, duration=0.1},
+    {grid=itemsGrid8, frames = {'3-3',10}, duration=0.1},
+    {grid=itemsGrid8, frames = {'4-4',10}, duration=0.1}
+  }
+}
+
+gCollectibleGraphics = {
+  coin = {grid=itemsGrid, frames={'2-5',6}, duration=0.2},
+  heart = {grid=hudGrid, frames={'9-10',2,'10-10',1,'10-10',2}, duration=0.2}
+}
+
+gEffectGraphics = {
   coinSparkle = {grid = itemsGrid, frames={'6-9', 6}, duration = 0.1}
-}
-
-gEffectsAnims = {
-  coinSparkle = anim8.newAnimation(itemsGrid(unpack(clcTables.coinSparkle.frames)), clcTables.coinSparkle.duration, 'pauseAtEnd')
-}
-
-clcImages = {
-  heart = hudImage,
-  coin = itemsImage,
-  coinSparkle = itemsImage
 }
 
 gProjectileGraphics = {

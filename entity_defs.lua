@@ -41,12 +41,66 @@ gProjectileDefs = {
 gEffectDefs = {
   coinSparkle = {
     image = itemsImage,
-    animation = clcTables.coinSparkle,
+    animation = gEffectGraphics.coinSparkle,
     x_speed = 0,
     y_speed = 0,
     facing = 1,
     gravity = false,
     duration = 0.4
+  }
+}
+
+gCollectibleDefs = {
+  coin = {
+    type = "coin",
+    image = itemsImage,
+    animation = gCollectibleGraphics.coin,
+    points = 100
+  },
+  heart = {
+    type = "heart",
+    image = hudImage,
+    animation = gCollectibleGraphics.heart,
+    points = 500
+  }
+}
+
+gBlockDefs = {
+  greenBrick = {
+    image = tilesImage,
+    animation = gBlockGraphics.greenBrick,
+    type = "bonkable",
+    gravityFactor = 1
+  },
+  greenBreak = {
+    image = itemsImage,
+    animation = gBlockGraphics.greenBreak,
+    type = "breakable",
+    breakFrames = gBreakFrames.greenBreak
+  },
+  box = {
+    image = itemsImage,
+    animation = gBlockGraphics.box,
+    type = "breakable",
+    breakFrames = gBreakFrames.box,
+    moveable = true
+  },
+  redMove = {
+    image = itemsImage,
+    animation = gBlockGraphics.redMove,
+    type = "solid",
+    gravity = true,
+    moveable = true
+  },
+  spikes = {
+    type = "death",
+    image = itemsImage,
+    animation = gBlockGraphics.spikes,
+  },
+  invisible = {
+    type = "invisible",
+    image = itemsImage,
+    animation = gBlockGraphics.invisible
   }
 }
 

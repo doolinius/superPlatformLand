@@ -21,12 +21,12 @@
  </tile>
  <tile id="18">
   <properties>
-   <property name="blockType" value="breakable"/>
+   <property name="blockType" value="box"/>
   </properties>
  </tile>
  <tile id="21">
   <properties>
-   <property name="blockType" value="pushable"/>
+   <property name="blockType" value="redMove"/>
   </properties>
  </tile>
  <tile id="23">
@@ -36,12 +36,12 @@
  </tile>
  <tile id="25">
   <properties>
-   <property name="blockType" value="death"/>
+   <property name="blockType" value="spikes"/>
   </properties>
  </tile>
  <tile id="36">
   <properties>
-   <property name="blockType" value="breakable"/>
+   <property name="blockType" value="greenBreak"/>
   </properties>
  </tile>
  <tile id="39">
