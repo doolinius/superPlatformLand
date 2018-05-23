@@ -187,6 +187,8 @@ function breakBlock(block)
   world:remove(block)
   block.enabled = false
 
+  sounds.breakBlock:stop()
+  sounds.breakBlock:play()
     -- create break effect
   local breakFrames = block:makeBreakFrames()
   for _, f in pairs(breakFrames) do

@@ -14,5 +14,6 @@ sounds = {
   start = love.audio.newSource("sounds/gameStart.ogg","static"),
   heart = love.audio.newSource("sounds/pickup.wav", "static"),
   tinyHop = love.audio.newSource("sounds/tinyHop.ogg", "static"),
-  punch = love.audio.newSource("sounds/punch.ogg","static")
+  punch = love.audio.newSource("sounds/punch.ogg","static"),
+  breakBlock = love.audio.newSource("sounds/slam.mp3", "static")
 }
