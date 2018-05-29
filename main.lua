@@ -28,7 +28,7 @@ function love.load()
   Gamestate.registerEvents()
   Gamestate.switch(startScreen, "hero", "1-1")
 
-  gravity = 4.5
+  gravity = -4.5
 
   score = 0
   lives = 2

@@ -87,7 +87,7 @@ function playLevel:enter(previous, heroName, level)
   effects = {}
   blocks = {}
 
-  local cLayer = self.map.layers[6]
+  local cLayer = self.map.layers["collectibles"]
   for y=1, cLayer.height do
     for x=1, cLayer.width do
       local tile = cLayer.data[y][x]
@@ -95,11 +95,6 @@ function playLevel:enter(previous, heroName, level)
         local c = Collectible:Create(gCollectibleDefs[tile.properties.type])--{}
         c.x = (x-1) * 16
         c.y = (y-1) * 16
-        --c.entityType = "collectible"
-        --c.type = tile.properties.type
-        --local anim = clcTables[c.type]
-        --c.animation = anim8.newAnimation(anim.grid(unpack(anim.frames)),anim.duration)
-        --print("Adding " .. c.type .. " at x:" .. c.x .. " y:" .. c.y)
         table.insert(collectibles, c)
         world:add(c, c.x, c.y, c.animation:getDimensions())
       end
@@ -107,7 +102,7 @@ function playLevel:enter(previous, heroName, level)
   end
 
   -- add all of the enemies
-  local eLayer = self.map.layers[7]
+  local eLayer = self.map.layers["enemies"]
   for y=1, eLayer.height do
     for x=1, eLayer.width do
       local tile = eLayer.data[y][x]
@@ -123,7 +118,7 @@ function playLevel:enter(previous, heroName, level)
   end
 
   -- add all interactive blocks
-  local bLayer = self.map.layers[5]
+  local bLayer = self.map.layers["blocks"]
   for y=1, bLayer.height do
     for x=1, bLayer.width do
       local tile = bLayer.data[y][x]
@@ -139,9 +134,9 @@ function playLevel:enter(previous, heroName, level)
     end
   end
 
-  self.map:removeLayer(7)
-  self.map:removeLayer(6)
-  self.map:removeLayer(5)
+  --self.map:removeLayer(7)
+  --self.map:removeLayer(6)
+  --self.map:removeLayer(5)
 
   hero = Character:Create(playerDefs[heroName], self.map)
   log.trace("Created here: " .. playerDefs[heroName].image)
@@ -282,20 +277,20 @@ function playLevel:drawHUD()
 end
 
 function playLevel:drawEntities()
-  for _,e in ipairs(enemies) do   -- loop through and draw enemies
-    e:draw()
-  end
   for _,c in pairs(collectibles) do -- loop through and draw collectibles
     c:draw()
+  end
+  for _,e in ipairs(enemies) do   -- loop through and draw enemies
+    e:draw()
   end
   for _, p in ipairs(projectiles) do
     p:draw()
   end
-  for _, effect in ipairs(effects) do
-    effect:draw()
-  end
   for _, block in ipairs(blocks) do
     block:draw()
+  end
+  for _, effect in ipairs(effects) do
+    effect:draw()
   end
 end
 
@@ -303,13 +298,22 @@ function playLevel:draw()
   --log.trace("PlayLevel DRAW")
   love.graphics.scale(scale,scale) -- set the proper scale
   love.graphics.push()             -- save current graphics parameters
+
+  -- translate background layers less than foreground to create
+  -- parallax scrolling
   love.graphics.translate(self.tx/4,0)    -- translate the camera
   --self.map:draw(self.tx, 0, scale, scale)    -- draw the map based on the translation
   self.map.layers[1]:draw(self.tx/4, 0, scale, scale)
   self.map.layers[2]:draw(self.tx/4, 0, scale, scale)
-  love.graphics.translate(self.tx-self.tx/4,0)
-  for i=3, #self.map.layers-2 do
-    self.map.layers[i]:draw(self.tx, 0, scale, scale)
+
+  -- translate all other layers at normal value
+  love.graphics.pop()
+  love.graphics.push()
+  love.graphics.translate(self.tx,0)
+  for i=3, #self.map.layers do
+    if self.map.layers[i].visible then
+      self.map.layers[i]:draw(self.tx, 0, scale, scale)
+    end
   end
   self:drawEntities()
   hero:draw()                     -- draw the hero

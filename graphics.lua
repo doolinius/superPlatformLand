@@ -73,6 +73,8 @@ gEffectGraphics = {
 }
 
 gProjectileGraphics = {
-  punch = {image = heroImage, quad = love.graphics.newQuad(3*16, 5*16, 16, 16, characterImage:getDimensions())},
-  kick = {image = heroImage, quad = love.graphics.newQuad(4*16, 5*16, 16, 16, characterImage:getDimensions())}
+  punch = {grid = characterGrid, frames={'4-4', 24}, duration = 0.1},
+  kick =  {grid = characterGrid, frames={'5-5', 24}, duration = 0.1}
+  --punch = {image = heroImage, quad = love.graphics.newQuad(3*16, 5*16, 16, 16, characterImage:getDimensions())},
+  --kick = {image = heroImage, quad = love.graphics.newQuad(4*16, 5*16, 16, 16, characterImage:getDimensions())}
 }

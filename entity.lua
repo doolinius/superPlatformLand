@@ -65,7 +65,7 @@ function Entity:update(dt)
     self.duration = math.max(0, self.duration - dt)
     if self.gravity or self.y_speed ~= 0 or self.x_speed ~= 0 then
       if self.gravity then
-        self.y_speed = self.y_speed + gravity * dt
+        self.y_speed = self.y_speed - gravity * dt
         self.y = self.y + self.y_speed
       end
       self.x = self.x + self.x_speed * self.facing
@@ -175,7 +175,7 @@ end
 function Block:update(dt)
   self.animation:update(dt)
   if self.inBonk then
-    self.y_speed = self.y_speed + gravity * dt * self.gravityFactor
+    self.y_speed = self.y_speed - gravity * dt * self.gravityFactor
   end
   if self.x_speed ~= 0 or self.y_speed ~= 0 then
     self.x = self.x + self.x_speed

@@ -11,9 +11,12 @@ function Projectile:Create(def, x, y)
     x_speed = def.x_speed,
     distance = def.distance,
     dx = 0,
-    graphic = gProjectileGraphics[def.type],
+    image = def.image, gProjectileGraphics[def.type],
+    animation = nil,
     enabled = true
   }
+  local a = def.animation
+  this.animation = anim8.newAnimation(a.grid(unpack(a.frames)), a.duration)
 
   setmetatable(this, self)
   return(this)
@@ -32,5 +35,5 @@ function Projectile:draw()
   if self.facing == -1 then
     offset = 16
   end
-  love.graphics.draw(self.graphic.image, self.graphic.quad, self.x, self.y, 0, self.facing, 1, offset, 0)
+  self.animation:draw(self.image, self.x, self.y, 0, self.facing, 1, offset, 0)
 end

@@ -110,7 +110,7 @@ function IdleState:update(dt)
 
 	-- update the Y value according to gravity
 	--self.character.y_speed = self.character.jump_force
-	self.character.y = self.character.y + gravity
+	self.character.y = self.character.y - gravity
 	-- check for collisions
 	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	--log.trace("Attempted X:" .. self.character.x .. " Y:" .. self.character.y)
@@ -174,7 +174,7 @@ function RunState:update(dt)
 
 		-- update the Y value according to gravity
 		--self.character.y_speed = self.character.jump_force
-		self.character.y = self.character.y + gravity
+		self.character.y = self.character.y - gravity
 
 		local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 
@@ -237,7 +237,7 @@ function FallState:update(dt)
 	self.character.py = self.character.y
 
 	self.character.animation:update(dt)
-	self.character.y_speed = self.character.y_speed - gravity * dt
+	self.character.y_speed = self.character.y_speed + gravity * dt
 	self.character.y = self.character.y - self.character.y_speed
 
 	if (love.keyboard.isDown('a')) then
@@ -317,7 +317,7 @@ function JumpState:update(dt)
 	self.character.py = self.character.y
 
 	self.character.animation:update(dt)
-	self.character.y_speed = self.character.y_speed - gravity * dt
+	self.character.y_speed = self.character.y_speed + gravity * dt
 	self.character.y = self.character.y - self.character.y_speed
 
 	if (love.keyboard.isDown('a')) then
@@ -421,7 +421,7 @@ end
 function DeathState:update(dt)
 	self.character.animation:update(dt)
 	-- if the player presses the jump key/button...
-	self.character.y_speed = self.character.y_speed - gravity * 2 * dt
+	self.character.y_speed = self.character.y_speed + gravity * 2 * dt
 	self.character.y = self.character.y - self.character.y_speed
 
 end
@@ -644,7 +644,7 @@ function HopState:update(dt)
 	end
 
 	self.character.x = self.character.x + self.character.speed * self.character.facing
-	self.character.y_speed = self.character.y_speed - gravity * dt
+	self.character.y_speed = self.character.y_speed + gravity * dt
 	self.character.y = self.character.y - self.character.y_speed
 	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	self.character.x = actualX
