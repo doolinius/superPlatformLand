@@ -39,8 +39,8 @@ function Entity:Create(def)
   local this = {
     x = def.x or 0,
     y = def.y or 0,
-    x_speed = def.x_speed or 0,
-    y_speed = def.y_speed or 0,
+    xVelocity = def.xVelocity or 0,
+    yVelocity = def.yVelocity or 0,
     image = def.image,
     animation = nil,
     facing = def.facing or 1,
@@ -63,12 +63,12 @@ function Entity:update(dt)
     self.enabled = false
   else
     self.duration = math.max(0, self.duration - dt)
-    if self.gravity or self.y_speed ~= 0 or self.x_speed ~= 0 then
+    if self.gravity or self.yVelocity ~= 0 or self.xVelocity ~= 0 then
       if self.gravity then
-        self.y_speed = self.y_speed - gravity * dt
-        self.y = self.y + self.y_speed
+        self.yVelocity = self.yVelocity - gravity * dt
+        self.y = self.y + self.yVelocity * dt
       end
-      self.x = self.x + self.x_speed * self.facing
+      self.x = self.x + self.xVelocity * self.facing
       --local actualX, actualY, cols, len = world:move(self, self.x, self.y)
       -- dammit, have to collide this thing
     end
@@ -95,8 +95,8 @@ function Block:Create(def)
     y = def.y or 0,
     ox = def.x or 0,
     oy = def.y or 0,
-    x_speed = def.x_speed or 0,
-    y_speed = def.y_speed or 0,
+    xVelocity = def.xVelocity or 0,
+    yVelocity = def.yVelocity or 0,
     image = def.image,
     animation = nil,
     gravity = def.gravity or false,
@@ -122,8 +122,8 @@ function Block:makeBreakFrames()
   local def = {
     x = self.x,
     y = self.y,
-    x_speed = -0.75,
-    y_speed = -2.5,
+    xVelocity = -0.75,
+    yVelocity = -150,
     image = self.image,
     gravity = true,
     duration = 3,
@@ -132,21 +132,21 @@ function Block:makeBreakFrames()
   local upperLeft = Entity:Create(def)
 
   def.x = self.x + 8
-  def.x_speed = 0.75
+  def.xVelocity = 0.75
   def.animation = self.breakFrames[2]
 
   local upperRight = Entity:Create(def)
 
   def.x = self.x
   def.y = self.y + 8
-  def.x_speed = -0.75
-  def.y_speed = -1.5
+  def.xVelocity = -0.75
+  def.yVelocity = -100
   def.animation = self.breakFrames[3]
 
   local lowerLeft = Entity:Create(def)
 
   def.x = self.x + 8
-  def.x_speed = 0.75
+  def.xVelocity = 0.75
   def.animation = self.breakFrames[4]
 
   local lowerRight = Entity:Create(def)
@@ -169,21 +169,21 @@ end
 
 function Block:bonk()
   self.inBonk = true
-  self.y_speed = -0.65
+  self.yVelocity = -50
 end
 
 function Block:update(dt)
   self.animation:update(dt)
   if self.inBonk then
-    self.y_speed = self.y_speed - gravity * dt * self.gravityFactor
+    self.yVelocity = self.yVelocity - gravity * dt * self.gravityFactor
   end
-  if self.x_speed ~= 0 or self.y_speed ~= 0 then
-    self.x = self.x + self.x_speed
-    self.y = self.y + self.y_speed
+  if self.xVelocity ~= 0 or self.yVelocity ~= 0 then
+    self.x = self.x + self.xVelocity * dt
+    self.y = self.y + self.yVelocity * dt
     if self.y >= self.oy then
       self.y = self.oy
       self.inBonk = false
-      self.y_speed = 0
+      self.yVelocity = 0
     end
     local actualX, actualY, cols, len = world:move(self, self.x, self.y, colFilter)
     --self.x = actualX
@@ -210,8 +210,8 @@ function Collectible:Create(def)
   local this = {
     x = def.x,
     y = def.y,
-    x_speed = def.x_speed or 0,
-    y_speed = def.y_speed or 0,
+    xVelocity = def.xVelocity or 0,
+    yVelocity = def.yVelocity or 0,
     type = def.type,
     image = def.image,
     animation = gCollectibleGraphics[def.type],

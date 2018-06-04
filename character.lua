@@ -8,14 +8,16 @@ function Character:Create(def, map) -- definition table
     image = love.graphics.newImage("graphics/" .. def.image),
     x = def.x, -- x position on screen
     y = def.y, -- y position on screen
-    px = def.x,
-    py = def.y,
+    px = def.x, -- previous x position
+    py = def.y, -- previous y position
     entityType = def.entityType, -- type of entity (enemy, hero, npc, etc.)
-    top_speed = def.speed, -- fastest possible X speed
-    speed = 0, -- current speed of the Character
-    facing = def.facing, -- 1 for facing right, -1 for facing left
+    maxSpeed = def.maxSpeed, -- fastest possible X speed
+    acc = def.acc, -- acceleration
+    friction = def.friction, -- friction (slowing force)
+    xVelocity = 0, -- current speed of the Character
+    yVelocity = 0,
     jump_force = def.jump_force,  -- initial y speed when taking off from a jump
-    y_speed = def.y_speed,
+    facing = def.facing, -- 1 for facing right, -1 for facing left
     maxHp = def.maxHp,
     hp = def.hp,
     ledgeBounce = def.ledgeBounce or false,
@@ -57,7 +59,6 @@ end
 
 function Character:update(dt)
     self.controller:update(dt)
-
 end
 
 function Character:draw()
@@ -66,5 +67,5 @@ function Character:draw()
     offset = 16
   end
   self.animation:draw(self.image, self.x, self.y, 0, self.facing, 1, offset, 0)
-  self.controller:draw()
+  --self.controller:draw()
 end

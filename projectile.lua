@@ -8,7 +8,7 @@ function Projectile:Create(def, x, y)
     y = y,
     entityType = "projectile",
     facing = def.facing or 1,
-    x_speed = def.x_speed,
+    xVelocity = def.maxSpeed,
     distance = def.distance,
     dx = 0,
     image = def.image, gProjectileGraphics[def.type],
@@ -23,8 +23,8 @@ function Projectile:Create(def, x, y)
 end
 
 function Projectile:update(dt)
-  self.x = self.x + self.x_speed * self.facing
-  self.dx = self.dx + self.x_speed
+  self.x = self.x + self.xVelocity * dt * self.facing
+  self.dx = self.dx + self.xVelocity * dt
   if self.dx >= self.distance then
     self.enabled = false
   end

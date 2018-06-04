@@ -109,7 +109,7 @@ function IdleState:update(dt)
 	end
 
 	-- update the Y value according to gravity
-	--self.character.y_speed = self.character.jump_force
+	--self.character.yVelocity = self.character.jump_force
 	self.character.y = self.character.y - gravity
 	-- check for collisions
 	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
@@ -126,8 +126,8 @@ end
 
 function IdleState:enter()
 	--print(inspect(self.character))
-	self.character.speed = 0
-	self.character.y_speed = 0
+	self.character.xVelocity = 0
+	self.character.yVelocity = 0
 	self.character.animation = self.character.animations.idle
 end
 
@@ -149,6 +149,8 @@ end
 function RunState:update(dt)
 	-- always update the animation frame
 	self.character.animation:update(dt)
+	self.character.x = self.character.x + self.character.xVelocity * dt
+	self.character.y = self.character.y + self.character.yVelocity * dt
 
   -- if the player presses the jump key/button...
 	if (love.keyboard.isDown('space')) then
@@ -156,25 +158,26 @@ function RunState:update(dt)
 	else
 		-- otherwise, move them left or right
 		if (love.keyboard.isDown('a')) then
-			self.character.speed = math.max(-self.character.top_speed, self.character.speed - 6 * dt)
-			self.character.x = self.character.x + self.character.speed
+			self.character.xVelocity = math.max(-self.character.maxSpeed, self.character.xVelocity - self.character.acc * dt)
+			--self.character.x = self.character.x + self.character.xVelocity * dt
 			self.character.facing = -1
 		elseif (love.keyboard.isDown('d')) then
-			self.character.speed = math.min(self.character.top_speed, self.character.speed + 6 * dt)
-			self.character.x = self.character.x + self.character.speed
+			self.character.xVelocity = math.min(self.character.maxSpeed, self.character.xVelocity + self.character.acc * dt)
+			--self.character.x = self.character.x + self.character.xVelocity * dt
 			self.character.facing = 1
 		else
-			self.character.speed = math.max(0, self.character.speed - 5 * dt)
-			self.character.x = self.character.x + self.character.speed * self.character.facing
-			if self.character.speed == 0 then
+			self.character.xVelocity = math.max(0, self.character.xVelocity - self.character.acc * dt)
+			--self.character.x = self.character.x + self.character.xVelocity * dt * self.character.facing
+			if self.character.xVelocity == 0 then
 				self.character.animation = self.character.animations.idle
 				self.character.controller:change("idle")
 			end
 		end
 
 		-- update the Y value according to gravity
-		--self.character.y_speed = self.character.jump_force
-		self.character.y = self.character.y - gravity
+		--self.character.yVelocity = self.character.jump_force
+		--self.character.yVelocity = self.character.yVelocity + gravity * dt
+		self.character.y = self.character.y - gravity * dt --self.character.yVelocity
 
 		local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 
@@ -198,6 +201,9 @@ function RunState:update(dt)
 					self.character.controller:change("death")
 	      end
 	    end
+		else
+			log.trace("NO collisions")
+			self.character.controller:change("fall")
 		end
 
 	end
@@ -237,16 +243,16 @@ function FallState:update(dt)
 	self.character.py = self.character.y
 
 	self.character.animation:update(dt)
-	self.character.y_speed = self.character.y_speed + gravity * dt
-	self.character.y = self.character.y - self.character.y_speed
+	self.character.yVelocity = self.character.yVelocity + gravity * dt
+	self.character.y = self.character.y - self.character.yVelocity * dt
 
 	if (love.keyboard.isDown('a')) then
-		self.character.speed = math.max(-self.character.top_speed, self.character.speed - 6 * dt)
-		self.character.x = self.character.x + self.character.speed
+		self.character.xVelocity = math.max(-self.character.maxSpeed, self.character.xVelocity - self.character.maxSpeed * 4 * dt)
+		self.character.x = self.character.x + self.character.xVelocity * dt
 		self.character.facing = -1
 	elseif (love.keyboard.isDown('d')) then
-		self.character.speed = math.min(self.character.top_speed, self.character.speed + 6 * dt)
-		self.character.x = self.character.x + self.character.speed
+		self.character.xVelocity = math.min(self.character.maxSpeed, self.character.xVelocity + self.character.maxSpeed * 4 * dt)
+		self.character.x = self.character.x + self.character.xVelocity * dt
 		self.character.facing = 1
 	end
 
@@ -276,10 +282,10 @@ function FallState:update(dt)
 			else
 				self.character.controller:change("idle")
 			end
-		-- if the hero collides with a tile above, set y_speed to 0 to allow
+		-- if the hero collides with a tile above, set yVelocity to 0 to allow
 		-- immediate falling
 		elseif c.type == "slide" and c.normal.y == 1 then
-			self.character.y_speed = 0
+			self.character.yVelocity = 0
 		end
 	end
 end
@@ -290,7 +296,7 @@ function FallState:draw()
 end
 
 function FallState:enter()
-	self.character.y_speed = 0
+	self.character.yVelocity = 0
 	self.character.animation = self.character.animations.fall
 end
 
@@ -317,21 +323,21 @@ function JumpState:update(dt)
 	self.character.py = self.character.y
 
 	self.character.animation:update(dt)
-	self.character.y_speed = self.character.y_speed + gravity * dt
-	self.character.y = self.character.y - self.character.y_speed
+	self.character.yVelocity = self.character.yVelocity + gravity * dt
+	self.character.y = self.character.y - self.character.yVelocity * dt
 
 	if (love.keyboard.isDown('a')) then
-		self.character.speed = math.max(-self.character.top_speed, self.character.speed - 6 * dt)
-		self.character.x = self.character.x + self.character.speed
+		self.character.xVelocity = math.max(-self.character.maxSpeed, self.character.xVelocity - self.character.maxSpeed * 4 * dt)
+		self.character.x = self.character.x + self.character.xVelocity * dt
 		self.character.facing = -1
 	elseif (love.keyboard.isDown('d')) then
-		self.character.speed = math.min(self.character.top_speed, self.character.speed + 6 * dt)
-		self.character.x = self.character.x + self.character.speed
+		self.character.xVelocity = math.min(self.character.maxSpeed, self.character.xVelocity + self.character.maxSpeed * 4 * dt)
+		self.character.x = self.character.x + self.character.xVelocity * dt
 		self.character.facing = 1
 	end
 
-	if (not love.keyboard.isDown('space') and self.character.y_speed > 0) then
-		self.character.y_speed = 0
+	if (not love.keyboard.isDown('space') and self.character.yVelocity > 0) then
+		self.character.yVelocity = 0
 	end
 
 	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
@@ -364,7 +370,7 @@ function JumpState:update(dt)
 					print("BONK")
 					c.other:bonk()
 				end
-				self.character.y_speed = -self.character.y_speed / 4
+				self.character.yVelocity = -self.character.yVelocity / 4
 			end
 
 		-- Handle collision with a projectile
@@ -379,10 +385,10 @@ function JumpState:update(dt)
 			else
 				self.character.controller:change("idle")
 			end
-		-- if the hero collides with a tile above, set y_speed to 0 to allow
+		-- if the hero collides with a tile above, set yVelocity to 0 to allow
 		-- immediate falling
 		elseif c.type == "slide" and c.normal.y == 1 then
-			self.character.y_speed = 0
+			self.character.yVelocity = 0
 		end
 	end
 end
@@ -395,7 +401,7 @@ function JumpState:draw()
 end
 
 function JumpState:enter()
-	self.character.y_speed = self.character.jump_force
+	self.character.yVelocity = self.character.jump_force
 	self.character.animation = self.character.animations.jump
 	self.character.animation:resume()
 	self.character.animation:gotoFrame(1)
@@ -421,8 +427,8 @@ end
 function DeathState:update(dt)
 	self.character.animation:update(dt)
 	-- if the player presses the jump key/button...
-	self.character.y_speed = self.character.y_speed + gravity * 2 * dt
-	self.character.y = self.character.y - self.character.y_speed
+	self.character.yVelocity = self.character.yVelocity + gravity * 2 * dt
+	self.character.y = self.character.y - self.character.yVelocity * dt
 
 end
 
@@ -432,8 +438,8 @@ end
 
 function DeathState:enter()
 	--print(inspect(self.character))
-	self.character.speed = 0
-	self.character.y_speed = self.character.jump_force
+	self.character.xVelocity = 0
+	self.character.yVelocity = self.character.jump_force
 	self.character.animation = self.character.animations.death
 end
 
@@ -454,8 +460,8 @@ end
 function PunchState:update(dt)
 	self.character.animation:update(dt)
 	-- if the player presses the jump key/button...
-	--self.character.y_speed = self.character.y_speed - gravity * 2 * dt
-	--self.character.y = self.character.y - self.character.y_speed
+	--self.character.yVelocity = self.character.yVelocity - gravity * 2 * dt
+	--self.character.y = self.character.y - self.character.yVelocity
 	if self.character.animation.position == 4 then
 		if love.keyboard.isDown('a') then
 			self.character.facing = -1
@@ -475,8 +481,8 @@ end
 
 function PunchState:enter()
 	--print(inspect(self.character))
-	self.character.speed = 0
-	--self.character.y_speed = self.character.jump_force
+	self.character.xVelocity = 0
+	--self.character.yVelocity = self.character.jump_force
 	self.character.animation = self.character.animations.punch
 	sounds.punch:play()
 
@@ -504,7 +510,7 @@ end
 
 function RollState:update(dt)
 	self.character.animation:update(dt)
-	self.character.x = self.character.x + self.character.speed * self.character.facing
+	self.character.x = self.character.x + self.character.xVelocity * dt * self.character.facing
 	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	for i=1,len do
 		if cols[i].normal.x + self.character.facing == 0 then
@@ -518,7 +524,7 @@ function RollState:draw()
 end
 
 function RollState:enter()
-	self.character.speed = self.character.top_speed
+	self.character.xVelocity = self.character.maxSpeed
 	self.character.animation = self.character.animations["roll"]
 end
 
@@ -546,7 +552,7 @@ function FlyState:update(dt)
 		self.timer = self.timer - dt
 	end
 	self.character.animation:update(dt)
-	self.character.x = self.character.x + self.character.speed * self.character.facing
+	self.character.x = self.character.x + self.character.xVelocity * dt * self.character.facing
 	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	self.character.x = actualX
 end
@@ -556,7 +562,7 @@ end
 
 function FlyState:enter()
 	self.timer = 5
-	self.character.speed = self.character.top_speed
+	self.character.xVelocity = self.character.maxSpeed
 	self.character.animation = self.character.animations.fly
 end
 
@@ -638,14 +644,14 @@ end
 
 function HopState:update(dt)
 	self.character.animation:update(dt)
-	if self.character.y_speed <= 0 then
+	if self.character.yVelocity <= 0 then
 		self.character.animation:gotoFrame(2)
 		self.character.animation:pause()
 	end
 
-	self.character.x = self.character.x + self.character.speed * self.character.facing
-	self.character.y_speed = self.character.y_speed + gravity * dt
-	self.character.y = self.character.y - self.character.y_speed
+	self.character.x = self.character.x + self.character.xVelocity * dt * self.character.facing
+	self.character.yVelocity = self.character.yVelocity + gravity * dt
+	self.character.y = self.character.y - self.character.yVelocity * dt
 	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	self.character.x = actualX
 	self.character.y = actualY
@@ -655,10 +661,10 @@ function HopState:update(dt)
 		-- change the state to either idle or run
 		if c.type == "slide" and c.normal.y == -1 then
 			self.character.controller:change("start_hop")
-		-- if the hero collides with a tile above, set y_speed to 0 to allow
+		-- if the hero collides with a tile above, set yVelocity to 0 to allow
 		-- immediate falling
 		elseif c.type == "slide" and c.normal.y == 1 then
-			self.character.y_speed = 0
+			self.character.yVelocity = 0
 		end
 	end
 end
@@ -669,8 +675,8 @@ end
 function HopState:enter()
 	self.character.animation = self.character.animations.hop
 	self.character.animation:gotoFrame(1)
-	self.character.y_speed = self.character.jump_force
-	self.character.speed = self.character.top_speed
+	self.character.yVelocity = self.character.jump_force
+	self.character.xVelocity = self.character.maxSpeed
 	if math.abs(self.character.x - hero.x) < wWidth/scale then
 		sounds.tinyHop:stop()
 		sounds.tinyHop:setVolume(0.75)
@@ -679,7 +685,7 @@ function HopState:enter()
 end
 
 function HopState:exit()
-	self.character.speed = 0
+	self.character.xVelocity = 0
 end
 
 StartHopState = {name="start_hop"}
