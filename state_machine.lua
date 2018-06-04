@@ -166,7 +166,11 @@ function RunState:update(dt)
 			--self.character.x = self.character.x + self.character.xVelocity * dt
 			self.character.facing = 1
 		else
-			self.character.xVelocity = math.max(0, self.character.xVelocity - self.character.acc * dt)
+			local limit = math.max
+			if self.character.facing == -1 then
+				limit = math.min
+			end
+			self.character.xVelocity = limit(0, self.character.xVelocity - self.character.acc * dt * self.character.facing)
 			--self.character.x = self.character.x + self.character.xVelocity * dt * self.character.facing
 			if self.character.xVelocity == 0 then
 				self.character.animation = self.character.animations.idle
@@ -328,13 +332,15 @@ function JumpState:update(dt)
 
 	if (love.keyboard.isDown('a')) then
 		self.character.xVelocity = math.max(-self.character.maxSpeed, self.character.xVelocity - self.character.maxSpeed * 4 * dt)
-		self.character.x = self.character.x + self.character.xVelocity * dt
+		--self.character.x = self.character.x + self.character.xVelocity * dt
 		self.character.facing = -1
 	elseif (love.keyboard.isDown('d')) then
 		self.character.xVelocity = math.min(self.character.maxSpeed, self.character.xVelocity + self.character.maxSpeed * 4 * dt)
-		self.character.x = self.character.x + self.character.xVelocity * dt
+		--self.character.x = self.character.x + self.character.xVelocity * dt
 		self.character.facing = 1
 	end
+
+	self.character.x = self.character.x + self.character.xVelocity * dt
 
 	if (not love.keyboard.isDown('space') and self.character.yVelocity > 0) then
 		self.character.yVelocity = 0
@@ -343,6 +349,9 @@ function JumpState:update(dt)
 	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
 	self.character.x = actualX
 	self.character.y = actualY
+	if self.character.x == self.character.px then
+		self.character.xVelocity = 0
+	end
 	for i=1,len do
 		local c = cols[i]
 		log.trace("# collisions: " .. len)
@@ -380,7 +389,7 @@ function JumpState:update(dt)
 		if c.type == "touch"  and c.other.type == "instadeath" then
 			self.character.controller:change("death")
 		elseif c.type == "slide" and c.normal.y == -1 then
-			if (love.keyboard.isDown('a') or love.keyboard.isDown('d')) then
+			if (love.keyboard.isDown('a') or love.keyboard.isDown('d')) or self.character.xVelocity ~= 0 then
 				self.character.controller:change("run")
 			else
 				self.character.controller:change("idle")
