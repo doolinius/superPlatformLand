@@ -112,11 +112,11 @@ function IdleState:update(dt)
 	--self.character.yVelocity = self.character.jump_force
 	self.character.y = self.character.y - gravity
 	-- check for collisions
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
+	local actualX, actualY, cols, len = world:move(self.character, self.character:colX(), self.character:colY(), colFilter)
 	--log.trace("Attempted X:" .. self.character.x .. " Y:" .. self.character.y)
 	--log.trace("ACTUAL    X:" .. actualX .. " Y:" .. actualY)
-	self.character.x = actualX
-	self.character.y = actualY
+	self.character.x = actualX - self.character.colBox.x
+	self.character.y = actualY - self.character.colBox.y
 
 end
 
@@ -149,8 +149,8 @@ end
 function RunState:update(dt)
 	-- always update the animation frame
 	self.character.animation:update(dt)
-	self.character.x = self.character.x + self.character.xVelocity * dt
-	self.character.y = self.character.y + self.character.yVelocity * dt
+
+	--self.character.y = self.character.y + self.character.yVelocity * dt
 
   -- if the player presses the jump key/button...
 	if (love.keyboard.isDown('space')) then
@@ -180,17 +180,18 @@ function RunState:update(dt)
 
 		-- update the Y value according to gravity
 		--self.character.yVelocity = self.character.jump_force
-		--self.character.yVelocity = self.character.yVelocity + gravity * dt
-		self.character.y = self.character.y - gravity * dt --self.character.yVelocity
+		self.character.yVelocity = self.character.yVelocity + gravity * dt
+		self.character.y = self.character.y - self.character.yVelocity * dt --self.character.yVelocity
 
-		local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
+		self.character.x = self.character.x + self.character.xVelocity * dt
 
+		local actualX, actualY, cols, len = world:move(self.character, self.character:colX(), self.character:colY(), colFilter)
 	  -- if there was a collision
 	  if (len > 0) then
-	    --print("collisions!!")
+	    --print("RUN collisions!!")
 	    -- put the hero where the collision world says he should be
-	    self.character.x = actualX
-	    self.character.y = actualY
+	    self.character.x = actualX - self.character.colBox.x
+	    self.character.y = actualY - self.character.colBox.y
 	    -- after collision detection
 	    for i=1, len do
 	      local c = cols[i]
@@ -203,6 +204,9 @@ function RunState:update(dt)
 
 				elseif c.type == "touch" and c.other.type == "instadeath" then
 					self.character.controller:change("death")
+				elseif c.type == "slide" and c.normal.y == -1 then
+					log.trace("Grounded")
+					self.character.yVelocity = 0
 	      end
 	    end
 		else
@@ -247,7 +251,7 @@ function FallState:update(dt)
 	self.character.py = self.character.y
 
 	self.character.animation:update(dt)
-	self.character.yVelocity = self.character.yVelocity + gravity * dt
+	self.character.yVelocity = math.max(maxFallSpeed, self.character.yVelocity + gravity * dt)
 	self.character.y = self.character.y - self.character.yVelocity * dt
 
 	if (love.keyboard.isDown('a')) then
@@ -260,9 +264,9 @@ function FallState:update(dt)
 		self.character.facing = 1
 	end
 
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
-	self.character.x = actualX
-	self.character.y = actualY
+	local actualX, actualY, cols, len = world:move(self.character, self.character:colX(), self.character:colY(), colFilter)
+	self.character.x = actualX - self.character.colBox.x
+	self.character.y = actualY - self.character.colBox.y
 	if len > 0 then
 		log.trace("# Collisions: " .. len)
 	end
@@ -300,7 +304,7 @@ function FallState:draw()
 end
 
 function FallState:enter()
-	self.character.yVelocity = 0
+	--self.character.yVelocity = 0
 	self.character.animation = self.character.animations.fall
 end
 
@@ -327,7 +331,7 @@ function JumpState:update(dt)
 	self.character.py = self.character.y
 
 	self.character.animation:update(dt)
-	self.character.yVelocity = self.character.yVelocity + gravity * dt
+	self.character.yVelocity = math.max(maxFallSpeed, self.character.yVelocity + gravity * dt)
 	self.character.y = self.character.y - self.character.yVelocity * dt
 
 	if (love.keyboard.isDown('a')) then
@@ -346,9 +350,9 @@ function JumpState:update(dt)
 		self.character.yVelocity = 0
 	end
 
-	local actualX, actualY, cols, len = world:move(self.character, self.character.x, self.character.y, colFilter)
-	self.character.x = actualX
-	self.character.y = actualY
+	local actualX, actualY, cols, len = world:move(self.character, self.character:colX(), self.character:colY(), colFilter)
+	self.character.x = actualX - self.character.colBox.x
+	self.character.y = actualY - self.character.colBox.y
 	if self.character.x == self.character.px then
 		self.character.xVelocity = 0
 	end
@@ -373,7 +377,16 @@ function JumpState:update(dt)
 			if c.other.type == "death" then
 				self.character.controller:change("death")
 			elseif c.other.type == "breakable" and c.normal.y == 1 then
+				log.trace("Breakable block, collision type " .. c.type)
+				if c.type == "cross" then
+					local dx = 1
+					if c.item.x < c.other.x then
+						dx = -1
+					end
+					self.character.x = self.character.x + dx
+				else
 					breakBlock(c.other)
+				end
 			elseif c.other.type == "bonkable" and c.normal.y == 1 then
 				if not c.other.inBonk then
 					print("BONK")

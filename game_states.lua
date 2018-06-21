@@ -140,7 +140,7 @@ function playLevel:enter(previous, heroName, level)
 
   hero = Character:Create(playerDefs[heroName], self.map)
   log.trace("Created here: " .. playerDefs[heroName].image)
-  world:add(hero, hero.x, hero.y, hero.animation:getDimensions())
+  world:add(hero, hero:getCollisionRect())
 
   self.tx = 0
 
@@ -272,7 +272,7 @@ function playLevel:drawHUD()
   love.graphics.draw(hudImage, hud.clock, (wWidth/scale)-6*8, 1)
   printWithShadow(math.floor(self.time), (wWidth/scale)-5*8, 1)
   printWithShadow("hero.x: " .. hero.x, (wWidth/scale)-12*9, 9)
-  printWithShadow("hero.y: " .. hero.y, (wWidth/scale)-12*9, 17)
+  printWithShadow("hero.yV: " .. hero.yVelocity, (wWidth/scale)-12*9, 17)
   printWithShadow("state: " .. hero.controller.current.name, (wWidth/scale)-12*8, 25)
 end
 

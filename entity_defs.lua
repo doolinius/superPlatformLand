@@ -15,13 +15,13 @@ playerDefs = {
     frame_width = 16,
     frame_height = 16,
     animations = {
-      run =  {frames = {'1-6',20}, duration = 0.1},
-      idle = {frames = {'1-3',19}, duration = 0.2},
-      jump = {frames = {'1-1',21}, duration = 0.1},
-      swim = {frames = {'1-6',22}, duration = 0.1},
+      run =  {frames = {'1-6',20}, duration = 0.1, colX=3, colY=2, colW=10, colH=14},
+      idle = {frames = {'1-3',19}, duration = 0.2, colX=3, colY=2, colW=10, colH=14},
+      jump = {frames = {'1-1',21}, duration = 0.1, colX=2, colY=0, colW=12, colH=14},
+      swim = {frames = {'1-6',22}, duration = 0.1, colX=0, colY=3, colW=14, colH=10},
       death = {frames = {'5-5',19}, duration = 0.1},
-      punch = {frames = {'1-2',23,'4-5',23}, duration = 0.1, onLoop='pauseAtEnd'},
-      fall = {frames = {'2-2',20}, duration = 0.1}
+      punch = {frames = {'1-2',23,'4-5',23}, duration = 0.1, onLoop='pauseAtEnd', colX=3, colY=2, colW=10, colH=14},
+      fall = {frames = {'2-2',20}, duration = 0.1, colX=2, colY=2, colW=12, colH=14}
     },
     states = {"idle", "run", "jump", "death","punch","fall"},
     default_state = "idle"

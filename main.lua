@@ -12,6 +12,7 @@ function love.load()
   bump = require('libs/bump')
   anim8 = require('libs/anim8/anim8')
   Gamestate = require('libs/hump.gamestate')
+  require('utils')
   require('collision')
   require('map')
   require('map_defs')
@@ -29,6 +30,7 @@ function love.load()
   Gamestate.switch(startScreen, "hero", "1-1")
 
   gravity = -544
+  maxFallSpeed = -270
 
   score = 0
   lives = 2

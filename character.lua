@@ -35,6 +35,7 @@ function Character:Create(def, map) -- definition table
   -- every character will have a table of animation frame sets, one for each
   -- possible state (eg., "run", "idle", "jump", "swim")
   this.animations = {}
+  this.colBoxes = {}
 
   -- loop through the animation definitions in the def table
   --for key, value in pairs(myTable) do
@@ -42,6 +43,12 @@ function Character:Create(def, map) -- definition table
     -- add a new set of animations to the table
     --  the key will be the state name, the value will be the animation object
     this.animations[state_name] = anim8.newAnimation(grid(unpack(grid_data.frames)), grid_data.duration, grid_data.onLoop)
+    this.colBoxes[state_name] = {
+      x = grid_data.colX or 0,
+      y = grid_data.colY or 0,
+      w = grid_data.colW or def.frame_width,
+      h = grid_data.colH or def.frame_height
+    }
   end
   setmetatable(this, self)
 
@@ -53,8 +60,25 @@ function Character:Create(def, map) -- definition table
   end
   -- set the default state
   this.controller:change(def.default_state)
+  this.colBox = this.colBoxes[def.default_state]
 
   return this
+end
+
+function Character:getCollisionRect()
+  return self.x + self.colBox.x, self.y + self.colBox.y, self.colBox.w, self.colBox.h
+end
+
+function Character:colX()
+  return self.x + self.colBox.x
+end
+
+function Character:colY()
+  return self.y + self.colBox.y
+end
+
+function Character:getCollisionXY()
+  return self.x + self.colBox.x, self.y + self.colBox.y
 end
 
 function Character:update(dt)

@@ -9,12 +9,22 @@ function colFilter(char, other)
   elseif other.entityType == "projectile" then
     return("cross")
   elseif other.entityType == "block" then
+    local charX, charY, charW, charH = char:getCollisionRect() -- ERROR
+    local charMid = charX + math.floor(charW / 2)
+    local blockMid = other.x + 8
     if other.type == "invisible" then
       if math.floor(char.py) >= other.y + 16 then
         return("slide")
       else
         return("cross")
       end
+    elseif math.abs(blockMid - charMid) >= (charW/2 + 8) then
+      log.trace("outside bounds")
+      return("slide")
+    elseif math.floor(char.py) > math.floor(char.y) and math.abs(charMid - blockMid) >= 6 then -- remove hardcoded 16
+      log.trace("ROUND THAT CORNER")
+      log.trace("py: " .. char.py .. " other.y+16:" .. other.y + 16)
+      return("cross")
     end
     return("slide")
   else -- if colliding with a block
