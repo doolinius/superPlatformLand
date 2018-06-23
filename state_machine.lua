@@ -390,7 +390,7 @@ function JumpState:update(dt)
 			elseif c.other.type == "bonkable" and c.normal.y == 1 then
 				if not c.other.inBonk then
 					print("BONK")
-					--c.other:bonk()  -- ERROR
+					c.other:bonk()  -- ERROR
 				end
 				self.character.yVelocity = -self.character.yVelocity / 4
 			end

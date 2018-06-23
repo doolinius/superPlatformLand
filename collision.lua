@@ -9,7 +9,7 @@ function colFilter(char, other)
   elseif other.entityType == "projectile" then
     return("cross")
   elseif other.entityType == "block" then
-    local charX, charY, charW, charH = char:getCollisionRect() -- ERROR
+    local charX, charY, charW, charH = char:getCollisionRect()
     local charMid = charX + math.floor(charW / 2)
     local blockMid = other.x + 8
     if other.type == "invisible" then

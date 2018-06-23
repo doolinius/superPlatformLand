@@ -95,6 +95,8 @@ function Block:Create(def)
     y = def.y or 0,
     ox = def.x or 0,
     oy = def.y or 0,
+    px = def.x or 0, -- Added to fix collision error consider refactoring in future?
+    py = def.y or 0,
     xVelocity = def.xVelocity or 0,
     yVelocity = def.yVelocity or 0,
     image = def.image,
@@ -197,6 +199,11 @@ function Block:draw()
   --  offset = 16
   --end
   self.animation:draw(self.image, self.x, self.y)--, 0, self.facing, 1, offset, 0)
+end
+
+-- Gets collision rectangle for bonkable blocks.
+function Block:getCollisionRect()
+  return self.x, self.y, self.image:getWidth(), self.image:getHeight()
 end
 
 function Block:collide(object)
