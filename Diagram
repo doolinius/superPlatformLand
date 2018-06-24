@@ -1,0 +1,127 @@
+Character.Lua
+  - Character [Table]
+  - (F) Character:Create(def, map) -- Creates a table to represent a character
+        -- <RETURNS this>
+    + (L) this [Table]
+      > image [Str] -- Image located in "graphics/"
+      > x [Float] -- x position on screen
+      > y [Float] -- y position on screen
+      > entityType [Str] -- type of entity (enemy, hero, npc, etc.)
+      > maxSpeed [Float] -- fastest possible x maxSpeed
+      > acc [Float] -- acceleration
+      > friction [Float] -- slowing force
+      > jump_force [Float] -- initial y speed during start of jump
+      > facing [Int] -- 1 for right, -1 for left
+      > maxHp [Int]
+      > hp [Int]
+      > ledgeBound [Default false]
+    + (L) grid [anim8.grid] -- Creates a grid of quads from def table
+          -- Uses frame_width and frame_height from def table
+    + animations [Table] -- Gets animation information for each state ("run", "idle",
+          -- etc.)  Uses animations from the def table
+    + colBoxes [Table]
+    + controller.states [state] -- Creates a list of states from the def table.
+          -- Looks up state in charStates in state_machine.Lua
+  - (F) Character:getCollisionRect() -- <RETURNS float, float, float, float>
+  - (F) Character:colX() -- <RETURNS float>
+  - (F) Character:colY() -- <RETURNS float>
+  - (F) Character:getCollisionXY() -- <RETURNS float, float>
+  - (F) Character:update(dt)
+  - (F) Character:draw()
+
+--------------------------------------------------------------------------------
+
+collision.lua
+  - (F) colFilter(char, other) -- Checks if entityTypes for characters or others
+      -- Currently: "projectile", "collectible", "enemy", "hero", "projectile",
+      -- "block", etc.
+      -- <RETURNS "slide", "cross", or "bounce">
+
+--------------------------------------------------------------------------------
+
+entity_defs.lua -- Holds data information for various objects in bame (ie position, animation,
+    -- etc.)
+  - PlayerDefs [Table]
+    + hero [Table]
+  - gProjectileDefs [Table]
+    + punch [Table]
+    + kick [Table]
+  - gEffectDefs [Table]
+    + coinSparkle [Table]
+  - gCollectibleDefs [Table]
+    + coin [Table]
+    + heart [Table]
+  - gBlockDefs [Table]
+    + greenBrick [Table]
+    + greenBreak [Table]
+    + box [Table]
+    + redMove [Table]
+    + spikes [Table]
+    + invisible [Table]
+  - gEnemyDefs [Table]
+    + bird [Table]
+    + rolly [Table]
+    + hopper [Table]
+    + popup[Table]
+
+--------------------------------------------------------------------------------
+
+entity.lua
+  - Entity [Table]
+  - (F) Entity:Create(def) -- Creates table representing Entities <RETURNS this>
+    + (L) this [Table]
+      > x [Default 0]
+      > y [Default 0]
+      > xVelocity [Default 0]
+      > yVelocity [Default 0]
+      > image
+      > animation
+      > facing [Default 1] -- 1 for right and -1 for left
+      > gravity [Default false] -- whether the object is affected by gravity
+      > duration [Default 0]
+  - (F) Entity:Update(dt)
+  - (F) Entity:draw()
+
+  - Block [Table]
+  - (F) Block:Create(def)
+    + (L) this [Table]
+      > x [Default 0]
+      > y [Default 0]
+      > ox [Default 0]
+      > oy [Default 0]
+      > px [Default 0] -- Added to fix collision error consider refactoring
+      > py [Default 0]
+      > xVelocity [Default 0]
+      > yVelocity [Default 0]
+      > image
+      > animation
+      > gravity [Default false]
+      > gravityFactor [Default 1]
+      > points [Default 0]
+      > type [Default "breakable"]
+      > breakFrames [Default nil]
+      > moveable = [Default false]
+  - (F) Block:makeBreakFrames()
+  - (F) Block:setPosition(x, y)
+  - (F) Block:bonk()
+  - (F) Block:update(dt)
+  - (F) Block:draw()
+  - (F) Block:getCollisionRect() <RETURNS float, float, float, float>
+  - (F) Block:collide(object) -- Empty Function
+
+  - Collectible [Table]
+  - (F) Collectible:Create(def) <RETURNS this>
+    + (L) this [Table]
+      > x
+      > y
+      > xVelocity [Default 0]
+      > yVelocity [Default 0]
+      > type
+      > image
+      > animation
+      > points [Default 0]
+  - (F) Collectible:update(dt)
+  - (F) Collectible:draw()
+  - (F) Collectible:collide(object) -- Empty Function
+
+--------------------------------------------------------------------------------
