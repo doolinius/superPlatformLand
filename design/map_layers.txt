@@ -1,0 +1,10 @@
+Image Layers
+    bg 1-5: parallax background layers 
+Tile Layers
+    decorations
+    platforms
+Object Layers
+    blocks - bonkable, breakable (punch, crush, projectile), pushable,carryable, deadly (spikes, lava, etc)
+    collectibles - coins, hearts, parachute, presents, treasure chest?, drinks, food, extra life
+    enemies
+    collision - level ends, edges, checkpoints

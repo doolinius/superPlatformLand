@@ -1,0 +1,5 @@
+How to Choose Character?
+-at level start
+-in hub level
+-on demand (have different health levels)
+-find character first?

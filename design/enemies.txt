@@ -1,0 +1,75 @@
+Bubs
+****
+Blue - can be stomped
+
+Spikey - can NOT be stomped
+
+Pokey - fires spikes? What does he do that Blue Bub doesn't? 
+
+Blocky - you can stand on him
+
+Robo Pumpkin (fall level)
+- different from Spikey? how? 
+
+Earmuff Squash (winter level)
+- slides around on ice? 
+
+ChiChi Birds
+************
+Blue - patrols back and forth, will fly toward hero after homing in
+Black - flies in sine wave 
+
+Rolling Nero
+************
+Orange - detects edges and rolls back and forth 
+Blue - rolls off edges 
+How to kill? Can you kill? Ride? Ride with Bushly?
+Stomp and kick?
+Can rev up and go really fast
+Knocks over other enemies if kicked
+
+Gloppy Slime
+************
+Red - moves (withdraws, moves, jumps up)
+Green - stationary
+How to defeat
+No hitbox when withdrawn
+
+Jumpy Frog
+**********
+Green 
+Red
+Blue
+
+Octo
+****
+Hatless -
+With Hat - 
+
+Diver the Fish
+**************
+
+
+Rocket Cherries
+***************
+Male
+Female
+
+Devo the Devil
+**************
+
+Yellow Round Guy
+****************
+Parachute!
+
+Pink Jelly Thing
+****************
+
+Purple Blorb
+************
+
+Comrade Cheesepuff
+******************
+
+Armor Totem
+***********

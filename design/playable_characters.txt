@@ -1,0 +1,63 @@
+Mr. Man
+*******
+Movement
+    walk, run, both? (medium speed)
+    jump (medium height)
+    swim (unique)
+Attack/Action
+    punch (ground)
+    kick (air)
+Abilities
+    break blocks 
+    push blocks
+    parachute
+
+Bumpy the Robot
+***************
+Movement
+    walk, run, both? (slow)
+    jump (lower than Mr. Man)
+Attack/Action
+    pick up/throw things?
+
+Abilities
+    push blocks (stronger than Mr. Man)
+    sit/crush blocks
+
+Princess Sera
+*************
+Movement
+    walk, run, both? (faster)
+    jump (higher without dress?)
+    float (with dress)
+Attack/Action
+    shoot bubbles (without dress)
+Abilities
+
+Bushly
+******
+Movement
+    walk/run
+    jump
+    high jump
+    crouching slide
+    wall jump
+    double jump
+Action
+    air dash
+Abilities
+    Interacts with enemies differently 
+    Disguise himself as a bush
+
+Onion Lad
+*********
+Movement
+    run (fastest)
+Attack/Action
+    FISTS!
+    Punch
+    Chop
+    Clap
+    Combo (like a beat 'em up)
+Abilities
+    Ground pound? 

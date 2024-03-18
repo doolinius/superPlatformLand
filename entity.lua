@@ -1,6 +1,6 @@
 -- Taken from http://lua-users.org/wiki/InheritanceTutorial
 -- Create a new class that inherits from a base class
---
+--[[
 function inheritsFrom( baseClass )
 
     -- The following lines are equivalent to the SimpleClass example:
@@ -31,6 +31,7 @@ function inheritsFrom( baseClass )
 
     return new_class
 end
+]]
 
 Entity = {entityType = "effect"}
 Entity.__index = Entity
