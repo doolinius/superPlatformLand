@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../../tilesets/blocks_thin.tsx"/>
+ <object gid="69" width="16" height="8">
+  <properties>
+   <property name="jump_through" type="bool" value="true"/>
+   <property name="type" propertytype="block_types" value="green_brick_thin"/>
+  </properties>
+ </object>
+</template>

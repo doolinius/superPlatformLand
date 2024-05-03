@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<tileset firstgid="1" source="../../tilesets/presents.tsx"/>
+ <object gid="1" width="16" height="16">
+  <properties>
+   <property name="points" type="int" value="1000"/>
+   <property name="type" propertytype="collectible_types" value="blue_present"/>
+  </properties>
+ </object>
+</template>

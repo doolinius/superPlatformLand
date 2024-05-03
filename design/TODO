@@ -1,0 +1,17 @@
+Super Platform Land Rewrite:
+    - Reorganize and combine graphics assets @started(24-03-19 10:31)
+    - Rewrite Map Loader
+    - Create new Object Types and Templates
+    - Update the Entity class to allow children
+    - Add lovebird, lume, lurker, and boipushy libraries
+
+SPL Improvements:
+    - Add Fall state
+    - Fix block bump algorithm
+    - Only update nearby enemies
+    - Use input library (boipushy)
+
+Graphics Enhancements:
+    - Increase size of old backgrounds
+    - Split old backgrounds into layers
+    - Adjust terrain for old map tiles

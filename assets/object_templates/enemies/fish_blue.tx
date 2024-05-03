@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../../tilesets/diver_fish.tsx"/>
+ <object gid="1" width="16" height="16">
+  <properties>
+   <property name="hits" type="int" value="1"/>
+   <property name="points" type="int" value="400"/>
+   <property name="type" propertytype="enemy_type" value="fish_blue"/>
+  </properties>
+ </object>
+</template>

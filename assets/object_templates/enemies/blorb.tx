@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../../tilesets/round_dudes.tsx"/>
+ <object gid="43" width="16" height="16">
+  <properties>
+   <property name="hits" type="int" value="3"/>
+   <property name="points" type="int" value="2000"/>
+   <property name="type" propertytype="enemy_type" value="blorb"/>
+  </properties>
+ </object>
+</template>

@@ -10,3 +10,6 @@ bonkable blocks
 
 something with pushable/carryable blocks
     Bumpy and Mr. Man
+
+Breaking/falling blocks
+    Only Bushly can stand on them

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../../tilesets/blocks_16x16.tsx"/>
+ <object gid="4" width="16" height="16">
+  <properties>
+   <property name="breakable" type="bool" value="true"/>
+   <property name="movable" type="bool" value="true"/>
+   <property name="type" propertytype="block_types" value="cardboard_box"/>
+  </properties>
+ </object>
+</template>

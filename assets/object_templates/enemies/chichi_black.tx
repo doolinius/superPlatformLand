@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../../tilesets/chichi.tsx"/>
+ <object gid="8" width="16" height="16">
+  <properties>
+   <property name="hits" type="int" value="1"/>
+   <property name="points" type="int" value="400"/>
+   <property name="type" propertytype="enemy_type" value="chichi_black"/>
+  </properties>
+ </object>
+</template>
