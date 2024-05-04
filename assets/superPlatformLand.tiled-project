@@ -1,0 +1,241 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "compatibilityVersion": 1100,
+    "extensionsPath": "extensions",
+    "folders": [
+        "."
+    ],
+    "properties": [
+    ],
+    "propertyTypes": [
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 2,
+            "members": [
+                {
+                    "name": "bonkable",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "breakable",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "crumbling",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "friction",
+                    "type": "float",
+                    "value": 1
+                },
+                {
+                    "name": "jump_through",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "lethal",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "movable",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "type",
+                    "propertyType": "block_types",
+                    "type": "string",
+                    "value": "red_brick"
+                }
+            ],
+            "name": "block",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "block_types",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "red_brick",
+                "red_brick_breakable",
+                "green_brick",
+                "green_brick_breakable",
+                "dk_green_brick",
+                "dk_green_brick_breakable",
+                "brown_brick",
+                "brown_brick_breakable",
+                "grey_brick",
+                "grey_brick_breakable",
+                "ice",
+                "ice_breakable",
+                "ice_spikes",
+                "spikes",
+                "grey_crumble",
+                "tan_crumble",
+                "cardboard_box",
+                "red_box",
+                "blue_deco",
+                "purple_deco",
+                "green_bevel",
+                "grey_bevel",
+                "purple_bevel",
+                "green_metal",
+                "greenish_metal",
+                "red_metal",
+                "grey_metal",
+                "smile_metal",
+                "big_purple",
+                "big_blue",
+                "medium_orange",
+                "medium_yellow",
+                "orange_brick",
+                "orange_brick_breakable",
+                "orange_brick_thin",
+                "red_brick_thin",
+                "green_brick_thin",
+                "dk_green_brick_thin",
+                "grey_brick_thin",
+                "brown_brick_thin",
+                "ice_thin",
+                "red_solid_thin",
+                "green_solid_thin",
+                "orange_solid_thin",
+                "blue_solid_thin"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 5,
+            "members": [
+                {
+                    "name": "points",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "sound",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "type",
+                    "propertyType": "collectible_types",
+                    "type": "string",
+                    "value": "coin"
+                }
+            ],
+            "name": "collectible",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "collectible_types",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "coin",
+                "small_coin",
+                "heart",
+                "red_present",
+                "health_kit",
+                "blue_present",
+                "green_present"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 7,
+            "members": [
+                {
+                    "name": "hits",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "points",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "type",
+                    "propertyType": "enemy_type",
+                    "type": "string",
+                    "value": "blue_bub"
+                }
+            ],
+            "name": "enemy",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "enemy_type",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "blue_bub",
+                "red_bub",
+                "green_bub",
+                "yellow_bub",
+                "nero_orange",
+                "nero_blue",
+                "gloppy_red",
+                "gloppy_green",
+                "gloppy_blue",
+                "jumpy_green",
+                "jumpy_blue",
+                "jumpy_red",
+                "chichi_blue",
+                "chichi_black",
+                "chichi_red",
+                "chichi_green",
+                "fish_blue",
+                "fish_green",
+                "fish_red",
+                "devo_devil",
+                "yellow_dude",
+                "jellyfish",
+                "blorb"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff2ec27e",
+            "drawFill": true,
+            "id": 1,
+            "members": [
+            ],
+            "name": "spawn_point",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        }
+    ]
+}
