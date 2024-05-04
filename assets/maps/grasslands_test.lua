@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 14,
-  nextobjectid = 103,
+  nextobjectid = 104,
   properties = {
     ["bg_music"] = "bg_music2",
     ["name"] = "Sunny Day",
@@ -1809,7 +1809,7 @@ return {
       height = 30,
       id = 1,
       name = "terrain",
-      class = "",
+      class = "block",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -2158,6 +2158,24 @@ return {
             ["lethal"] = false,
             ["movable"] = false,
             ["type"] = "brown_brick_breakable"
+          }
+        },
+        {
+          id = 103,
+          name = "",
+          type = "collectible",
+          shape = "rectangle",
+          x = 416,
+          y = 320,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1,
+          visible = true,
+          properties = {
+            ["points"] = 50,
+            ["sound"] = "coin",
+            ["type"] = "coin"
           }
         }
       }

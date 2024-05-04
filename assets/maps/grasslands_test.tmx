@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="103">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="104">
  <editorsettings>
   <export target="grasslands_test.lua" format="lua"/>
  </editorsettings>
@@ -118,6 +118,11 @@
   <object id="100" template="../object_templates/blocks/brown_breakable.tx" x="528" y="352"/>
   <object id="101" template="../object_templates/blocks/brown_breakable.tx" x="544" y="352"/>
   <object id="102" template="../object_templates/blocks/brown_breakable.tx" x="560" y="352"/>
+  <object id="103" template="../object_templates/collectibles/coin.tx" x="416" y="320">
+   <properties>
+    <property name="sound" value="coin"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="9" name="other"/>
  <imagelayer id="10" name="fg1"/>

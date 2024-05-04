@@ -8,6 +8,14 @@ for i=0, math.floor(imgH/16)-1 do
         table.insert(quads[i+1], q)
     end
 end
+local thinQuads = {}
+for i=0, math.floor(imgH/8)-1 do 
+    table.insert(thinQuads, {})
+    for j=0, math.floor(imgW/16)-1 do 
+        local q = love.graphics.newQuad(j*16, i*16, 16, 16, imgW, imgH)
+        table.insert(thinQuads[i+1], q)
+    end
+end
 gBlockQuads = {
     grey_crumble = quads[1][1],
     grey_crumble_crack = quads[1][2],
@@ -46,5 +54,30 @@ gBlockQuads = {
 
     grey_bevel = quads[6][8],
     purple_bevel = quads[6][9],
-    purple_deco = quads[6][10]
+    purple_deco = quads[6][10],
+
+    orange_brick_thin = thinQuads[5][3],
+    ice_thin = thinQuads[5][5],
+    dk_green_brick_thin = thinQuads[5][5],
+    gray_brick_thin = thinQuads[5][11],
+    green_brick_thin = thinQuads[6][3],
+    red_brick_thin = thinQuads[6][8],
+    brown_brick_thin = thinQuads[6][11]
 }
+
+gBlockDefs = {}
+for bname, q in pairs(gBlockQuads) do 
+    local def = {image=gBlockImage, quad=q}
+    gBlockDefs[bname] = def
+end
+
+gBlockDefs.spikes.hitbox = {16, 8, 0, 8}
+gBlockDefs.ice_spikes.hitbox = {16, 8, 0, 8}
+
+gBlockDefs.orange_brick_thin.hitbox = {16, 8, 0, 0}
+gBlockDefs.ice_thin.hitbox = {16, 8, 0, 0}
+gBlockDefs.dk_green_brick_thin.hitbox = {16, 8, 0, 0}
+gBlockDefs.gray_brick_thin.hitbox = {16, 8, 0, 0}
+gBlockDefs.green_brick_thin.hitbox = {16, 8, 0, 0}
+gBlockDefs.red_brick_thin.hitbox = {16, 8, 0, 0}
+gBlockDefs.brown_brick_thin.hitbox = {16, 8, 0, 0}
