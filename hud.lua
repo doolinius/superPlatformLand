@@ -1,11 +1,10 @@
 HUD = {}
 HUD.__index = HUD 
 
-function HUD:Create(gameworld, level, player)
+function HUD:Create(gameworld, level)
     local this = {
         gameworld = gameworld, 
-        level = level, 
-        player = player,
+        level = level
     }
 
     setmetatable(this, self)

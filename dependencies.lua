@@ -16,11 +16,13 @@ require('libs/state_stack')
 require('libs/StateMachine')
 
 -- require game specific files next
+require('constants')
 require('input_bindings')
 require('character_states')
 require('character')
 require('camera')
 require('level')
+require('collision')
 require('entity')
 require('block')
 require('collectible')

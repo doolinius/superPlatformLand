@@ -67,17 +67,28 @@ gBlockQuads = {
 
 gBlockDefs = {}
 for bname, q in pairs(gBlockQuads) do 
-    local def = {image=gBlockImage, quad=q}
+    local def = {image=gBlockImage, quad=q, width=16, height=16}
     gBlockDefs[bname] = def
 end
 
-gBlockDefs.spikes.hitbox = {16, 8, 0, 8}
-gBlockDefs.ice_spikes.hitbox = {16, 8, 0, 8}
+gBlockDefs.spikes.hitbox = {width=16, height=8, ox=0, oy=8}
+gBlockDefs.ice_spikes.hitbox = {width=16, height=8, ox=0, oy=8}
 
-gBlockDefs.orange_brick_thin.hitbox = {16, 8, 0, 0}
-gBlockDefs.ice_thin.hitbox = {16, 8, 0, 0}
-gBlockDefs.dk_green_brick_thin.hitbox = {16, 8, 0, 0}
-gBlockDefs.gray_brick_thin.hitbox = {16, 8, 0, 0}
-gBlockDefs.green_brick_thin.hitbox = {16, 8, 0, 0}
-gBlockDefs.red_brick_thin.hitbox = {16, 8, 0, 0}
-gBlockDefs.brown_brick_thin.hitbox = {16, 8, 0, 0}
+gBlockDefs.orange_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
+gBlockDefs.ice_thin.hitbox = {width=16, height=8,ox=y, oy=0}
+gBlockDefs.dk_green_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
+gBlockDefs.gray_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
+gBlockDefs.green_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
+gBlockDefs.red_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
+gBlockDefs.brown_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
+
+gBlockDefs.spikes.height = 8
+gBlockDefs.ice_spikes.height = 8
+
+gBlockDefs.orange_brick_thin.height = 8
+gBlockDefs.ice_thin.height = 8
+gBlockDefs.dk_green_brick_thin.height = 8
+gBlockDefs.gray_brick_thin.height = 8
+gBlockDefs.green_brick_thin.height = 8
+gBlockDefs.red_brick_thin.height = 8
+gBlockDefs.brown_brick_thin.height = 8

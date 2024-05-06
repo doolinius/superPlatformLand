@@ -1,8 +1,9 @@
 Collectible = class('Collectible', Entity)
+Collectible.static.type = 'collectible'
 
-function Collectible:initialize(obj)
-    Entity.initialize(self, gCollectibleDefs[obj.properties.type], obj.x, obj.y)
-    self.type = obj.type
+function Collectible:initialize(obj, world)
+    Entity.initialize(self, gCollectibleDefs[obj.properties.type], obj.x, obj.y, world)
+    self.subtype = obj.type
     self.points = obj.points
     self.sound = Sound[obj.sound]
     self.onCollect = gCollectibleDefs[obj.properties.type].onCollect
@@ -17,7 +18,8 @@ function Collectible:onRemove()
 end
 
 function Collectible:update(dt)
-    Entity.update(self, dt)
+    local actualX, actualY, cols, len = Entity.update(self, dt)
+    -- resolve collisions
 end
 
 function Collectible:draw()

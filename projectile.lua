@@ -1,39 +1,21 @@
-Projectile = {}
-Projectile.__index = Projectile
+Projectile = class('Projectile', Entity)
+Projectile.static.type = 'projectile'
 
-function Projectile:Create(def, x, y)
-  local this = {
-    type = def.type, -- punch, kick, bullet, etc.
-    x = x,
-    y = y,
-    entityType = "projectile",
-    facing = def.facing or 1,
-    xVelocity = def.maxSpeed,
-    distance = def.distance,
-    dx = 0,
-    image = def.image, gProjectileGraphics[def.type],
-    animation = nil,
-    enabled = true
-  }
-  local a = def.animation
-  this.animation = anim8.newAnimation(a.grid(unpack(a.frames)), a.duration)
-
-  setmetatable(this, self)
-  return(this)
+function Projectile:initialize(ptype, x, y, world)
+    self.subtype = ptype -- punch, kick, bullet, etc.
+    local def = gProjectileDefs[ptype]
+    Entity.initialize(self, def, x, y, world)
+    self.distance = def.distance
 end
 
 function Projectile:update(dt)
-  self.x = self.x + self.xVelocity * dt * self.facing
-  self.dx = self.dx + self.xVelocity * dt
+  local actualX, actualY, cols, len = Entity.update(self, dt)
+  -- resolve collisions
   if self.dx >= self.distance then
-    self.enabled = false
+    self.remove = false
   end
 end
 
 function Projectile:draw()
-  local offset = 0
-  if self.facing == -1 then
-    offset = 16
-  end
-  self.animation:draw(self.image, self.x, self.y, 0, self.facing, 1, offset, 0)
+  Entity.draw(self)
 end

@@ -1,4 +1,18 @@
-
+gColFilters = {
+  block = function (item, other)
+    return('slide')
+  end,
+  collectible = function (item, other)
+    return('slide')
+  end,
+  projectile = function (item, other)
+    return('slide')
+  end,
+  character = function (item, other)
+    return('slide')
+  end
+}
+--[[
 function colFilter(char, other)
   if char.entityType == "projectile" then
     return("cross")
@@ -84,5 +98,6 @@ function colFilter(char, other)
     --log.trace("UGH... DEFAULT")
     return("slide")
   end
-  ]]
+  
 end
+]]

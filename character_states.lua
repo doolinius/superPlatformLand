@@ -20,7 +20,7 @@ end
 function IdleState:exit() 
 end
 
-function IdleState:update(dt)
+function IdleState:handleInput(dt)
     if input:pressed('left') then 
         self.controller:change('run', {dir=-1})
     elseif input:pressed('right') then 
@@ -30,16 +30,9 @@ function IdleState:update(dt)
     if input:pressed('jump') then 
         self.controller:change('jump')
     end
+end
 
-    -- check for things that ran into US without moving
-    --[[
-    local actualX, actualY, cols, len = self.level.world:check(self.character, self.character.x, self.character.y)
-    if len > 0 then 
-        for i=1, len do 
-            
-        end
-    end
-    ]]
+function IdleState:update(dt)
 
 end
 
@@ -68,7 +61,7 @@ end
 
 function RunState:exit() end 
 
-function RunState:update(dt) 
+function RunState:handleInput()
     if input:down('left') then 
         self.character.facing = -1
         self.character.velocity.x = -self.character.velocity.top_x
@@ -81,6 +74,10 @@ function RunState:update(dt)
     if input:pressed('jump') then 
         self.character.controller:change('jump')
     end
+end
+
+function RunState:update(dt) 
+    
 end 
 
 function RunState:draw() end
@@ -106,7 +103,7 @@ end
 
 function JumpState:exit() end 
 
-function JumpState:update(dt)
+function JumpState:handleInput()
     if self.character.velocity.y >= 0 then
         self.controller:change('fall')
     else
@@ -120,6 +117,10 @@ function JumpState:update(dt)
             self.character.velocity.x = 0
         end
     end
+end
+
+function JumpState:update(dt)
+    
 end
 
 function JumpState:draw() end
@@ -144,7 +145,7 @@ end
 
 function FallState:exit() end 
 
-function FallState:update(dt) 
+function FallState:handleInput()
     if input:down('left') then
         self.character.facing = -1
         self.character.velocity.x = -self.character.velocity.top_x
@@ -157,6 +158,10 @@ function FallState:update(dt)
     if self.character.velocity.y == 0 then
         self.character:landFromFall()
     end
+end
+
+function FallState:update(dt) 
+    
 end 
 
 function FallState:draw() end 

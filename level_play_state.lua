@@ -7,18 +7,18 @@ function LevelPlayState:Create(level_id, character_id)
     -- Create the player character first
     -- before creating 'this'
     -- this happens BEFORE creating the level
-    local player = Character:Create(gCharacterDefs[character_id])
+    --local player = Character:Create(gCharacterDefs[character_id])
 
     local this = {
-        level = Level:Create(level_id, player),
-        player = player,
+        level = Level:Create(level_id, character_id),
+        --player = player,
         hud = nil
     }
 
-    this.hud = HUD:Create(gameWorld, this.level, player)
+    this.hud = HUD:Create(gameWorld, this.level)
     -- the Level needs a reference to the player, 
     -- and the player needs a reference to the level
-    this.player.level = this.level
+    --this.player.level = this.level
 
     setmetatable(this, self)
     return(this)

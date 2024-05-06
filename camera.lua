@@ -38,8 +38,8 @@ end
 function Camera:follow(obj, offset)
   self.offset = offset or {x=0,y=0}
   self.followObject = obj
-  self.x = self.followObject.x + self.offset.x
-  self.y = self.followObject.y + self.offset.y
+  self.x = self.followObject.position.x + self.offset.x
+  self.y = self.followObject.position.y + self.offset.y
 end
 
 function Camera:followCharacter(char)
@@ -131,8 +131,8 @@ end
 function Camera:update(dt)
   if self.followObject and not self:isMoving() then
     --log.trace("Not moving.")
-    self.x = self.followObject.x + self.offset.x
-    self.y = self.followObject.y + self.offset.y
+    self.x = self.followObject.position.x + self.offset.x
+    self.y = self.followObject.position.y + self.offset.y
   elseif self:isMoving() then
     --log.trace("Uhh.. moving???")
     self.tweenX:Update(dt)

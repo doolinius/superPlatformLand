@@ -1,12 +1,13 @@
 --Block = { type = "block" }
 --Block.__index = Block 
 Block = class('Block', Entity)
+Block.static.type = 'block'
 
 -- This one takes a block definition as found in data/block_defs.lua
-function Block:initialize(obj)
+function Block:initialize(obj, world)
     local bprops = obj.properties
-    log.trace("Initializing the Entity")
-    Entity.initialize(self, gBlockDefs[bprops.type], obj.x, obj.y)
+    self.subtype = bprops.type
+    Entity.initialize(self, gBlockDefs[bprops.type], obj.x, obj.y-16, world)
     self.friction = bprops.friction
     self.breakable = bprops.breakable 
     self.bonkable = bprops.bonkable
@@ -17,7 +18,7 @@ function Block:initialize(obj)
 end 
 
 function Block:update(dt)
-    Entity.update(self, dt)
+    local actualX, actualY, cols, len = Entity.update(self, dt)
 end
 
 function Block:draw()

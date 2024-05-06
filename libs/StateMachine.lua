@@ -61,6 +61,18 @@ function StateMachine:change(stateName, enterParams)
 	self.current:enter(enterParams)
 end
 
+function StateMachine:hasState(stateName) 
+	if self.states[stateName] ~= nil then 
+		return(true)
+	else
+		return(false)
+	end
+end 
+
+function StateMachine:handleInput(dt)
+	self.current:handleInput(dt)
+end
+
 function StateMachine:update(dt)
 	self.current:update(dt) -- INPUT happens here
 end

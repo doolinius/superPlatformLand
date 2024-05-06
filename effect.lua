@@ -1,6 +1,8 @@
 Effect = class('Effect', Entity)
+Effect.static.type = 'effect'
 
 function Effect:initialize(def, x, y)
+    def.hitbox = "none"
     Entity.initialize(self, def, x, y)
     self.timer = def.duration
 end 

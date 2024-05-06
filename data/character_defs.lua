@@ -1,11 +1,11 @@
 gCharacterDefs = {
     mr_man = {
-        image = 'mr_man.png',
-        w = 16, 
-        h = 16,
+        image = 'characters/mr_man.png',
+        width = 16, 
+        height = 16,
         hitbox = {
-            w = 8,
-            h = 14,
+            width = 8,
+            height = 14,
             ox = 4,
             oy = 2
         },
@@ -18,6 +18,7 @@ gCharacterDefs = {
             jump = {frames={1, 3}, duration=0.15},
             fall = {frames={2, 3}, duration=0.15}
         },
+        startingAnimation = 'idle',
         states = {'idle', 'run', 'jump', 'fall'}--,, 'fall', 'punch', 'hit', 'die'}
     }
 }
