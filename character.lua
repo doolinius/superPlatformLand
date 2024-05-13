@@ -2,28 +2,43 @@
 Character = class('Character', Entity)
 Character.static.type = 'character'
 
-function Character:initialize(def, x, y, world)
-    Entity.initialize(self, def, x, y, world)
+function Character:initialize(def, x, y, level)
+    self.type = 'character'
+    Entity.initialize(self, def, x, y, level)
     self.gravityEffect = 1.0
     self.health = health or 1 -- default value trick
-    self.world = world
+    self.world = level.world
     --level = level
+    self.status = {
+        invincible = false,
+        invulnerable = false
+    }
+
+    if def.status then 
+        for name, value in pairs(def.status) do 
+            self.status[name] = value 
+        end
+    end 
 
     -- Create the state machine with an empty state table
     local states = {}
     self.controller = StateMachine:Create(states)
-
     -- for each state in the definition table
     for _, name in ipairs(def.states) do
+
         local state = gCharacterStates[name] -- get a reference to the class
         assert(state) -- make sure it exists
-        assert(states[state.name] == nil) -- make sure we haven't already added it
-
-        local instance = state:Create(self) -- Create the instance of the state
-        states[state.name] = function () return instance end -- add it to the table
+        assert(states[name] == nil) -- make sure we haven't already added it
+    
+        local instance = state:new(self, self.level) -- Create the instance of the state
+        states[name] = function () return instance end -- add it to the table
+   
     end
+    
+    self.controller:change(def.startingState)--, {anim=self.startingAnimation})
 
-    self.controller:change(def.states[1])
+    self.special = def.special
+
 end
 
 function Character:handleInput(dt)
@@ -102,17 +117,16 @@ function Character:update(dt)
             ]]
             local c = cols[i]
             
-            if c.other['properties'] ~= nil then
-                --log.trace("Colliding with TERRAIN")
+            if c.other.type == "terrain" then
                 if c.normal.y == -1 or c.normal.y == 1 then -- if we are touching ground 
                     self.velocity.y = 0 
                 end
             elseif c.other.type == 'enemy' then 
-                self.character:takeHit()
+                self:takeHit()
             elseif c.other.type == 'collectible' then 
-                self.character:collect(c.other)
-            elseif c.other.type == "block" then 
-                --log.trace("hit a BLOCK" .. inspect(c.other, {depth=1}))
+                --self:collect(c.other)
+                c.other:onCollect(self)
+            elseif c.other.type == "block" then
                 if c.normal.y == 1 or c.normal.y == -1 then -- we hit a block from below
                     self.velocity.y = 0
                 end

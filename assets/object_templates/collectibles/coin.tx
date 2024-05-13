@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
-	<tileset firstgid="1" source="../../tilesets/coin.tsx"/>
+ <tileset firstgid="1" source="../../tilesets/coin.tsx"/>
  <object gid="1" width="16" height="16">
   <properties>
    <property name="points" type="int" value="50"/>
+   <property name="sound" value="coin"/>
   </properties>
  </object>
 </template>

@@ -9,7 +9,13 @@ gColFilters = {
     return('slide')
   end,
   character = function (item, other)
-    return('slide')
+    if other.type == 'collectible' then 
+      return('cross')
+    elseif other.type == 'block' then 
+      return('slide')
+    else 
+      return('slide')
+    end
   end
 }
 --[[

@@ -17,7 +17,7 @@ function love.load()
 
     gameWorld = GameWorld:Create()
     gStateStack = StateStack:Create()
-    local level = LevelPlayState:Create('grasslands_test', 'mr_man')
+    local level = LevelPlayState:Create('grasslands_test', 'bumpy')
     gStateStack:push(level)
 
 end

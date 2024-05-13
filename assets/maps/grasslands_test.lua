@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 14,
-  nextobjectid = 104,
+  nextobjectid = 108,
   properties = {
     ["bg_music"] = "bg_music2",
     ["name"] = "Sunny Day",
@@ -1275,447 +1275,299 @@ return {
       tiles = {
         {
           id = 20,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 21,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 22,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 28,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 37,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 38,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 39,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 45,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 52,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 53,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 54,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 55,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 56,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 57,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 58,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 60,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 61,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 62,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 63,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 64,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 66,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 69,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 70,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 71,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 72,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 73,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 74,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 75,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 79,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 88,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 89,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 90,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 96,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 105,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 106,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 107,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 140,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 190,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 191,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 192,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 198,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 207,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 208,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 209,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 215,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 222,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 223,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 224,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 225,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 226,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 227,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 228,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 230,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 231,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 232,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 233,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 234,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 236,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 239,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 240,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 241,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 242,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 243,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 244,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 245,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 249,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 258,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 259,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 260,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 266,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 275,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 276,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 277,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         },
         {
           id = 310,
-          properties = {
-            ["terrain"] = true
-          }
+          type = "terrain"
         }
       }
     }
@@ -2167,6 +2019,78 @@ return {
           shape = "rectangle",
           x = 416,
           y = 320,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1,
+          visible = true,
+          properties = {
+            ["points"] = 50,
+            ["sound"] = "coin",
+            ["type"] = "coin"
+          }
+        },
+        {
+          id = 104,
+          name = "",
+          type = "collectible",
+          shape = "rectangle",
+          x = 256,
+          y = 384,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1,
+          visible = true,
+          properties = {
+            ["points"] = 50,
+            ["sound"] = "coin",
+            ["type"] = "coin"
+          }
+        },
+        {
+          id = 105,
+          name = "",
+          type = "collectible",
+          shape = "rectangle",
+          x = 288,
+          y = 384,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1,
+          visible = true,
+          properties = {
+            ["points"] = 50,
+            ["sound"] = "coin",
+            ["type"] = "coin"
+          }
+        },
+        {
+          id = 106,
+          name = "",
+          type = "collectible",
+          shape = "rectangle",
+          x = 320,
+          y = 384,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1,
+          visible = true,
+          properties = {
+            ["points"] = 50,
+            ["sound"] = "coin",
+            ["type"] = "coin"
+          }
+        },
+        {
+          id = 107,
+          name = "",
+          type = "collectible",
+          shape = "rectangle",
+          x = 352,
+          y = 384,
           width = 16,
           height = 16,
           rotation = 0,

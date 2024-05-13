@@ -5,6 +5,7 @@ Block.static.type = 'block'
 
 -- This one takes a block definition as found in data/block_defs.lua
 function Block:initialize(obj, world)
+    self.type = 'block'
     local bprops = obj.properties
     self.subtype = bprops.type
     Entity.initialize(self, gBlockDefs[bprops.type], obj.x, obj.y-16, world)
