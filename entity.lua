@@ -88,6 +88,9 @@ function Entity:initialize(def, x, y, level)
   else
     assert("Entity must have a quad, animation or animations field")
   end
+  self.rotate = def.rotate or 0
+  self.rotAmt = 0
+  self.rotTimer = 0
   self.hitboxRender = def.hitboxRender or false
 
   -- Field for determining removal from game
@@ -96,7 +99,12 @@ function Entity:initialize(def, x, y, level)
 end
 
 function Entity:update(dt)
-
+  if self.rotate ~= 0 then 
+    self.rotTimer = self.rotTimer + dt 
+    if self.rotTimer >= 0.1 then 
+      self.rotAmt = self.rotAmt + self.rotate 
+    end 
+  end
   if self.animation then
     self.animation:update(dt)
   end
@@ -117,7 +125,11 @@ function Entity:draw()
     offset = self.width
   end
   if self.quad then
-    love.graphics.draw(self.image, self.quad, self.position.x, self.position.y, 0, self.facing, 1, offset)
+    if self.rotate ~= 0 then 
+      love.graphics.draw(self.image, self.quad, self.position.x, self.position.y, self.rotAmt, self.facing, 1, self.width/2, self.height/2)
+    else 
+      love.graphics.draw(self.image, self.quad, self.position.x, self.position.y, 0, self.facing, 1, offset)
+    end 
   else
     self.animation:draw(self.image, self.position.x, self.position.y, 0, self.facing, 1, offset)
   end 

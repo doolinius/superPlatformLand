@@ -132,6 +132,9 @@ function Character:update(dt)
                 end
                 if c.other.lethal then 
                     --self.controller:change('die')
+                elseif c.other.breakable and c.normal.y == 1 then 
+                    c.other.remove = true 
+                    breakBlock(c.other, self.level)
                 end
             end
         end

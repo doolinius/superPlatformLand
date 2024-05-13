@@ -8,7 +8,7 @@ function Block:initialize(obj, world)
     self.type = 'block'
     local bprops = obj.properties
     self.subtype = bprops.type
-    Entity.initialize(self, gBlockDefs[bprops.type], obj.x, obj.y-16, world)
+    Entity.initialize(self, gBlockDefs[bprops.type], obj.x, obj.y-obj.height, world)
     self.friction = bprops.friction
     self.breakable = bprops.breakable 
     self.bonkable = bprops.bonkable

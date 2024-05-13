@@ -28,7 +28,7 @@ gCharacterDefs = {
         height = 32,
         hitbox = {
             width = 10,
-            height = 20,
+            height = 19,
             ox = 3,
             oy = 12
         },
@@ -96,7 +96,7 @@ gCharacterDefs = {
         height = 16,
         hitbox = {
             width = 12,
-            height = 13,
+            height = 12,
             ox = 2,
             oy = 3
         },

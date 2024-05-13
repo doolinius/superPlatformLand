@@ -44,3 +44,19 @@ gEffectDefs = {
         gravityEffect = 1.0
     }
 }
+
+gFragEffectDefs = {
+}
+
+for name, fragQuad in pairs(gBlockFragments) do 
+    gFragEffectDefs[name] = {
+        image = gBlockImage,
+        quad = fragQuad,
+        width = 8,
+        height = 8,
+        rotate = math.pi/4, 
+        hitbox = "none",
+        gravityEffect = 1.0,
+        duration = 3.0
+    }
+end

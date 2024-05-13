@@ -12,8 +12,16 @@ local thinQuads = {}
 for i=0, math.floor(imgH/8)-1 do 
     table.insert(thinQuads, {})
     for j=0, math.floor(imgW/16)-1 do 
-        local q = love.graphics.newQuad(j*16, i*16, 16, 16, imgW, imgH)
+        local q = love.graphics.newQuad(j*16, i*8, 16, 8, imgW, imgH)
         table.insert(thinQuads[i+1], q)
+    end
+end
+local smallQuads = {}
+for i=0, math.floor(imgH/8)-1 do 
+    table.insert(smallQuads, {})
+    for j=0, math.floor(imgW/8)-1 do 
+        local q = love.graphics.newQuad(j*8, i*8, 8, 8, imgW, imgH)
+        table.insert(smallQuads[i+1], q)
     end
 end
 gBlockQuads = {
@@ -56,6 +64,10 @@ gBlockQuads = {
     purple_bevel = quads[6][9],
     purple_deco = quads[6][10],
 
+    red_solid_thin = thinQuads[1][7],
+    orange_solid_thin = thinQuads[1][9],
+    green_solid_thin = thinQuads[2][7],
+    blue_solid_thin = thinQuads[2][9],
     orange_brick_thin = thinQuads[5][3],
     ice_thin = thinQuads[5][5],
     dk_green_brick_thin = thinQuads[5][5],
@@ -74,13 +86,17 @@ end
 gBlockDefs.spikes.hitbox = {width=16, height=8, ox=0, oy=8}
 gBlockDefs.ice_spikes.hitbox = {width=16, height=8, ox=0, oy=8}
 
-gBlockDefs.orange_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
-gBlockDefs.ice_thin.hitbox = {width=16, height=8,ox=y, oy=0}
-gBlockDefs.dk_green_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
-gBlockDefs.gray_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
-gBlockDefs.green_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
-gBlockDefs.red_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
-gBlockDefs.brown_brick_thin.hitbox = {width=16, height=8,ox=y, oy=0}
+gBlockDefs.orange_brick_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.ice_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.dk_green_brick_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.gray_brick_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.green_brick_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.red_brick_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.brown_brick_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.orange_solid_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.red_solid_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.green_solid_thin.hitbox = {width=16, height=8, ox=0, oy=0}
+gBlockDefs.blue_solid_thin.hitbox = {width=16, height=8, ox=0, oy=0}
 
 gBlockDefs.spikes.height = 8
 gBlockDefs.ice_spikes.height = 8
@@ -92,3 +108,20 @@ gBlockDefs.gray_brick_thin.height = 8
 gBlockDefs.green_brick_thin.height = 8
 gBlockDefs.red_brick_thin.height = 8
 gBlockDefs.brown_brick_thin.height = 8
+
+gBlockFragments = {
+    orange_brick_breakable_left = smallQuads[6][5],
+    orange_brick_breakable_right = smallQuads[6][6],
+    ice_crack_left = smallQuads[6][9],
+    ice_crack_right = smallQuads[6][10],
+    dk_green_brick_breakable_left = smallQuads[6][15],
+    dk_green_brick_breakable_right = smallQuads[6][16],
+    grey_brick_breakable_left = smallQuads[6][21],
+    grey_brick_breakable_right = smallQuads[6][22],
+    green_brick_breakable_left = smallQuads[8][5],
+    green_brick_breakable_right = smallQuads[8][6],
+    red_brick_breakable_left = smallQuads[8][15],
+    red_brick_breakable_right = smallQuads[8][16],
+    brown_brick_breakable_left = smallQuads[8][21],
+    brown_brick_breakable_right = smallQuads[8][22]
+}

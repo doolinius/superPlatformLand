@@ -144,6 +144,12 @@ function RunState:handleInput()
     end
 end
 
+function RunState:update(dt)
+    --if self.character.velocity.y > 10 then 
+      --  self.character.controller:change('fall')
+    --end 
+end
+
 --JumpState = { name = "jump" }
 --JumpState.__index = JumpState
 JumpState = class('JumpState', CharacterState)
@@ -267,7 +273,7 @@ function GetSerious:enter(params)
     self.character.animation = self.character.frames.get_serious
     self.character.velocity.top_x = 90
     self.timer = 0.5
-    local e = Effect:new(gEffects.dress_toss, self.character.position.x, self.character.position.y+16, self.level)
+    local e = Effect:new(gEffectDefs.dress_toss, self.character.position.x, self.character.position.y+16, self.level)
     e.velocity = {x=-70*self.character.position.facing, y=-100}
     self.level:addEffect(e)
 end
