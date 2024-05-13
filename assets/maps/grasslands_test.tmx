@@ -141,7 +141,6 @@
   <object id="120" template="../object_templates/blocks/spikes.tx" x="848" y="480"/>
   <object id="129" template="../object_templates/blocks/orange_thin.tx" x="256" y="344"/>
   <object id="130" template="../object_templates/blocks/orange_thin.tx" x="272" y="344"/>
-  <object id="131" template="../object_templates/blocks/orange_thin.tx" x="272" y="344"/>
   <object id="132" template="../object_templates/blocks/orange_thin.tx" x="288" y="344"/>
   <object id="133" template="../object_templates/blocks/orange_thin.tx" x="304" y="344"/>
   <object id="134" template="../object_templates/blocks/orange_thin.tx" x="320" y="344"/>

@@ -2425,29 +2425,6 @@ return {
           }
         },
         {
-          id = 131,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 272,
-          y = 344,
-          width = 16,
-          height = 8,
-          rotation = 0,
-          gid = 278,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = false,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = true,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "orange_solid_thin"
-          }
-        },
-        {
           id = 132,
           name = "",
           type = "block",

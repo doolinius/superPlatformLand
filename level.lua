@@ -5,7 +5,13 @@ function Level:Create(level_id, player_id)
     local this = {
         map = sti('assets/maps/' .. level_id .. '.lua', {'bump'}),
         player = nil,
-        entities = {},
+        entities = {
+            players = {},
+            enemies = {},
+            collectibles = {},
+            blocks = {},
+            effects = {}
+        },
         world = bump.newWorld(),
         camera = nil
     }
@@ -24,7 +30,7 @@ function Level:Create(level_id, player_id)
             this.player.position.y = o.y - this.player.height
             --this:addEntity(player)
             -- add it to the entities table
-            table.insert(this.entities, this.player)
+            table.insert(this.entities.players, this.player)
             -- add it to the collision world
             this.world:add(
                 this.player, 
@@ -37,14 +43,14 @@ function Level:Create(level_id, player_id)
             --log.trace("Block type: " .. o.properties.type)
             local b = Block:new(o, this)
             --this:addEntity(b)
-            table.insert(this.entities, b)
+            table.insert(this.entities.blocks, b)
             --log.trace(inspect(b, {depth=2}))
             this.world:add(b, b.position.x, b.position.y, b.hitbox.width, b.hitbox.height)
         elseif o.type == 'enemy' then 
             local e = Enemy:Create(o, this)
         elseif o.type == 'collectible' then 
             local c = Collectible:new(o, this)
-            table.insert(this.entities, c)
+            table.insert(this.entities.enemies, c)
             this.world:add(c, c.position.x, c.position.y, c.hitbox.width, c.hitbox.height)
         end
     end
@@ -54,23 +60,38 @@ function Level:Create(level_id, player_id)
     local entityLayer = this.map:convertToCustomLayer('entities')
     entityLayer.update = function(self, dt)
         --for _, e in ipairs(this.entities) do
-        for i=#this.entities, 1, -1 do
-            local e = this.entities[i]
-            if e.remove then 
-                -- remove from this table
-                e:onRemove()
-                table.remove(this.entities, i)
-                if e.type ~= 'effect' then
-                    this.world:remove(e)
+        for _, entities in pairs(this.entities) do
+            for i=#entities, 1, -1 do
+                local e = entities[i]
+                if e.remove then 
+                    -- remove from this table
+                    e:onRemove()
+                    table.remove(entities, i)
+                    if e.type ~= 'effect' then
+                        this.world:remove(e)
+                    end
+                else
+                    e:update(dt)
                 end
-            else
-                e:update(dt)
             end
         end
     end
 
     entityLayer.draw = function(self)
-        for _, e in ipairs(this.entities) do 
+
+        for _, e in ipairs(this.entities.effects) do 
+            e:draw()
+        end
+        for _, e in ipairs(this.entities.collectibles) do 
+            e:draw()
+        end
+        for _, e in ipairs(this.entities.enemies) do 
+            e:draw()
+        end
+        for _, e in ipairs(this.entities.players) do 
+            e:draw()
+        end
+        for _, e in ipairs(this.entities.blocks) do 
             e:draw()
         end
     end
@@ -80,12 +101,12 @@ function Level:Create(level_id, player_id)
 end
 
 function Level:addEntity(e)
-    table.insert(self.entities, e)
+    table.insert(self.entities[e.type], e)
     self.world:add(e, e.position.x, e.position.y, e.width, e.height)
 end
 
 function Level:addEffect(e)
-    table.insert(self.entities, e)
+    table.insert(self.entities.effects, e)
 end
 
 function Level:handleInput(dt)
@@ -102,6 +123,6 @@ function Level:draw(sx, sy)
     local tx, ty = self.camera:transCoords()
     self.map:draw(tx, ty)
     --love.graphics.setColor(0, 1, 0, 1)
-    self.map:bump_draw(tx, ty)
+    --self.map:bump_draw(tx, ty)
     --love.graphics.setColor(1, 1, 1, 1)
 end 
