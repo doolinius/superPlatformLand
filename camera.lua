@@ -128,11 +128,17 @@ function Camera:transCoords()
   ]]
 end
 
+--function lerp(a,b,t) return (1-t)*a + t*b end
+function lerp(a, b, x, dt) return a + (b - a) * (1.0 - math.exp(-x * dt)) end
+
 function Camera:update(dt)
   if self.followObject and not self:isMoving() then
     --log.trace("Not moving.")
-    self.x = self.followObject.position.x + self.offset.x
-    self.y = self.followObject.position.y + self.offset.y
+    local damping = 6
+    local x_value = lerp(self.x, self.followObject.position.x + self.offset.x, damping, dt)
+    local y_value = lerp(self.y, self.followObject.position.y + self.offset.y, damping, dt)
+    self.x = x_value -- self.followObject.position.x + self.offset.x
+    self.y = y_value -- self.followObject.position.y + self.offset.y
   elseif self:isMoving() then
     --log.trace("Uhh.. moving???")
     self.tweenX:Update(dt)
