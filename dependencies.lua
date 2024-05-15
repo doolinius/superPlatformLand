@@ -3,12 +3,13 @@
 ]]
 
 -- require libraries first
+log = require('libs/log')
 loader = require('libs/love-loader')
-Input = require('libs/input')
+--Input = require('libs/input')
+baton = require('libs/baton')
 anim8 = require('libs/anim8/anim8')
 sti = require('libs/sti')
 bump = require('libs/bump')
-log = require('libs/log')
 inspect = require('libs/inspect')
 lovebird = require('libs/lovebird')
 class = require('libs/middleclass')
