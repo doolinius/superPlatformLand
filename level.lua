@@ -123,6 +123,6 @@ function Level:draw(sx, sy)
     local tx, ty = self.camera:transCoords()
     self.map:draw(tx, ty)
     --love.graphics.setColor(0, 1, 0, 1)
-    self.map:bump_draw(tx, ty)
+    --self.map:bump_draw(tx, ty)
     --love.graphics.setColor(1, 1, 1, 1)
 end 

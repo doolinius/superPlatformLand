@@ -271,7 +271,7 @@ end
 
 function GetSerious:enter(params)
     self.character.animation = self.character.frames.get_serious
-    self.character.velocity.top_x = 90
+    self.character.velocity.top_x = 88
     self.timer = 0.5
     local e = Effect:new(gEffectDefs.dress_toss, self.character.position.x, self.character.position.y+16, self.level)
     log.trace("Facing: " .. self.character.position.facing)

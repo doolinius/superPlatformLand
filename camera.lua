@@ -93,12 +93,15 @@ function Camera:transCoords()
   -- the camera is following should be center screen
   local tx = self.x - math.floor(gameWidth / 2)
   local ty = self.y - math.floor(gameHeight / 2)
+  --local tx = math.floor(self.x - (gameWidth / 2))
+  --local ty = math.floor(self.y - (gameHeight / 2))
   -- clamp the tx and ty between current min and max values
   -- negate these values for the true tx and ty
   tx = -(clamp(tx, self.minTX, self.maxTX))
   ty = -(clamp(ty, self.minTY, self.maxTY))
   -- floor them because of the division by 2
   --log.trace("TX: " .. tx .. " TY: " .. ty)
+  --log.trace("TX diff: " .. tx - self.followObject.position.x)
   --return math.floor(tx+0.5), math.floor(ty)
   return tx, ty
   --[[
@@ -134,11 +137,13 @@ function lerp(a, b, x, dt) return a + (b - a) * (1.0 - math.exp(-x * dt)) end
 function Camera:update(dt)
   if self.followObject and not self:isMoving() then
     --log.trace("Not moving.")
-    local damping = 6
+    local damping = 5
     local x_value = lerp(self.x, self.followObject.position.x + self.offset.x, damping, dt)
-    local y_value = lerp(self.y, self.followObject.position.y + self.offset.y, damping, dt)
-    self.x = x_value -- self.followObject.position.x + self.offset.x
-    self.y = y_value -- self.followObject.position.y + self.offset.y
+    local y_value = lerp(self.y, self.followObject.position.y + self.offset.y, damping*1.5, dt)
+    self.x = math.floor(0.5+ x_value) -- self.followObject.position.x + self.offset.x
+    self.y = math.floor(0.5+ y_value) -- self.followObject.position.y + self.offset.y
+    --self.x = self.followObject.position.x + self.offset.x
+    --self.y = self.followObject.position.y + self.offset.y
   elseif self:isMoving() then
     --log.trace("Uhh.. moving???")
     self.tweenX:Update(dt)

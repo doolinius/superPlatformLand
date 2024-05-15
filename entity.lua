@@ -123,6 +123,9 @@ function Entity:draw()
   if self.position.facing == -1 then 
     offset = self.width
   end
+  if self.type == "character" then
+    log.trace("X Pos: " .. self.position.x)
+  end
   if self.quad then
     if self.rotate ~= 0 then 
       love.graphics.draw(self.image, self.quad, self.position.x, self.position.y, self.rotAmt, self.position.facing, 1, self.width/2, self.height/2)
