@@ -90,8 +90,17 @@ function Character:update(dt)
     -- The state machine will handle setting velocities, directions, animations
     -- It will also handle the input
     self.controller:update(dt)
-    local actualX, actualY, cols, len = Entity.update(self, dt)
+    --local actualX, actualY, cols, len = Entity.update(self, dt)
+    self.position.px = self.position.x
+    self.position.py = self.position.y
+    --local actualX, actualY, cols, len = Entity.update(self, dt)
+    Entity.update(self, dt)
+    local actualX, actualY, cols, len = self.level.world:check(self, self.position.x + self.hitbox.ox, self.position.y + self.hitbox.oy, gColFilters.character)
 
+    self.level.world:update(self, actualX, actualY)
+    
+    actualX = actualX-self.hitbox.ox
+    actualY = actualY-self.hitbox.oy
     self.position.x = actualX 
     self.position.y = actualY
 
@@ -127,14 +136,24 @@ function Character:update(dt)
                 --self:collect(c.other)
                 c.other:onCollect(self)
             elseif c.other.type == "block" then
-                if c.normal.y == 1 or c.normal.y == -1 then -- we hit a block from below
-                    self.velocity.y = 0
-                end
+                
                 if c.other.lethal then 
                     --self.controller:change('die')
-                elseif c.other.breakable and c.normal.y == 1 then 
-                    c.other.remove = true 
-                    breakBlock(c.other, self.level)
+                elseif c.other.breakable then
+                    if c.normal.y == 1 then
+                        self.velocity.y = self.velocity.y * 0.5
+                        c.other.remove = true 
+                        breakBlock(c.other, self.level)
+                    end
+                elseif c.other.jump_through then 
+                    if c.normal.y == 1 or c.normal.y == 0 then
+                        log.trace("JUMP THROUGH " .. inspect(c.normal) .. " " .. c.type)
+                    else 
+                        self.velocity.y = 0
+                    end
+                elseif c.normal.y == 1 or c.normal.y == -1 then -- we hit a block from below
+                    log.trace("FROM BELOW")
+                    self.velocity.y = 0
                 end
             end
         end
@@ -142,6 +161,10 @@ function Character:update(dt)
     self.position.x = math.floor(actualX+0.5)
     self.position.y = math.floor(actualY+0.5)
     --log.trace("Update X: " .. self.x .. " Y: " .. self.y)
+end
+
+function Character:bottom()
+    return(self.position.y + self.hitbox.height)
 end
 
 function Character:landFromFall()

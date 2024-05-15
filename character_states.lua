@@ -43,13 +43,13 @@ function IdleState:handleInput(dt)
     if input:pressed('special') then
         self.character:special()
     end
-    if input:pressed('left') then 
+    if input:down('left') then 
         self.controller:change('run', {dir=-1})
-    elseif input:pressed('right') then 
+    elseif input:down('right') then 
         self.controller:change('run', {dir=1})
     end
 
-    if input:pressed('jump') then 
+    if input:down('jump') then 
         self.controller:change('jump')
     end
 end
@@ -131,10 +131,10 @@ end
 
 function RunState:handleInput()
     if input:down('left') then 
-        self.character.facing = -1
+        self.character.position.facing = -1
         self.character.velocity.x = -self.character.velocity.top_x
     elseif input:down('right') then 
-        self.character.facing = 1
+        self.character.position.facing = 1
         self.character.velocity.x = self.character.velocity.top_x
     else
         self.character.controller:change('idle')
@@ -171,11 +171,11 @@ function JumpState:handleInput()
         self.controller:change('fall')
     else
         if input:down('left') then
-            self.character.facing = -1
+            self.character.position.facing = -1
             self.character.velocity.x = -self.character.velocity.top_x
         elseif input:down('right') then 
             self.character.velocity.x = self.character.velocity.top_x
-            self.character.facing = 1
+            self.character.position.facing = 1
         else
             self.character.velocity.x = 0
         end
@@ -197,11 +197,11 @@ end
 
 function FallState:handleInput()
     if input:down('left') then
-        self.character.facing = -1
+        self.character.position.facing = -1
         self.character.velocity.x = -self.character.velocity.top_x
     elseif input:down('right') then 
         self.character.velocity.x = self.character.velocity.top_x
-        self.character.facing = 1
+        self.character.position.facing = 1
     else
         self.character.velocity.x = 0
     end
@@ -241,11 +241,11 @@ function FloatState:handleInput(dt)
         return 
     end
     if input:down('left') then
-        self.character.facing = -1
+        self.character.position.facing = -1
         self.character.velocity.x = -self.character.velocity.top_x
     elseif input:down('right') then 
         self.character.velocity.x = self.character.velocity.top_x
-        self.character.facing = 1
+        self.character.position.facing = 1
     else
         self.character.velocity.x = 0
     end
@@ -274,7 +274,8 @@ function GetSerious:enter(params)
     self.character.velocity.top_x = 90
     self.timer = 0.5
     local e = Effect:new(gEffectDefs.dress_toss, self.character.position.x, self.character.position.y+16, self.level)
-    e.velocity = {x=-70*self.character.position.facing, y=-100}
+    log.trace("Facing: " .. self.character.position.facing)
+    e.velocity = {x=self.character.position.facing*-70, y=-100}
     self.level:addEffect(e)
 end
 

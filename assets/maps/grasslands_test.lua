@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 14,
-  nextobjectid = 137,
+  nextobjectid = 139,
   properties = {
     ["bg_music"] = "bg_music2",
     ["name"] = "Sunny Day",
@@ -1661,7 +1661,7 @@ return {
       height = 30,
       id = 1,
       name = "terrain",
-      class = "block",
+      class = "terrain",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -2537,6 +2537,52 @@ return {
             ["lethal"] = false,
             ["movable"] = false,
             ["type"] = "orange_solid_thin"
+          }
+        },
+        {
+          id = 137,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 512,
+          y = 344,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          gid = 298,
+          visible = true,
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = true,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "green_solid_thin"
+          }
+        },
+        {
+          id = 138,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 496,
+          y = 344,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          gid = 298,
+          visible = true,
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = true,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "green_solid_thin"
           }
         }
       }

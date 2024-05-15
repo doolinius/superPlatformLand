@@ -67,7 +67,6 @@ function Entity:initialize(def, x, y, level)
     local g = anim8.newGrid(def.width, def.height, imgW, imgH)
     self.framesets = {} -- create the frameset table 
     for setName, animations in pairs(def.framesets) do -- loop through def framesets
-      log.trace("Creating frameset " .. setName)
       self.framesets[setName] = {} -- create new animations table
       for animName, frameData in pairs(animations) do -- loop animations
         -- create animation 
@@ -82,7 +81,7 @@ function Entity:initialize(def, x, y, level)
     -- set starting animation
     local startingAnimation = def.startingAnimation or def.startingState
     assert(self.frames[startingAnimation] ~= nil, "startingAnimation must have a matching set of frames in the animation table")
-    log.warn(inspect(self.frames, {depth=1}))
+    --log.warn(inspect(self.frames, {depth=1}))
     self.animation = self.frames[startingAnimation]
     assert(self.animation ~= nil)
   else
@@ -111,26 +110,26 @@ function Entity:update(dt)
   self.position.x = math.floor(0.5 + self.position.x + self.velocity.x * dt)
   self.velocity.y = self.velocity.y + GRAVITY * self.gravityEffect * dt
   self.position.y = math.floor(0.5 + self.position.y + self.velocity.y * dt)
-  if self.hitbox then
-    local actualX, actualY, cols, len = self.world:move(self, self.position.x + self.hitbox.ox, self.position.y + self.hitbox.oy, gColFilters[self.type])
-    return actualX-self.hitbox.ox, actualY-self.hitbox.oy, cols, len
-  end
+  --if self.hitbox then
+  --  local actualX, actualY, cols, len = self.world:move(self, self.position.x + self.hitbox.ox, self.position.y + self.hitbox.oy, gColFilters[self.type])
+  --  return actualX-self.hitbox.ox, actualY-self.hitbox.oy, cols, len
+  --end
 end
 
 function Entity:onRemove() end
 
 function Entity:draw()
   local offset = 0 
-  if self.facing == -1 then 
+  if self.position.facing == -1 then 
     offset = self.width
   end
   if self.quad then
     if self.rotate ~= 0 then 
-      love.graphics.draw(self.image, self.quad, self.position.x, self.position.y, self.rotAmt, self.facing, 1, self.width/2, self.height/2)
+      love.graphics.draw(self.image, self.quad, self.position.x, self.position.y, self.rotAmt, self.position.facing, 1, self.width/2, self.height/2)
     else 
-      love.graphics.draw(self.image, self.quad, self.position.x, self.position.y, 0, self.facing, 1, offset)
+      love.graphics.draw(self.image, self.quad, self.position.x, self.position.y, 0, self.position.facing, 1, offset)
     end 
   else
-    self.animation:draw(self.image, self.position.x, self.position.y, 0, self.facing, 1, offset)
+    self.animation:draw(self.image, self.position.x, self.position.y, 0, self.position.facing, 1, offset)
   end 
 end

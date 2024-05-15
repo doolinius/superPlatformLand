@@ -8,11 +8,34 @@ gColFilters = {
   projectile = function (item, other)
     return('slide')
   end,
-  character = function (item, other)
-    if other.type == 'collectible' then 
+  character = function (char, other)
+    if other.type == 'terrain' then
+      --log.trace("TERRAIN")
+      return('slide')
+    elseif other.type == 'collectible' then 
+      --log.trace("CF: collectible")
       return('cross')
     elseif other.type == 'block' then 
-      return('slide')
+      --log.trace("CF block")
+      -- if the character is still below the jump_through block
+      if other.jump_through then
+        --log.trace("CF JUMP THROUGH")
+        --log.trace("other.position.y < (char.position.y + char.hitbox.height+4)" ..
+        --  "opy: " .. other.position.y .. 
+        --  " cpy: " .. char.position.y .. 
+        --  " chh: " .. char.hitbox.height .. 
+        --  " total: " .. char.position.y + char.hitbox.height)
+        --if other.position.y < (char.position.y + char.height + 1) then
+        if char.velocity.y < 0 then
+          return('cross')
+        -- TODO: colliding with jump_through blocks from the side
+        else
+          --log.trace("falling DOWN")
+          return('slide')
+        end
+      else 
+        return('slide')
+      end
     else 
       return('slide')
     end

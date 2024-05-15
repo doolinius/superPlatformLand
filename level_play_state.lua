@@ -37,11 +37,13 @@ function LevelPlayState:handleInput(dt)
     if input:pressed('pause') then 
         -- create PauseState
         -- push onto gameStack
+    elseif input:pressed('mark') then 
+        log.error("-------MARK-------")
     end
 end 
 
 function LevelPlayState:update(dt)
-    self:handleInput(dt)
+    --self:handleInput(dt)
     self.level:handleInput(dt)
     self.level:update(dt)
     self.hud:update(dt)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="137">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="139">
  <editorsettings>
   <export target="grasslands_test.lua" format="lua"/>
  </editorsettings>
@@ -35,7 +35,7 @@
  <imagelayer id="3" name="bg1" offsetx="0" offsety="272" parallaxx="0.5" repeatx="1">
   <image source="../graphics/tilesets/grassland/bg/1_foreground.png" width="288" height="208"/>
  </imagelayer>
- <layer id="1" name="terrain" class="block" width="200" height="30">
+ <layer id="1" name="terrain" class="terrain" width="200" height="30">
   <properties>
    <property name="collidable" type="bool" value="true"/>
   </properties>
@@ -146,6 +146,8 @@
   <object id="134" template="../object_templates/blocks/orange_thin.tx" x="320" y="344"/>
   <object id="135" template="../object_templates/blocks/orange_thin.tx" x="336" y="344"/>
   <object id="136" template="../object_templates/blocks/orange_thin.tx" x="352" y="344"/>
+  <object id="137" template="../object_templates/blocks/green_thin.tx" x="512" y="344"/>
+  <object id="138" template="../object_templates/blocks/green_thin.tx" x="496" y="344"/>
  </objectgroup>
  <objectgroup id="9" name="other"/>
  <imagelayer id="10" name="fg1"/>

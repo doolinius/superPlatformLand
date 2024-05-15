@@ -19,10 +19,12 @@ function love.load()
     gStateStack = StateStack:Create()
     local level = LevelPlayState:Create('grasslands_test', 'princess_sera')
     gStateStack:push(level)
-
+    frameNum = 0 
 end
 
 function love.update(dt)
+    input:update(dt)
+    frameNum = frameNum + 1
     gStateStack:update(dt)
     -- comment out to enable web based debugger at http://localhost:4444
     lovebird.update()

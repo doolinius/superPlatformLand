@@ -66,8 +66,8 @@ gBlockQuads = {
 
     red_solid_thin = thinQuads[1][7],
     orange_solid_thin = thinQuads[1][9],
-    green_solid_thin = thinQuads[2][7],
-    blue_solid_thin = thinQuads[2][9],
+    green_solid_thin = thinQuads[3][7],
+    blue_solid_thin = thinQuads[3][9],
     orange_brick_thin = thinQuads[5][3],
     ice_thin = thinQuads[5][5],
     dk_green_brick_thin = thinQuads[5][5],

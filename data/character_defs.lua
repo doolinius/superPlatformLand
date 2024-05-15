@@ -20,7 +20,7 @@ gCharacterDefs = {
             hit = {frames={5,1}, duration=1}
         },
         startingState = 'idle',
-        states = {'idle', 'run', 'jump', 'fall', 'die'}--,, 'fall', 'punch', 'hit', 'die'}
+        states = {'idle', 'run', 'jump', 'fall'}--,, 'fall', 'punch', 'hit', 'die'}
     },
     princess_sera = {
         image = 'characters/princess_sera.png',
