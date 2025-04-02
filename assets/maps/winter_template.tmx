@@ -2,7 +2,7 @@
 <map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="76">
  <properties>
   <property name="bg_music" value=""/>
-  <property name="level_name" value=""/>
+  <property name="name" value=""/>
   <property name="time_limit" type="int" value="0"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/coin.tsx"/>

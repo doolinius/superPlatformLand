@@ -79,6 +79,11 @@ function Level:Create(level_id, player_id)
 
     entityLayer.draw = function(self)
 
+
+        for _, e in ipairs(this.entities.blocks) do 
+            e:draw()
+        end
+
         for _, e in ipairs(this.entities.effects) do 
             e:draw()
         end
@@ -89,9 +94,6 @@ function Level:Create(level_id, player_id)
             e:draw()
         end
         for _, e in ipairs(this.entities.players) do 
-            e:draw()
-        end
-        for _, e in ipairs(this.entities.blocks) do 
             e:draw()
         end
     end

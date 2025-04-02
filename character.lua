@@ -80,8 +80,8 @@ function characterCollisionFilter(char, other)
         return("slide")
     elseif other.type == "collectible" then 
         return("cross")
-		else 
-				return("slide")
+	else 
+		return("slide")
     end
 end
 
@@ -144,6 +144,10 @@ function Character:update(dt)
                         self.velocity.y = self.velocity.y * 0.5
                         c.other.remove = true 
                         breakBlock(c.other, self.level)
+                    elseif c.normal.y == -1 then
+                        self.velocity.y = 0
+                    --else 
+
                     end
                 elseif c.other.jump_through then 
                     if c.normal.y == 1 or c.normal.y == 0 then

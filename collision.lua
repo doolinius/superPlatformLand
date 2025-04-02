@@ -19,19 +19,14 @@ gColFilters = {
       --log.trace("CF block")
       -- if the character is still below the jump_through block
       if other.jump_through then
-        --log.trace("CF JUMP THROUGH")
-        --log.trace("other.position.y < (char.position.y + char.hitbox.height+4)" ..
-        --  "opy: " .. other.position.y .. 
-        --  " cpy: " .. char.position.y .. 
-        --  " chh: " .. char.hitbox.height .. 
-        --  " total: " .. char.position.y + char.hitbox.height)
-        --if other.position.y < (char.position.y + char.height + 1) then
-        if char.velocity.y < 0 then
-          return('cross')
+        -- if block.position.y < (char.position.y + char.height + 1) then
+
+        -- This way does. And look how simple it is.
+        if char.velocity.y < 0 then -- if character is moving UP
+          return('cross') -- allow character to pass through 
         -- TODO: colliding with jump_through blocks from the side
         else
-          --log.trace("falling DOWN")
-          return('slide')
+          return('slide') -- stop character from moving
         end
       else 
         return('slide')

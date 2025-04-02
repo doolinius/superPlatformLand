@@ -17,13 +17,16 @@ function love.load()
 
     gameWorld = GameWorld:Create()
     gStateStack = StateStack:Create()
-    local level = LevelPlayState:Create('grasslands_test', 'bushly')
+    local level = LevelPlayState:Create('grasslands_test', 'princess_sera')
     gStateStack:push(level)
     frameNum = 0 
 end
 
 function love.update(dt)
     input:update(dt)
+    if input:pressed('screenshot') then 
+        love.graphics.captureScreenshot('spl.png')
+    end
     frameNum = frameNum + 1
     gStateStack:update(dt)
     -- comment out to enable web based debugger at http://localhost:4444

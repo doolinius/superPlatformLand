@@ -40,7 +40,8 @@ local config = {
         jump = {'key:space', 'button:a'},
         special = {'key:p', 'button:y'},
         pause = {'key:tab'},
-        mark = {'key:m'}
+        mark = {'key:m'},
+        screenshot = {'key:2'}
     },
     joystick = love.joystick.getJoysticks()[1]
 }
