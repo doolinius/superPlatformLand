@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="139">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="144">
  <editorsettings>
   <export target="grasslands_test.lua" format="lua"/>
  </editorsettings>
@@ -148,6 +148,7 @@
   <object id="136" template="../object_templates/blocks/orange_thin.tx" x="352" y="344"/>
   <object id="137" template="../object_templates/blocks/green_thin.tx" x="512" y="344"/>
   <object id="138" template="../object_templates/blocks/green_thin.tx" x="496" y="344"/>
+  <object id="143" template="../object_templates/blocks/spikes.tx" x="864" y="480"/>
  </objectgroup>
  <objectgroup id="9" name="other"/>
  <imagelayer id="10" name="fg1"/>

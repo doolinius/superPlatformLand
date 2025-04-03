@@ -22,13 +22,13 @@
  <imagelayer id="6" name="bg4" offsetx="0" offsety="272" parallaxx="0.15" repeatx="1">
   <image source="../graphics/tilesets/autumn/bg/6b_hills.png" width="288" height="208"/>
  </imagelayer>
- <imagelayer id="5" name="bg3" offsetx="0" offsety="272" parallaxx="0.2" repeatx="1">
+ <imagelayer id="5" name="bg3" tintcolor="#adb2ff" offsetx="0" offsety="272" parallaxx="0.2" repeatx="1">
   <image source="../graphics/tilesets/autumn/bg/5_tree_row_2.png" width="288" height="208"/>
  </imagelayer>
- <imagelayer id="4" name="bg2" offsetx="0" offsety="272" parallaxx="0.3" repeatx="1">
+ <imagelayer id="4" name="bg2" tintcolor="#bdc1ff" offsetx="0" offsety="272" parallaxx="0.3" repeatx="1">
   <image source="../graphics/tilesets/autumn/bg/4_tree_row_1.png" width="288" height="208"/>
  </imagelayer>
- <imagelayer id="3" name="bg1" offsetx="0" offsety="272" parallaxx="0.5" repeatx="1">
+ <imagelayer id="3" name="bg1" tintcolor="#7a81ff" offsetx="0" offsety="272" parallaxx="0.5" repeatx="1">
   <image source="../graphics/tilesets/autumn/bg/3_bottom_leaf_piles.png" width="288" height="208"/>
  </imagelayer>
  <layer id="1" name="terrain" width="200" height="30">
@@ -101,10 +101,10 @@
  </layer>
  <objectgroup id="8" name="entities"/>
  <objectgroup id="9" name="other"/>
- <imagelayer id="10" name="fg1" offsetx="0" offsety="272" parallaxx="1.25" repeatx="1">
+ <imagelayer id="10" name="fg1" tintcolor="#7a81ff" offsetx="0" offsety="272" parallaxx="1.25" repeatx="1">
   <image source="../graphics/tilesets/autumn/bg/2_trees.png" width="288" height="208"/>
  </imagelayer>
- <imagelayer id="11" name="fg2" offsetx="0" offsety="272" parallaxx="0" repeatx="1">
+ <imagelayer id="11" name="fg2" tintcolor="#7a81ff" offsetx="0" offsety="272" parallaxx="0" repeatx="1">
   <image source="../graphics/tilesets/autumn/bg/1_leaf_top.png" width="288" height="208"/>
   <properties>
    <property name="music" value=""/>
