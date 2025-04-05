@@ -3,60 +3,72 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "tilesets/blocks_16x16.tsx",
+    "activeFile": "maps/grasslands_test.tmx",
     "expandedProjectPaths": [
-        "tilesets",
         "object_templates",
-        ".",
+        "tilesets",
+        "object_templates/enemies",
+        "object_templates/blocks",
         "maps",
-        "object_templates/enemies"
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "": {
             "scaleInDock": 1
         },
+        "maps/1-1.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 3,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 1552.1666666666665,
+                "y": 139.5
+            }
+        },
         "maps/autumn_template_a.tmx": {
             "scale": 1.78,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1600,
-                "y": 239.6067415730337
+                "x": 1600.2808988764045,
+                "y": 239.60674157303373
             }
         },
         "maps/autumn_template_a_night.tmx": {
             "scale": 1.8828,
-            "selectedLayer": 5,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 1599.7450605481197,
-                "y": 239.80242192479287
+                "x": 1600.0106224771616,
+                "y": 239.80242192479284
             }
         },
         "maps/autumn_template_b.tmx": {
             "scale": 0.8414,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1599.7147611124315,
-                "y": 240.6703113857856
+                "x": 1600.3090087948656,
+                "y": 240.67031138578557
             }
         },
         "maps/grasslands_template.tmx": {
             "scale": 1.5955,
-            "selectedLayer": 1,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 1599.4985897837669,
-                "y": 239.7367596364776
+                "x": 1599.8119711689124,
+                "y": 385.14572234409275
             }
         },
         "maps/grasslands_test.tmx": {
             "expandedObjectLayers": [
                 8
             ],
-            "scale": 1.71,
-            "selectedLayer": 7,
+            "scale": 4,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 180.1169590643275,
-                "y": 332.45614035087715
+                "x": 1035.875,
+                "y": 382.875
             }
         },
         "maps/grasslands_test.tmx#blocks_16x16": {
@@ -66,12 +78,12 @@
             "scale": 3.17,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1599.0536277602523,
+                "x": 1599.2113564668769,
                 "y": 239.2744479495268
             }
         },
         "tilesets/blocks_16x16.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 1.5,
             "scaleInEditor": 2.5859
         },
         "tilesets/blocks_thin.tsx": {
@@ -89,6 +101,10 @@
         },
         "tilesets/diver_fish.tsx": {
             "scaleInDock": 1
+        },
+        "tilesets/grassland_entities.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "tilesets/grassland_terrain.tsx": {
             "scaleInDock": 1,
@@ -108,11 +124,17 @@
         },
         "tilesets/round_dudes.tsx": {
             "scaleInDock": 1
+        },
+        "tilesets/trees.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "/Users/jdoolin/projects/superPlatformLand/assets/maps",
+    "last.exportedFilePath": "/home/jdoolin/projects/superPlatformLand/assets/maps",
+    "last.imagePath": "/home/jdoolin/projects/superPlatformLand/assets/graphics/tilesets/grassland",
     "last.objectTemplatePath": "/Users/jdoolin/projects/superPlatformLand/assets/object_templates/blocks",
-    "map.lastUsedExportFilter": "All Files (*)",
+    "map.height": 13,
+    "map.lastUsedExportFilter": "Lua files (*.lua)",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
@@ -125,18 +147,29 @@
         "maps/autumn_template_b.tmx",
         "maps/autumn_template_a_night.tmx",
         "maps/autumn_template_a.tmx",
-        "tilesets/blocks_16x16.tsx"
+        "tilesets/blocks_16x16.tsx",
+        "maps/1-1.tmx",
+        "tilesets/grassland_entities.tsx"
     ],
     "project": "superPlatformLand.tiled-project",
+    "property.type": "int",
     "recentFiles": [
-        "maps/grasslands_test.tmx",
-        "tilesets/grassland_terrain.tsx",
-        "maps/winter_template.tmx",
-        "maps/grasslands_template.tmx",
-        "maps/autumn_template_b.tmx",
-        "maps/autumn_template_a_night.tmx",
-        "maps/autumn_template_a.tmx",
+        "tilesets/grassland_entities.tsx",
+        "maps/1-1.tmx",
         "tilesets/blocks_16x16.tsx",
+        "maps/autumn_template_a.tmx",
+        "maps/autumn_template_a_night.tmx",
+        "maps/autumn_template_b.tmx",
+        "maps/grasslands_template.tmx",
+        "maps/winter_template.tmx",
+        "tilesets/grassland_terrain.tsx",
+        "maps/grasslands_test.tmx",
+        "tilesets/trees.tsx",
         "tilesets/bubs.tsx"
-    ]
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
 }

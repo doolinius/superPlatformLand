@@ -61,7 +61,8 @@
             "type": "class",
             "useAs": [
                 "property",
-                "object"
+                "object",
+                "tile"
             ]
         },
         {

@@ -7,7 +7,7 @@ Super Platform Land Rewrite:
 
 SPL Improvements:
     ✔ Add Fall state @done(24-05-15 15:43)
-    - Fix block bump algorithm
+    ☐ Fix block bump algorithm
     - Only update nearby enemies
     ✔ Use input library (baton) @done(24-05-15 15:43)
 
@@ -15,3 +15,12 @@ Graphics Enhancements:
     ✔ Increase size of old backgrounds @done(24-05-15 15:43)
     ✔ Split old backgrounds into layers @done(24-05-15 15:43)
     ✔ Adjust terrain for old map tiles @done(24-05-15 15:43)
+    ☐ Add Powerup blocks (? block equiv)
+    ☐ Add more brick block colors
+    ☐ More pointy block colors
+    ☐ More pushable/movable blocks
+
+Design Decisions:
+    - Midpoint graphic/mechanism @started(25-04-04 10:07)
+    - Level end mechanism/graphics @started(25-04-04 10:07)
+    - Alternative to warp pipes, vines, potions (doors?) @started(25-04-04 10:07)
