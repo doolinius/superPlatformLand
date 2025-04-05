@@ -41,11 +41,16 @@ function Level:Create(level_id, player_id)
             )
         elseif o.type == 'block' then 
             --log.trace("Block type: " .. o.properties.type)
-            local b = Block:new(o, this)
-            --this:addEntity(b)
-            table.insert(this.entities.blocks, b)
-            --log.trace(inspect(b, {depth=2}))
-            this.world:add(b, b.position.x, b.position.y, b.hitbox.width, b.hitbox.height)
+            if o.properties.invisible then
+                local b = InvisibleBlock:new(o, this)
+                this.world:add(b, b.x, b.y, b.width, b.height)
+            else
+                local b = Block:new(o, this)
+                --this:addEntity(b)
+                table.insert(this.entities.blocks, b)
+                --log.trace(inspect(b, {depth=2}))
+                this.world:add(b, b.position.x, b.position.y, b.hitbox.width, b.hitbox.height)
+            end
         elseif o.type == 'enemy' then 
             local e = Enemy:Create(o, this)
         elseif o.type == 'collectible' then 

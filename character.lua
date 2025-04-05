@@ -97,12 +97,7 @@ function Character:update(dt)
     Entity.update(self, dt)
     local actualX, actualY, cols, len = self.level.world:check(self, self.position.x + self.hitbox.ox, self.position.y + self.hitbox.oy, gColFilters.character)
 
-    self.level.world:update(self, actualX, actualY)
-    
-    actualX = actualX-self.hitbox.ox
-    actualY = actualY-self.hitbox.oy
-    self.position.x = actualX 
-    self.position.y = actualY
+    -- position updating WAS here
 
     --[[
         Option 1 - Entity updates velocities, but doesn't move 
@@ -139,16 +134,27 @@ function Character:update(dt)
                 
                 if c.other.lethal then 
                     --self.controller:change('die')
+                elseif c.other.invisible then 
+                    if c.normal.y == 1 then
+                        actualX = c.itemRect.x 
+                        actualY = c.itemRect.y
+                        self.velocity.y = 0
+                        -- bonk block
+                        -- replace with dead block
+                    end
                 elseif c.other.breakable then
                     if c.normal.y == 1 then
                         self.velocity.y = self.velocity.y * 0.5
-                        c.other.remove = true 
-                        breakBlock(c.other, self.level)
+                        --c.other.remove = true 
+                        --breakBlock(c.other, self.level)
+                        c.other:onBreak(self.level)
                     elseif c.normal.y == -1 then
                         self.velocity.y = 0
                     --else 
 
                     end
+                elseif c.other.bonkable then 
+                    c.other:onBonk(self)
                 elseif c.other.jump_through then 
                     if c.normal.y == 1 or c.normal.y == 0 then
                         log.trace("JUMP THROUGH " .. inspect(c.normal) .. " " .. c.type)
@@ -162,6 +168,14 @@ function Character:update(dt)
             end
         end
     end
+
+    self.level.world:update(self, actualX, actualY)
+    
+    actualX = actualX-self.hitbox.ox
+    actualY = actualY-self.hitbox.oy
+    self.position.x = actualX 
+    self.position.y = actualY
+
     self.position.x = math.floor(actualX+0.5)
     self.position.y = math.floor(actualY+0.5)
     --log.trace("Update X: " .. self.x .. " Y: " .. self.y)

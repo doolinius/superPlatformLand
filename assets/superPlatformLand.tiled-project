@@ -11,7 +11,7 @@
     ],
     "propertyTypes": [
         {
-            "color": "#ff73fa79",
+            "color": "#ffff5500",
             "drawFill": true,
             "id": 2,
             "members": [
@@ -26,6 +26,12 @@
                     "value": false
                 },
                 {
+                    "name": "contains",
+                    "propertyType": "collectible_types",
+                    "type": "string",
+                    "value": "none"
+                },
+                {
                     "name": "crumbling",
                     "type": "bool",
                     "value": false
@@ -34,11 +40,6 @@
                     "name": "friction",
                     "type": "float",
                     "value": 1
-                },
-                {
-                    "name": "invisible",
-                    "type": "bool",
-                    "value": false
                 },
                 {
                     "name": "jump_through",
@@ -165,7 +166,8 @@
                 "red_present",
                 "health_kit",
                 "blue_present",
-                "green_present"
+                "green_present",
+                "none"
             ],
             "valuesAsFlags": false
         },

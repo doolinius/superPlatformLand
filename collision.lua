@@ -28,6 +28,8 @@ gColFilters = {
         else
           return('slide') -- stop character from moving
         end
+      elseif other.invisible then 
+        return('cross')
       else 
         return('slide')
       end

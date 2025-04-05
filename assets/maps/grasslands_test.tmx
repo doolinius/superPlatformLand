@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="145">
-=======
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="155">
->>>>>>> cce779e1f8569953ca10fd55ee66e327d4beaa8a
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="156">
  <editorsettings>
   <export target="grasslands_test.lua" format="lua"/>
  </editorsettings>
@@ -153,9 +149,6 @@
   <object id="137" template="../object_templates/blocks/green_thin.tx" x="512" y="344"/>
   <object id="138" template="../object_templates/blocks/green_thin.tx" x="496" y="344"/>
   <object id="143" template="../object_templates/blocks/spikes.tx" x="864" y="480"/>
-<<<<<<< HEAD
-  <object id="144" template="../object_templates/blocks/invisible.tx" type="block" x="272" y="288" visible="1"/>
-=======
   <object id="144" template="../object_templates/blocks/green_brick.tx" x="928" y="400"/>
   <object id="145" template="../object_templates/blocks/green_brick.tx" x="944" y="400"/>
   <object id="146" template="../object_templates/blocks/green_brick.tx" x="976" y="400"/>
@@ -167,7 +160,7 @@
   <object id="152" template="../object_templates/blocks/green_brick.tx" x="1184" y="384"/>
   <object id="153" template="../object_templates/blocks/green_brick.tx" x="1216" y="384"/>
   <object id="154" template="../object_templates/blocks/green_brick.tx" x="1232" y="400"/>
->>>>>>> cce779e1f8569953ca10fd55ee66e327d4beaa8a
+  <object id="155" template="../object_templates/blocks/invisible.tx" x="272" y="288"/>
  </objectgroup>
  <objectgroup id="9" name="other"/>
  <imagelayer id="10" name="fg1"/>

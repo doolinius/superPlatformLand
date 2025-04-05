@@ -15,6 +15,7 @@ lovebird = require('libs/lovebird')
 class = require('libs/middleclass')
 require('libs/state_stack')
 require('libs/StateMachine')
+Stateful = require('libs/stateful')
 
 -- require game specific files next
 require('constants')

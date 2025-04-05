@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 14,
-  nextobjectid = 155,
+  nextobjectid = 156,
   properties = {
     ["bg_music"] = "bg_music2",
     ["name"] = "Sunny Day",
@@ -907,267 +907,993 @@ return {
       tiles = {
         {
           id = 0,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "grey_crumble"
+          }
         },
         {
           id = 1,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 2,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 3,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 4,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 5,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 6,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 7,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 8,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 9,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = true,
+            ["movable"] = false,
+            ["type"] = "spikes"
+          }
         },
         {
           id = 10,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 11,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "tan_crumble"
+          }
         },
         {
           id = 12,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 13,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 14,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 15,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 16,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 17,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 18,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 19,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 20,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 21,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 22,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "orange_brick_breakable"
+          }
         },
         {
           id = 23,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "orange_brick"
+          }
         },
         {
           id = 24,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 25,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "ice"
+          }
         },
         {
           id = 26,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 27,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "dk_green_brick_breakable"
+          }
         },
         {
           id = 28,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "dk_green_brick"
+          }
         },
         {
           id = 29,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 30,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "grey_brick_breakable"
+          }
         },
         {
           id = 31,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "grey_brick"
+          }
         },
         {
           id = 32,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 33,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "green_brick_breakable"
+          }
         },
         {
           id = 34,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "green_brick"
+          }
         },
         {
           id = 35,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 36,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = true,
+            ["movable"] = false,
+            ["type"] = "ice_spikes"
+          }
         },
         {
           id = 37,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "ice_breakable"
+          }
         },
         {
           id = 38,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick_breakable"
+          }
         },
         {
           id = 39,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 40,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 41,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "brown_brick_breakable"
+          }
         },
         {
           id = 42,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "brown_brick"
+          }
         },
         {
           id = 43,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 44,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 45,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 46,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 47,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 48,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 49,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 50,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 51,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 52,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 53,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 54,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 55,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 56,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 57,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 58,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 59,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 60,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 61,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 62,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 63,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 64,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 65,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         }
       }
     },
@@ -1201,47 +1927,168 @@ return {
       tiles = {
         {
           id = 6,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 8,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 28,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 30,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 46,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 48,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 51,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 54,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 68,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 73,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 76,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
+          }
         }
       }
     },
@@ -1797,6 +2644,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1820,6 +2668,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1843,6 +2692,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1866,6 +2716,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1889,6 +2740,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1912,6 +2764,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1935,6 +2788,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1958,6 +2812,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1981,6 +2836,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2004,6 +2860,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2117,6 +2974,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2140,6 +2998,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2163,6 +3022,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2186,6 +3046,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2209,6 +3070,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2232,6 +3094,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2255,6 +3118,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2278,6 +3142,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2301,6 +3166,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2324,6 +3190,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2347,6 +3214,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2370,6 +3238,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2393,6 +3262,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -2416,6 +3286,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -2439,6 +3310,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -2462,6 +3334,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -2485,6 +3358,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -2508,6 +3382,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -2531,6 +3406,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -2554,6 +3430,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -2577,6 +3454,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -2600,6 +3478,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2623,6 +3502,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2646,6 +3526,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2669,6 +3550,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2692,6 +3574,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2715,6 +3598,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2738,6 +3622,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2761,6 +3646,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2784,6 +3670,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2807,6 +3694,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2830,6 +3718,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2853,12 +3742,37 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
+            ["contains"] = "none",
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
             ["type"] = "green_brick"
+          }
+        },
+        {
+          id = 155,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 272,
+          y = 288,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["invisible"] = true,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["type"] = "red_brick"
           }
         }
       }
