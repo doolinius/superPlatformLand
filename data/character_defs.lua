@@ -11,7 +11,7 @@ gCharacterDefs = {
         },
         velocity = {x=0, y=0, 
             top_x=90, 
-            jump_force=230},
+            jump_force=250},
         animations = {
             idle = {frames={'1-3', 1}, duration=0.15},
             run = {frames={'1-6', 2}, duration=0.15},
@@ -102,7 +102,7 @@ gCharacterDefs = {
         },
         velocity = {x=0, y=0, 
             top_x=75, 
-            jump_force=230},
+            jump_force=245},
         status = {
             charged = false
         },
