@@ -11,7 +11,7 @@
     ],
     "propertyTypes": [
         {
-            "color": "#ffa0a0a4",
+            "color": "#ff73fa79",
             "drawFill": true,
             "id": 2,
             "members": [
@@ -34,6 +34,11 @@
                     "name": "friction",
                     "type": "float",
                     "value": 1
+                },
+                {
+                    "name": "invisible",
+                    "type": "bool",
+                    "value": false
                 },
                 {
                     "name": "jump_through",

@@ -128,6 +128,7 @@
         "tilesets/blocks_16x16.tsx"
     ],
     "project": "superPlatformLand.tiled-project",
+    "property.type": "bool",
     "recentFiles": [
         "maps/grasslands_test.tmx",
         "tilesets/grassland_terrain.tsx",
