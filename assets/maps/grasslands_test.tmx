@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="156">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="157">
  <editorsettings>
   <export target="grasslands_test.lua" format="lua"/>
  </editorsettings>
@@ -160,9 +160,15 @@
   <object id="152" template="../object_templates/blocks/green_brick.tx" x="1184" y="384"/>
   <object id="153" template="../object_templates/blocks/green_brick.tx" x="1216" y="384"/>
   <object id="154" template="../object_templates/blocks/green_brick.tx" x="1232" y="400"/>
-  <object id="155" template="../object_templates/blocks/invisible.tx" x="272" y="288"/>
+  <object id="155" template="../object_templates/blocks/invisible.tx" x="272" y="288">
+   <properties>
+    <property name="contains" type="object" value="156"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup id="9" name="other"/>
+ <objectgroup id="9" name="other">
+  <object id="156" template="../object_templates/collectibles/coin.tx" x="272" y="288" visible="0"/>
+ </objectgroup>
  <imagelayer id="10" name="fg1"/>
  <imagelayer id="11" name="fg2">
   <properties>

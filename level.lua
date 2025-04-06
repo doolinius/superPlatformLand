@@ -41,6 +41,9 @@ function Level:Create(level_id, player_id)
             )
         elseif o.type == 'block' then 
             --log.trace("Block type: " .. o.properties.type)
+            --log.trace("Block Contains ID: " .. inspect(o.properties.contains))
+            o.properties.contains = this.map.objects[o.properties.contains.id]
+            --log.trace("Block Contains Object: " .. inspect(obj))
             if o.properties.invisible then
                 local b = InvisibleBlock:new(o, this)
                 this.world:add(b, b.x, b.y, b.width, b.height)
@@ -53,7 +56,7 @@ function Level:Create(level_id, player_id)
             end
         elseif o.type == 'enemy' then 
             local e = Enemy:Create(o, this)
-        elseif o.type == 'collectible' then 
+        elseif o.type == 'collectible' and o.visible then 
             local c = Collectible:new(o, this)
             table.insert(this.entities.enemies, c)
             this.world:add(c, c.position.x, c.position.y, c.hitbox.width, c.hitbox.height)
@@ -102,6 +105,8 @@ function Level:Create(level_id, player_id)
             e:draw()
         end
     end
+
+    this.map:removeLayer('other') 
 
     setmetatable(this, self)
     return(this)

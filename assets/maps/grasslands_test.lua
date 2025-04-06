@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 14,
-  nextobjectid = 156,
+  nextobjectid = 157,
   properties = {
     ["bg_music"] = "bg_music2",
     ["name"] = "Sunny Day",
@@ -911,7 +911,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -926,7 +926,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -941,7 +941,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -956,7 +956,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -971,7 +971,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -986,7 +986,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1001,7 +1001,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1016,7 +1016,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1031,7 +1031,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1046,7 +1046,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1061,7 +1061,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1076,7 +1076,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1091,7 +1091,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1106,7 +1106,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1121,7 +1121,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1136,7 +1136,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1151,7 +1151,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1166,7 +1166,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1181,7 +1181,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1196,7 +1196,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1211,7 +1211,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1226,7 +1226,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1241,7 +1241,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1256,7 +1256,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1271,7 +1271,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1286,7 +1286,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1301,7 +1301,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1316,7 +1316,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1331,7 +1331,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1346,7 +1346,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1361,7 +1361,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1376,7 +1376,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1391,7 +1391,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1406,7 +1406,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1421,7 +1421,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1436,7 +1436,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1451,7 +1451,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1466,7 +1466,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1481,7 +1481,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1496,7 +1496,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1511,7 +1511,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1526,7 +1526,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1541,7 +1541,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1556,7 +1556,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1571,7 +1571,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1586,7 +1586,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1601,7 +1601,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1616,7 +1616,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1631,7 +1631,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1646,7 +1646,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1661,7 +1661,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1676,7 +1676,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1691,7 +1691,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1706,7 +1706,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1721,7 +1721,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1736,7 +1736,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1751,7 +1751,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1766,7 +1766,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1781,7 +1781,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1796,7 +1796,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1811,7 +1811,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1826,7 +1826,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1841,7 +1841,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1856,7 +1856,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1871,7 +1871,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1886,7 +1886,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1931,7 +1931,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1946,7 +1946,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1961,7 +1961,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1976,7 +1976,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -1991,7 +1991,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2006,7 +2006,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2021,7 +2021,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2036,7 +2036,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2051,7 +2051,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2066,7 +2066,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2081,7 +2081,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2644,7 +2644,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2668,7 +2668,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2692,7 +2692,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2716,7 +2716,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2740,7 +2740,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2764,7 +2764,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2788,7 +2788,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2812,7 +2812,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2836,7 +2836,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2860,7 +2860,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = true,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2974,7 +2974,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -2998,7 +2998,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3022,7 +3022,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3046,7 +3046,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3070,7 +3070,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3094,7 +3094,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3118,7 +3118,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3142,7 +3142,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3166,7 +3166,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3190,7 +3190,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3214,7 +3214,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3238,7 +3238,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3262,7 +3262,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -3286,7 +3286,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -3310,7 +3310,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -3334,7 +3334,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -3358,7 +3358,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -3382,7 +3382,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -3406,7 +3406,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -3430,7 +3430,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -3454,7 +3454,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = true,
@@ -3478,7 +3478,7 @@ return {
           properties = {
             ["bonkable"] = false,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3502,7 +3502,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3526,7 +3526,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3550,7 +3550,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3574,7 +3574,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3598,7 +3598,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3622,7 +3622,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3646,7 +3646,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3670,7 +3670,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3694,7 +3694,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3718,7 +3718,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3742,7 +3742,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 0 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["jump_through"] = false,
@@ -3765,7 +3765,7 @@ return {
           properties = {
             ["bonkable"] = true,
             ["breakable"] = false,
-            ["contains"] = "none",
+            ["contains"] = { id = 156 },
             ["crumbling"] = false,
             ["friction"] = 1,
             ["invisible"] = true,
@@ -3790,7 +3790,26 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {}
+      objects = {
+        {
+          id = 156,
+          name = "",
+          type = "collectible",
+          shape = "rectangle",
+          x = 272,
+          y = 288,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 1,
+          visible = false,
+          properties = {
+            ["points"] = 50,
+            ["sound"] = "coin",
+            ["type"] = "coin"
+          }
+        }
+      }
     },
     {
       type = "imagelayer",

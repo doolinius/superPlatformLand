@@ -27,9 +27,8 @@
                 },
                 {
                     "name": "contains",
-                    "propertyType": "collectible_types",
-                    "type": "string",
-                    "value": "none"
+                    "type": "object",
+                    "value": 0
                 },
                 {
                     "name": "crumbling",
