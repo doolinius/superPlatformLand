@@ -91,8 +91,8 @@ function Character:update(dt)
     -- It will also handle the input
     self.controller:update(dt)
     --local actualX, actualY, cols, len = Entity.update(self, dt)
-    self.position.px = self.position.x
-    self.position.py = self.position.y
+    --self.position.px = self.position.x
+    --self.position.py = self.position.y
     --local actualX, actualY, cols, len = Entity.update(self, dt)
     Entity.update(self, dt)
     local actualX, actualY, cols, len = self.level.world:check(self, self.position.x + self.hitbox.ox, self.position.y + self.hitbox.oy, gColFilters.character)
@@ -153,8 +153,11 @@ function Character:update(dt)
                     --else 
 
                     end
-                elseif c.other.bonkable then 
-                    c.other:onBonk(self)
+                elseif c.other.bonkable then
+                    if c.normal.y == 1 then 
+                        self.velocity.y = 0
+                        c.other:onBonk(self)
+                    end
                 elseif c.other.jump_through then 
                     if c.normal.y == 1 or c.normal.y == 0 then
                         log.trace("JUMP THROUGH " .. inspect(c.normal) .. " " .. c.type)

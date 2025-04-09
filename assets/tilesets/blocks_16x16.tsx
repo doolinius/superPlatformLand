@@ -158,4 +158,65 @@
  <tile id="63" type="block"/>
  <tile id="64" type="block"/>
  <tile id="65" type="block"/>
+ <tile id="66" type="block">
+  <properties>
+   <property name="bonkable" type="bool" value="true"/>
+   <property name="replacement" propertytype="block_types" value="dead"/>
+   <property name="type" propertytype="block_types" value="look"/>
+  </properties>
+ </tile>
+ <tile id="67" type="block">
+  <properties>
+   <property name="bonkable" type="bool" value="true"/>
+   <property name="replacement" propertytype="block_types" value="dead"/>
+   <property name="type" propertytype="block_types" value="look"/>
+  </properties>
+ </tile>
+ <tile id="68" type="block">
+  <properties>
+   <property name="bonkable" type="bool" value="true"/>
+   <property name="replacement" propertytype="block_types" value="dead"/>
+   <property name="type" propertytype="block_types" value="look"/>
+  </properties>
+ </tile>
+ <tile id="69" type="block">
+  <properties>
+   <property name="bonkable" type="bool" value="true"/>
+   <property name="replacement" propertytype="block_types" value="dead"/>
+   <property name="type" propertytype="block_types" value="look"/>
+  </properties>
+ </tile>
+ <tile id="70" type="block">
+  <properties>
+   <property name="type" propertytype="block_types" value="dead"/>
+  </properties>
+ </tile>
+ <tile id="77" type="block">
+  <properties>
+   <property name="bonkable" type="bool" value="true"/>
+   <property name="replacement" propertytype="block_types" value="dead"/>
+   <property name="type" propertytype="block_types" value="look"/>
+  </properties>
+ </tile>
+ <tile id="78" type="block">
+  <properties>
+   <property name="bonkable" type="bool" value="true"/>
+   <property name="replacement" propertytype="block_types" value="dead"/>
+   <property name="type" propertytype="block_types" value="look"/>
+  </properties>
+ </tile>
+ <tile id="79" type="block">
+  <properties>
+   <property name="bonkable" type="bool" value="true"/>
+   <property name="replacement" propertytype="block_types" value="dead"/>
+   <property name="type" propertytype="block_types" value="look"/>
+  </properties>
+ </tile>
+ <tile id="80" type="block">
+  <properties>
+   <property name="bonkable" type="bool" value="true"/>
+   <property name="replacement" propertytype="block_types" value="dead"/>
+   <property name="type" propertytype="block_types" value="look"/>
+  </properties>
+ </tile>
 </tileset>

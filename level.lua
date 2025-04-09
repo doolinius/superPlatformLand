@@ -10,7 +10,8 @@ function Level:Create(level_id, player_id)
             enemies = {},
             collectibles = {},
             blocks = {},
-            effects = {}
+            effects = {},
+            projectiles = {}
         },
         world = bump.newWorld(),
         camera = nil
@@ -19,7 +20,7 @@ function Level:Create(level_id, player_id)
     this.bg_music = Music[this.map.properties.bg_music]
     this.name = this.map.properties.name
     --this.player.world = this.world -- give the player a reference to the collision world
-    this.map:bump_init(this.world)
+    this.map:bump_init(this.world) -- connect STI with bump
     this.time_limit = this.map.properties.time_limit
     -- loop through all the objects in the map
     --  enemies, collectibles, blocks, spawn_points, etc. 
@@ -48,7 +49,13 @@ function Level:Create(level_id, player_id)
                 local b = InvisibleBlock:new(o, this)
                 this.world:add(b, b.x, b.y, b.width, b.height)
             else
-                local b = Block:new(o, this)
+                local b
+                if o.properties.type == "look" then
+                    o.properties.type = "look_left_down"
+                    b = LookBlock:new(o, this)
+                else 
+                    b = Block:new(o, this)
+                end
                 --this:addEntity(b)
                 table.insert(this.entities.blocks, b)
                 --log.trace(inspect(b, {depth=2}))

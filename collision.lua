@@ -22,7 +22,7 @@ gColFilters = {
         -- if block.position.y < (char.position.y + char.height + 1) then
 
         -- This way does. And look how simple it is.
-        if char.velocity.y < 0 then -- if character is moving UP
+        if char.velocity.y <= 0 then -- if character is moving UP
           return('cross') -- allow character to pass through 
         -- TODO: colliding with jump_through blocks from the side
         else

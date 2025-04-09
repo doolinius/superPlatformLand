@@ -64,6 +64,15 @@ gBlockQuads = {
     purple_bevel = quads[6][9],
     purple_deco = quads[6][10],
 
+    look_left_high = quads[7][1],
+    look_right_high = quads[7][2],
+    look_left_low = quads[8][1],
+    look_right_low = quads[8][2],
+    look_left_up = quads[7][3],
+    look_right_up = quads[7][4],
+    look_left_down = quads[8][3],
+    look_right_down = quads[8][4],
+
     red_solid_thin = thinQuads[1][7],
     orange_solid_thin = thinQuads[1][9],
     green_solid_thin = thinQuads[3][7],

@@ -54,6 +54,7 @@ function IdleState:handleInput(dt)
 	end
 end
 
+--[[
 PrincessIdle = class("PrincessIdle", IdleState)
 
 function PrincessIdle:initialize(character, level)
@@ -113,7 +114,7 @@ function PrincessFall:enter(params)
 		self.character.animation = self.character.frames.fall
 	end
 end
-
+]]
 --RunState = { name = "run" }
 --RunState.__index = RunState
 RunState = class("RunState", CharacterState)
@@ -167,6 +168,12 @@ function JumpState:enter(params)
 	local mult = params.multiplier or 1
 	self.character.velocity.y = -self.character.velocity.jump_force * mult
 	self.character.animation = self.character.frames.jump
+end
+
+function JumpState:update(dt)
+	if self.character.velocity.y == 0 then 
+		self.character:change("fall")
+	end
 end
 
 function JumpState:handleInput()
