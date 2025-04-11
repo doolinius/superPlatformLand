@@ -106,7 +106,7 @@ function Character:update(dt)
     ]]
 
     if len > 0 then -- there were collisions
-        for i=1, len do 
+        for i=1, len do -- loop through all collision objects
             --[[
                 if terrain or block then
                     check normal for above/below collision
@@ -126,21 +126,24 @@ function Character:update(dt)
                     self.velocity.y = 0 
                 end
             elseif c.other.type == 'enemy' then 
-                self:takeHit()
+                self:takeHit(c.other)
             elseif c.other.type == 'collectible' then 
                 --self:collect(c.other)
                 c.other:onCollect(self)
             elseif c.other.type == "block" then
-                
+
+                if c.normal.y == -1 and not c.other.invisible then
+                    self.velocity.y = 0
+                end
+  
                 if c.other.lethal then 
                     --self.controller:change('die')
                 elseif c.other.invisible then 
-                    if c.normal.y == 1 then
+                    if c.normal.y == 1 then -- if I hit invisible block from bottom
                         actualX = c.itemRect.x 
                         actualY = c.itemRect.y
                         self.velocity.y = 0
-                        -- bonk block
-                        -- replace with dead block
+                        c.other:onBonk(self)
                     end
                 elseif c.other.breakable then
                     if c.normal.y == 1 then
@@ -148,10 +151,6 @@ function Character:update(dt)
                         --c.other.remove = true 
                         --breakBlock(c.other, self.level)
                         c.other:onBreak(self.level)
-                    elseif c.normal.y == -1 then
-                        self.velocity.y = 0
-                    --else 
-
                     end
                 elseif c.other.bonkable then
                     if c.normal.y == 1 then 

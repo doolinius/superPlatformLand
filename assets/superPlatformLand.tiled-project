@@ -59,7 +59,7 @@
                     "name": "replacement",
                     "propertyType": "block_types",
                     "type": "string",
-                    "value": "red_brick"
+                    "value": "none"
                 },
                 {
                     "name": "type",
@@ -128,7 +128,8 @@
                 "orange_solid_thin",
                 "blue_solid_thin",
                 "look",
-                "dead"
+                "dead",
+                "none"
             ],
             "valuesAsFlags": false
         },

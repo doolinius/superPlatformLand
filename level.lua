@@ -63,9 +63,11 @@ function Level:Create(level_id, player_id)
             end
         elseif o.type == 'enemy' then 
             local e = Enemy:Create(o, this)
+            -- add the enemy to the collision world 
+            -- add the enemy to the enemies table in entities
         elseif o.type == 'collectible' and o.visible then 
             local c = Collectible:new(o, this)
-            table.insert(this.entities.enemies, c)
+            table.insert(this.entities.collectibles, c)
             this.world:add(c, c.position.x, c.position.y, c.hitbox.width, c.hitbox.height)
         end
     end
@@ -145,3 +147,8 @@ function Level:draw(sx, sy)
     --self.map:bump_draw(tx, ty)
     --love.graphics.setColor(1, 1, 1, 1)
 end 
+
+function Level:addBlock(b)
+    self.world:add(b, b.position.x, b.position.y, b.width, b.height)
+    table.insert(self.entities.blocks, b)
+end

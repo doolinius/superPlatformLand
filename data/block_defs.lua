@@ -73,6 +73,9 @@ gBlockQuads = {
     look_left_down = quads[8][3],
     look_right_down = quads[8][4],
 
+    dead = quads[7][5],
+    clear = quads[7][6],
+
     red_solid_thin = thinQuads[1][7],
     orange_solid_thin = thinQuads[1][9],
     green_solid_thin = thinQuads[3][7],
@@ -91,6 +94,8 @@ for bname, q in pairs(gBlockQuads) do
     local def = {image=gBlockImage, quad=q, width=16, height=16}
     gBlockDefs[bname] = def
 end
+
+gBlockDefs.dead.bonkable = false
 
 gBlockDefs.spikes.hitbox = {width=16, height=8, ox=0, oy=8}
 gBlockDefs.ice_spikes.hitbox = {width=16, height=8, ox=0, oy=8}
