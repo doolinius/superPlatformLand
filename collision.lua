@@ -3,7 +3,7 @@ gColFilters = {
     return('slide')
   end,
   collectible = function (item, other)
-    return('slide')
+    return('cross')
   end,
   projectile = function (item, other)
     return('slide')

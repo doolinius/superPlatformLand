@@ -77,8 +77,8 @@ function Level:Create(level_id, player_id)
     local entityLayer = this.map:convertToCustomLayer('entities')
     entityLayer.update = function(self, dt)
         --for _, e in ipairs(this.entities) do
-        for _, entities in pairs(this.entities) do
-            for i=#entities, 1, -1 do
+        for _, entities in pairs(this.entities) do -- loops through each entity subtable
+            for i=#entities, 1, -1 do -- loop BACKWARDS through each entity
                 local e = entities[i]
                 if e.remove then 
                     -- remove from this table
