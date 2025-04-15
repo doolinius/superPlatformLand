@@ -27,8 +27,9 @@
                 },
                 {
                     "name": "contains",
-                    "type": "object",
-                    "value": 0
+                    "propertyType": "collectible_types",
+                    "type": "string",
+                    "value": "none"
                 },
                 {
                     "name": "crumbling",
@@ -54,12 +55,6 @@
                     "name": "movable",
                     "type": "bool",
                     "value": false
-                },
-                {
-                    "name": "replacement",
-                    "propertyType": "block_types",
-                    "type": "string",
-                    "value": "none"
                 },
                 {
                     "name": "type",
@@ -126,10 +121,7 @@
                 "red_solid_thin",
                 "green_solid_thin",
                 "orange_solid_thin",
-                "blue_solid_thin",
-                "look",
-                "dead",
-                "none"
+                "blue_solid_thin"
             ],
             "valuesAsFlags": false
         },
@@ -251,6 +243,31 @@
             "useAs": [
                 "property",
                 "object"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 8,
+            "members": [
+                {
+                    "name": "collidable",
+                    "type": "bool",
+                    "value": true
+                }
+            ],
+            "name": "terrain",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
             ]
         }
     ]

@@ -1,78 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="grassland_terrain" tilewidth="16" tileheight="16" tilecount="340" columns="17">
+<tileset version="1.10" tiledversion="1.11.2" name="grassland_terrain" tilewidth="16" tileheight="16" tilecount="340" columns="17">
+ <editorsettings>
+  <export target="grassland_terrain.lua" format="lua"/>
+ </editorsettings>
  <image source="../graphics/tilesets/grassland/grassland_terrain.png" width="272" height="320"/>
- <tile id="20" type="terrain"/>
- <tile id="21" type="terrain"/>
- <tile id="22" type="terrain"/>
- <tile id="28" type="terrain"/>
- <tile id="37" type="terrain"/>
- <tile id="38" type="terrain"/>
- <tile id="39" type="terrain"/>
- <tile id="45" type="terrain"/>
- <tile id="52" type="terrain"/>
- <tile id="53" type="terrain"/>
- <tile id="54" type="terrain"/>
- <tile id="55" type="terrain"/>
- <tile id="56" type="terrain"/>
- <tile id="57" type="terrain"/>
- <tile id="58" type="terrain"/>
- <tile id="60" type="terrain"/>
- <tile id="61" type="terrain"/>
- <tile id="62" type="terrain"/>
- <tile id="63" type="terrain"/>
- <tile id="64" type="terrain"/>
- <tile id="66" type="terrain"/>
- <tile id="69" type="terrain"/>
- <tile id="70" type="terrain"/>
- <tile id="71" type="terrain"/>
- <tile id="72" type="terrain"/>
- <tile id="73" type="terrain"/>
- <tile id="74" type="terrain"/>
- <tile id="75" type="terrain"/>
- <tile id="79" type="terrain"/>
- <tile id="88" type="terrain"/>
- <tile id="89" type="terrain"/>
- <tile id="90" type="terrain"/>
- <tile id="96" type="terrain"/>
- <tile id="105" type="terrain"/>
- <tile id="106" type="terrain"/>
- <tile id="107" type="terrain"/>
- <tile id="140" type="terrain"/>
- <tile id="190" type="terrain"/>
- <tile id="191" type="terrain"/>
- <tile id="192" type="terrain"/>
- <tile id="198" type="terrain"/>
- <tile id="207" type="terrain"/>
- <tile id="208" type="terrain"/>
- <tile id="209" type="terrain"/>
- <tile id="215" type="terrain"/>
- <tile id="222" type="terrain"/>
- <tile id="223" type="terrain"/>
- <tile id="224" type="terrain"/>
- <tile id="225" type="terrain"/>
- <tile id="226" type="terrain"/>
- <tile id="227" type="terrain"/>
- <tile id="228" type="terrain"/>
- <tile id="230" type="terrain"/>
- <tile id="231" type="terrain"/>
- <tile id="232" type="terrain"/>
- <tile id="233" type="terrain"/>
- <tile id="234" type="terrain"/>
- <tile id="236" type="terrain"/>
- <tile id="239" type="terrain"/>
- <tile id="240" type="terrain"/>
- <tile id="241" type="terrain"/>
- <tile id="242" type="terrain"/>
- <tile id="243" type="terrain"/>
- <tile id="244" type="terrain"/>
- <tile id="245" type="terrain"/>
- <tile id="249" type="terrain"/>
- <tile id="258" type="terrain"/>
- <tile id="259" type="terrain"/>
- <tile id="260" type="terrain"/>
- <tile id="266" type="terrain"/>
- <tile id="275" type="terrain"/>
- <tile id="276" type="terrain"/>
- <tile id="277" type="terrain"/>
- <tile id="310" type="terrain"/>
+ <tile id="190">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="191">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="192">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="198">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="222">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="223">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="227">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="228">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="231">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="232">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="233">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="234">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
+ <tile id="236">
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="terrain" x="0" y="0" width="16" height="7"/>
+  </objectgroup>
+ </tile>
 </tileset>
