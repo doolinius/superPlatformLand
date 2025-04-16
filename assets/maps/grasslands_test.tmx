@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="165">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="166">
  <editorsettings>
   <export target="grasslands_test.lua" format="lua"/>
  </editorsettings>
@@ -109,7 +109,6 @@
  </layer>
  <objectgroup id="8" name="entities">
   <object id="91" template="../object_templates/spawnpoint.tx" type="spawn_point" x="32" y="448"/>
-  <object id="93" template="../object_templates/blocks/green_brick.tx" x="64" y="416"/>
   <object id="94" template="../object_templates/blocks/spikes.tx" x="592" y="480"/>
   <object id="95" template="../object_templates/blocks/spikes.tx" x="608" y="480"/>
   <object id="96" template="../object_templates/blocks/spikes.tx" x="608" y="480"/>
@@ -170,6 +169,7 @@
   <object id="158" gid="283" x="144" y="384" width="16" height="16"/>
   <object id="159" gid="283" x="112" y="368" width="16" height="16"/>
   <object id="163" gid="468" x="198" y="498" width="16" height="16"/>
+  <object id="165" gid="238" x="64" y="416" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="9" name="other">
   <object id="156" template="../object_templates/collectibles/coin.tx" x="272" y="304" visible="1"/>

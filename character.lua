@@ -159,12 +159,12 @@ function Character:update(dt)
                     end
                 elseif c.other.jump_through then 
                     if c.normal.y == 1 or c.normal.y == 0 then
-                        log.trace("JUMP THROUGH " .. inspect(c.normal) .. " " .. c.type)
+                        --log.trace("JUMP THROUGH " .. inspect(c.normal) .. " " .. c.type)
                     else 
                         self.velocity.y = 0
                     end
                 elseif c.normal.y == 1 or c.normal.y == -1 then -- we hit a block from below
-                    log.trace("FROM BELOW")
+                    --log.trace("FROM BELOW")
                     self.velocity.y = 0
                 end
             end

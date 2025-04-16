@@ -47,7 +47,7 @@ function Level:Create(level_id, player_id)
             --log.trace("Block Contains Object: " .. inspect(obj))
             if o.properties.invisible then
                 local b = InvisibleBlock:new(o, this)
-                this.world:add(b, b.x, b.y, b.width, b.height)
+                this.world:add(b, b.position.x, b.position.y, b.width, b.height)
             else
                 local b
                 if o.properties.type == "look" then

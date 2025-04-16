@@ -58,6 +58,10 @@ function Block:onBonk(char)
         self:gotoState('Bonked')
     end
     -- emit collectible if necessary
+    if self.contains then 
+        log.info("Contains " .. self.contains.type)
+        self.contains:emit()
+    end
 end
 
 function Block:replaceWith(blockType)
@@ -97,20 +101,6 @@ end
 
 LookBlock = class('LookBlock', Block)
 
---[[
-function LookBlock:initialize(obj, level)
-    Entity.initialize(self, gBlockDefs[obj.properties.type], obj.x, obj.y-obj.height,level)
-    self.type = "block"
-    self.subtype = "look"
-    local bprops = obj.properties 
-    self.friction = 1
-    self.bonkable = true
-    self.contains = bprops.contains
-    --self.quad = gBlockQuads.look_left_down
-    --self.image = gBlockImage
-end
-]]
-
 function LookBlock:update(dt)
     local player = self.level.player 
     local dx = player.position.x - self.position.x 
@@ -140,8 +130,10 @@ function InvisibleBlock:initialize(obj, level)
     self.subtype = 'invisible'
     local bprops = obj.properties
     --self.subtype = bprops.type
-    self.x = obj.x 
-    self.y = obj.y 
+    self.position = {
+        x = obj.x,
+        y = obj.y
+    }
     self.height = obj.height 
     self.width = obj.width
     --Entity.initialize(self, gBlockDefs[bprops.type], obj.x, obj.y-obj.height, world)
@@ -150,8 +142,5 @@ function InvisibleBlock:initialize(obj, level)
     self.invisible = bprops.invisible
     self.contains = bprops.contains
     self.world = level.world -- MAY NOT NEED
+    self.level = level
 end
-
---function InvisibleBlock:update(dt) end 
-
---function InvisibleBlock:draw() end

@@ -57,6 +57,11 @@
                     "value": false
                 },
                 {
+                    "name": "replacement",
+                    "type": "string",
+                    "value": "none"
+                },
+                {
                     "name": "type",
                     "propertyType": "block_types",
                     "type": "string",

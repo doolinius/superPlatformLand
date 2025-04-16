@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 15,
-  nextobjectid = 163,
+  nextobjectid = 166,
   properties = {
     ["bg_music"] = "bg_music2",
     ["name"] = "Sunny Day",
@@ -917,6 +917,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "grey_crumble"
           }
         },
@@ -932,6 +933,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -947,6 +949,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -962,6 +965,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -977,6 +981,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -992,6 +997,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1007,6 +1013,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1022,6 +1029,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1037,6 +1045,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1052,6 +1061,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -1067,6 +1077,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1082,6 +1093,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "tan_crumble"
           }
         },
@@ -1097,6 +1109,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1112,6 +1125,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1127,6 +1141,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1142,6 +1157,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1157,6 +1173,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1172,6 +1189,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1187,6 +1205,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1202,6 +1221,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1217,6 +1237,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1232,6 +1253,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1247,6 +1269,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "orange_brick_breakable"
           }
         },
@@ -1262,6 +1285,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "orange_brick"
           }
         },
@@ -1277,6 +1301,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1292,6 +1317,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "ice"
           }
         },
@@ -1307,6 +1333,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1322,6 +1349,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "dk_green_brick_breakable"
           }
         },
@@ -1337,6 +1365,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "dk_green_brick"
           }
         },
@@ -1352,6 +1381,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1367,6 +1397,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "grey_brick_breakable"
           }
         },
@@ -1382,6 +1413,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "grey_brick"
           }
         },
@@ -1397,6 +1429,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1412,6 +1445,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick_breakable"
           }
         },
@@ -1427,6 +1461,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -1442,6 +1477,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1457,6 +1493,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "ice_spikes"
           }
         },
@@ -1472,6 +1509,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "ice_breakable"
           }
         },
@@ -1487,6 +1525,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick_breakable"
           }
         },
@@ -1502,6 +1541,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1517,6 +1557,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1532,6 +1573,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "brown_brick_breakable"
           }
         },
@@ -1547,6 +1589,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "brown_brick"
           }
         },
@@ -1562,6 +1605,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1577,6 +1621,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1592,6 +1637,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1607,6 +1653,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1622,6 +1669,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1637,6 +1685,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1652,6 +1701,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1667,6 +1717,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1682,6 +1733,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1697,6 +1749,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1712,6 +1765,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1727,6 +1781,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1742,6 +1797,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1757,6 +1813,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1772,6 +1829,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1787,6 +1845,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1802,6 +1861,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1817,6 +1877,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1832,6 +1893,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1847,6 +1909,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1862,6 +1925,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1877,6 +1941,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1892,6 +1957,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -1971,6 +2037,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "dead"
           }
         },
@@ -2080,6 +2147,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2095,6 +2163,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2110,6 +2179,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2125,6 +2195,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2140,6 +2211,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2155,6 +2227,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2170,6 +2243,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2185,6 +2259,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2200,6 +2275,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2215,6 +2291,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -2230,6 +2307,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         }
@@ -2948,30 +3026,6 @@ return {
           properties = {}
         },
         {
-          id = 93,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 64,
-          y = 416,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 238,
-          visible = true,
-          properties = {
-            ["bonkable"] = true,
-            ["breakable"] = false,
-            ["contains"] = "none",
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "green_brick"
-          }
-        },
-        {
           id = 94,
           name = "",
           type = "block",
@@ -2992,6 +3046,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3016,6 +3071,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3040,6 +3096,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3064,6 +3121,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3088,6 +3146,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3112,6 +3171,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3136,6 +3196,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "brown_brick_breakable"
           }
         },
@@ -3160,6 +3221,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "brown_brick_breakable"
           }
         },
@@ -3184,6 +3246,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "brown_brick_breakable"
           }
         },
@@ -3298,6 +3361,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3322,6 +3386,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3346,6 +3411,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3370,6 +3436,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3394,6 +3461,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3418,6 +3486,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3442,6 +3511,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3466,6 +3536,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3490,6 +3561,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3514,6 +3586,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3538,6 +3611,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3562,6 +3636,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3586,6 +3661,7 @@ return {
             ["jump_through"] = true,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "orange_solid_thin"
           }
         },
@@ -3610,6 +3686,7 @@ return {
             ["jump_through"] = true,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "orange_solid_thin"
           }
         },
@@ -3634,6 +3711,7 @@ return {
             ["jump_through"] = true,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "orange_solid_thin"
           }
         },
@@ -3658,6 +3736,7 @@ return {
             ["jump_through"] = true,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "orange_solid_thin"
           }
         },
@@ -3682,6 +3761,7 @@ return {
             ["jump_through"] = true,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "orange_solid_thin"
           }
         },
@@ -3706,6 +3786,7 @@ return {
             ["jump_through"] = true,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "orange_solid_thin"
           }
         },
@@ -3730,6 +3811,7 @@ return {
             ["jump_through"] = true,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "orange_solid_thin"
           }
         },
@@ -3754,6 +3836,7 @@ return {
             ["jump_through"] = true,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_solid_thin"
           }
         },
@@ -3778,6 +3861,7 @@ return {
             ["jump_through"] = true,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_solid_thin"
           }
         },
@@ -3802,6 +3886,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = true,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "spikes"
           }
         },
@@ -3826,6 +3911,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -3850,6 +3936,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -3874,6 +3961,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -3898,6 +3986,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -3922,6 +4011,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -3946,6 +4036,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -3970,6 +4061,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -3994,6 +4086,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -4018,6 +4111,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -4042,6 +4136,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -4066,6 +4161,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "green_brick"
           }
         },
@@ -4090,6 +4186,7 @@ return {
             ["jump_through"] = false,
             ["lethal"] = false,
             ["movable"] = false,
+            ["replacement"] = "none",
             ["type"] = "red_brick"
           }
         },
@@ -4166,6 +4263,45 @@ return {
             ["movable"] = false,
             ["replacement"] = "dead",
             ["type"] = "look"
+          }
+        },
+        {
+          id = 163,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 198,
+          y = 498,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 468,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 165,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 64,
+          y = 416,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 238,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "green_brick"
           }
         }
       }
