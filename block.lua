@@ -59,8 +59,8 @@ function Block:onBonk(char)
     end
     -- emit collectible if necessary
     if self.contains then 
-        log.info("Contains " .. self.contains.type)
-        self.contains:emit()
+        --log.info("Contains " .. self.contains.type)
+        --self.contains:emit()
     end
 end
 

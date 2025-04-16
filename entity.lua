@@ -109,7 +109,10 @@ function Entity:update(dt)
   end
   self.position.x = math.floor(0.5 + self.position.x + self.velocity.x * dt)
   self.velocity.y = self.velocity.y + GRAVITY * self.gravityEffect * dt
-  self.position.y = math.floor(0.5 + self.position.y + self.velocity.y * dt)
+  --self.position.y = math.floor(0.5 + self.position.y + self.velocity.y * dt)
+  -- NOTE: This fixes the increasing Y velocity problem. The Y velocity had to reach a 
+  -- threshhold before it was enough to move a whole pixel downward. 
+  self.position.y = self.position.y + self.velocity.y * dt
   --if self.hitbox then
   --  local actualX, actualY, cols, len = self.world:move(self, self.position.x + self.hitbox.ox, self.position.y + self.hitbox.oy, gColFilters[self.type])
   --  return actualX-self.hitbox.ox, actualY-self.hitbox.oy, cols, len
@@ -117,6 +120,8 @@ function Entity:update(dt)
 end
 
 function Entity:onRemove() end
+
+function Entity:emit() end
 
 function Entity:draw()
   local offset = 0 

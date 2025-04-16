@@ -6,6 +6,7 @@ function Character:initialize(def, x, y, level)
     self.type = 'character'
     Entity.initialize(self, def, x, y, level)
     self.gravityEffect = 1.0
+    self.grounded = true
     self.health = health or 1 -- default value trick
     self.world = level.world
     --level = level
@@ -105,6 +106,7 @@ function Character:update(dt)
         Option 3 - Entity moves in world and returns collision data here
     ]]
 
+    self.grounded = false
     if len > 0 then -- there were collisions
         for i=1, len do -- loop through all collision objects
             --[[
@@ -120,10 +122,12 @@ function Character:update(dt)
                 -level end
             ]]
             local c = cols[i]
-            
             if c.other.type == "terrain" then
                 if c.normal.y == -1 or c.normal.y == 1 then -- if we are touching ground 
-                    self.velocity.y = 0 
+                    self.velocity.y = 0
+                    if c.normal.y == -1 then
+                        self.grounded = true 
+                    end
                 end
             elseif c.other.type == 'enemy' then 
                 self:takeHit(c.other)
@@ -134,6 +138,7 @@ function Character:update(dt)
 
                 if c.normal.y == -1 and not c.other.invisible then
                     self.velocity.y = 0
+                    self.grounded = true
                 end
   
                 if c.other.lethal then 
@@ -170,7 +175,6 @@ function Character:update(dt)
             end
         end
     end
-
     self.level.world:update(self, actualX, actualY)
     
     actualX = actualX-self.hitbox.ox

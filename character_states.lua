@@ -149,9 +149,9 @@ function RunState:handleInput()
 end
 
 function RunState:update(dt)
-	--if self.character.velocity.y > 10 then
-	--  self.character.controller:change('fall')
-	--end
+	if not self.character.grounded then
+	  self.character.controller:change('fall')
+	end
 end
 
 --JumpState = { name = "jump" }
@@ -168,6 +168,7 @@ function JumpState:enter(params)
 	local mult = params.multiplier or 1
 	self.character.velocity.y = -self.character.velocity.jump_force * mult
 	self.character.animation = self.character.frames.jump
+	--self.grounded = false
 end
 
 function JumpState:update(dt)
@@ -192,8 +193,6 @@ function JumpState:handleInput()
 	end
 end
 
---FallState = { name = "fall" }
---FallState.__index = FallState
 FallState = class("FallState", CharacterState)
 
 function FallState:initialize(character, level)
@@ -222,6 +221,7 @@ function FallState:handleInput()
 	if self.character.velocity.y == 0 then
 		self.character:landFromFall()
 		self.character.status.float = false
+		--self.character.grounded = true
 	end
 end
 
