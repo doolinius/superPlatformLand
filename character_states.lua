@@ -313,13 +313,14 @@ function CrouchState:enter(params)
 	--self.previousHitbox = self.character.hitbox
 	--self.character.hitbox = {width=8, height=9, ox=4, oy=7}
 	self.character.position.y = self.character.position.y + 3
+	self.chargeTime = 1.75
 end
 
 function CrouchState:exit()
-	self.chargeTime = 1.75
 	--self.character.hitbox = self.previousHitbox
 	self.character.animation:gotoFrame(1)
 	self.character.animation:resume()
+	self.character.status.charged = false
 end
 
 function CrouchState:handleInput()
