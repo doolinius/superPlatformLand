@@ -1,91 +1,87 @@
-Level = {}
-Level.__index = Level
+Level = class('Level')
 
-function Level:Create(level_id, player_id)
-    local this = {
-        map = sti('assets/maps/' .. level_id .. '.lua', {'bump'}),
-        player = nil,
-        entities = {
-            players = {},
-            enemies = {},
-            collectibles = {},
-            blocks = {},
-            effects = {},
-            projectiles = {}
-        },
-        world = bump.newWorld(),
-        camera = nil
+function Level:initialize(level_id, player_id)
+    self.map = sti('assets/maps/' .. level_id .. '.lua', {'bump'})
+    self.entities = {
+        players = {},
+        enemies = {},
+        collectibles = {},
+        blocks = {},
+        effects = {},
+        projectiles = {}
     }
-    this.player = Character:new(gCharacterDefs[player_id], 0, 0, this)
-    this.bg_music = Music[this.map.properties.bg_music]
-    this.name = this.map.properties.name
-    --this.player.world = this.world -- give the player a reference to the collision world
-    this.map:bump_init(this.world) -- connect STI with bump
-    this.time_limit = this.map.properties.time_limit
+    self.world = bump.newWorld()
+
+    self.player = Character:new(gCharacterDefs[player_id], 0, 0, self)
+    self.bg_music = Music[self.map.properties.bg_music]
+    self.name = self.map.properties.name
+    --self.player.world = self.world -- give the player a reference to the collision world
+    self.map:bump_init(self.world) -- connect STI with bump
+    self.time_limit = self.map.properties.time_limit
     -- loop through all the objects in the map
     --  enemies, collectibles, blocks, spawn_points, etc. 
-    for _, o in pairs(this.map.objects) do -- for key, value in pairs(someTable) do 
+    for _, o in pairs(self.map.objects) do -- for key, value in pairs(someTable) do 
         if o.type == 'spawn_point' then 
-            -- set player coordinates (this.player)
-            this.player.position.x = o.x + this.player.hitbox.ox
-            this.player.position.y = o.y - this.player.height
-            --this:addEntity(player)
+            -- set player coordinates (self.player)
+            self.player.position.x = o.x + self.player.hitbox.ox
+            self.player.position.y = o.y - self.player.height
+            --self:addEntity(player)
             -- add it to the entities table
-            table.insert(this.entities.players, this.player)
+            table.insert(self.entities.players, self.player)
             -- add it to the collision world
-            this.world:add(
-                this.player, 
-                this.player.position.x + this.player.hitbox.ox, 
-                this.player.position.y + this.player.hitbox.oy, 
-                this.player.hitbox.width, 
-                this.player.hitbox.height
+            self.world:add(
+                self.player, 
+                self.player.position.x + self.player.hitbox.ox, 
+                self.player.position.y + self.player.hitbox.oy, 
+                self.player.hitbox.width, 
+                self.player.hitbox.height
             )
         elseif o.type == 'block' then 
             --log.trace("Block type: " .. o.properties.type)
             --log.trace("Block Contains ID: " .. inspect(o.properties.contains))
-            o.properties.contains = this.map.objects[o.properties.contains.id]
+            o.properties.contains = self.map.objects[o.properties.contains.id]
             --log.trace("Block Contains Object: " .. inspect(obj))
             if o.properties.invisible then
-                local b = InvisibleBlock:new(o, this)
-                this.world:add(b, b.position.x, b.position.y, b.width, b.height)
+                local b = InvisibleBlock:new(o, self)
+                self.world:add(b, b.position.x, b.position.y, b.width, b.height)
             else
                 local b
                 if o.properties.type == "look" then
                     o.properties.type = "look_left_down"
-                    b = LookBlock:new(o, this)
+                    b = LookBlock:new(o, self)
                 else 
-                    b = Block:new(o, this)
+                    b = Block:new(o, self)
                 end
-                --this:addEntity(b)
-                table.insert(this.entities.blocks, b)
+                --self:addEntity(b)
+                table.insert(self.entities.blocks, b)
                 --log.trace(inspect(b, {depth=2}))
-                this.world:add(b, b.position.x, b.position.y, b.hitbox.width, b.hitbox.height)
+                self.world:add(b, b.position.x, b.position.y, b.hitbox.width, b.hitbox.height)
             end
         elseif o.type == 'enemy' then 
-            local e = Enemy:Create(o, this)
+            local e = Enemy:Create(o, self)
             -- add the enemy to the collision world 
             -- add the enemy to the enemies table in entities
         elseif o.type == 'collectible' and o.visible then 
-            local c = Collectible:new(o, this)
-            table.insert(this.entities.collectibles, c)
-            this.world:add(c, c.position.x, c.position.y, c.hitbox.width, c.hitbox.height)
+            local c = Collectible:new(o, self)
+            table.insert(self.entities.collectibles, c)
+            self.world:add(c, c.position.x, c.position.y, c.hitbox.width, c.hitbox.height)
         end
     end
 
-    this.camera = Camera:Create(this.map, gameWidth, gameHeight, this.player)
+    self.camera = Camera:Create(self.map, gameWidth, gameHeight, self.player)
 
-    local entityLayer = this.map:convertToCustomLayer('entities')
-    entityLayer.update = function(self, dt)
-        --for _, e in ipairs(this.entities) do
-        for _, entities in pairs(this.entities) do -- loops through each entity subtable
+    local entityLayer = self.map:convertToCustomLayer('entities')
+    entityLayer.update = function(layer, dt)
+        --for _, e in ipairs(self.entities) do
+        for _, entities in pairs(self.entities) do -- loops through each entity subtable
             for i=#entities, 1, -1 do -- loop BACKWARDS through each entity
                 local e = entities[i]
                 if e.remove then 
-                    -- remove from this table
+                    -- remove from self table
                     e:onRemove()
                     table.remove(entities, i)
                     if e.type ~= 'effect' then
-                        this.world:remove(e)
+                        self.world:remove(e)
                     end
                 else
                     e:update(dt)
@@ -94,31 +90,29 @@ function Level:Create(level_id, player_id)
         end
     end
 
-    entityLayer.draw = function(self)
+    entityLayer.draw = function(layer)
 
 
-        for _, e in ipairs(this.entities.blocks) do 
+        for _, e in ipairs(self.entities.blocks) do 
             e:draw()
         end
 
-        for _, e in ipairs(this.entities.effects) do 
+        for _, e in ipairs(self.entities.effects) do 
             e:draw()
         end
-        for _, e in ipairs(this.entities.collectibles) do 
+        for _, e in ipairs(self.entities.collectibles) do 
             e:draw()
         end
-        for _, e in ipairs(this.entities.enemies) do 
+        for _, e in ipairs(self.entities.enemies) do 
             e:draw()
         end
-        for _, e in ipairs(this.entities.players) do 
+        for _, e in ipairs(self.entities.players) do 
             e:draw()
         end
     end
 
-    this.map:removeLayer('other') 
+    self.map:removeLayer('other') 
 
-    setmetatable(this, self)
-    return(this)
 end
 
 function Level:addEntity(e)

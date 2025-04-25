@@ -10,7 +10,7 @@ function LevelPlayState:Create(level_id, character_id)
     --local player = Character:Create(gCharacterDefs[character_id])
 
     local this = {
-        level = Level:Create(level_id, character_id),
+        level = Level:new(level_id, character_id),
         --player = player,
         hud = nil
     }
