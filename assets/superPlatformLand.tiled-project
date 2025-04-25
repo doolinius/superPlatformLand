@@ -126,7 +126,23 @@
                 "red_solid_thin",
                 "green_solid_thin",
                 "orange_solid_thin",
-                "blue_solid_thin"
+                "blue_solid_thin",
+                "green_solid",
+                "red_solid",
+                "orange_solid",
+                "blue_solid",
+                "grey_solid",
+                "brown_solid",
+                "orange_box",
+                "green_box",
+                "blue_box",
+                "grey_box",
+                "brown_box",
+                "blue_brick_breakable",
+                "blue_brick",
+                "blue_brick_thin",
+                "brown_solid_thin",
+                "grey_solid_thin"
             ],
             "valuesAsFlags": false
         },
@@ -259,6 +275,11 @@
                     "name": "collidable",
                     "type": "bool",
                     "value": true
+                },
+                {
+                    "name": "jump_through",
+                    "type": "bool",
+                    "value": false
                 }
             ],
             "name": "terrain",

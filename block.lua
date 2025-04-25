@@ -5,11 +5,11 @@ Block.static.type = 'block'
 Block:include(Stateful)
 
 -- This one takes a block definition as found in data/block_defs.lua
-function Block:initialize(obj, world)
+function Block:initialize(obj, level)
     self.type = 'block'
     local bprops = obj.properties
     self.subtype = bprops.type
-    Entity.initialize(self, gBlockDefs[bprops.type], obj.x, obj.y-obj.height, world)
+    Entity.initialize(self, gBlockDefs[bprops.type], obj.x, obj.y-obj.height, level)
     self.friction = bprops.friction or 1.0
     self.breakable = bprops.breakable or false 
     self.bonkable = bprops.bonkable or false 
@@ -78,7 +78,7 @@ end
 
 local Bonked = Block:addState('Bonked')
 
-function Bonked:enteredState()
+function Bonked:enteredState() -- override "enterredState"
     self.startY = self.position.y
     self.velocity.y = -110
     self.gravityEffect = 1.9
@@ -90,8 +90,8 @@ function Bonked:exitedState()
 end
 
 function Bonked:update(dt)
-    Block.update(self, dt)
-    if self.velocity.y < 0 then 
+    Block.update(self, dt) -- the middleclass/stateful version of super()
+    if self.velocity.y < 0 then -- when the block is on the way up...
         -- TODO: check for collision with enemies
     elseif self.position.y >= self.startY then 
         self.position.y = self.startY
@@ -102,7 +102,7 @@ end
 LookBlock = class('LookBlock', Block)
 
 function LookBlock:update(dt)
-    local player = self.level.player 
+    local player = self.level.player -- get a reference to the player object
     local dx = player.position.x - self.position.x 
     local dy = player.position.y - self.position.y
     local tan = dy / dx -- SOH, CAH, TOA

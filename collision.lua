@@ -11,7 +11,11 @@ gColFilters = {
   character = function (char, other)
     if other.type == 'terrain' then
       --log.trace("TERRAIN")
-      return('slide')
+      if other.properties.jump_through then 
+        return('cross')
+      else
+        return('slide')
+      end 
     elseif other.type == 'collectible' then 
       --log.trace("CF: collectible")
       return('cross')
@@ -20,7 +24,7 @@ gColFilters = {
       -- if the character is still below the jump_through block
       if other.jump_through then
         -- if block.position.y < (char.position.y + char.height + 1) then
-
+        log.trace("COLFILTER JUMP THROUGH " .. inspect(other.jump_through))
         -- This way does. And look how simple it is.
         if char.velocity.y <= 0 then -- if character is moving UP
           return('cross') -- allow character to pass through 

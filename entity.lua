@@ -34,6 +34,7 @@ function Entity:initialize(def, x, y, level)
   else 
     self.velocity = {x=0, y=0, top_x=0, jump_force=0, top_y=TERMINAL_Y}
   end
+  -- As defined in the entity definition, or 0
   self.gravityEffect = def.gravityEffect or 0
 
   -- Drawable data
