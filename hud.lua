@@ -1,14 +1,8 @@
-HUD = {}
-HUD.__index = HUD 
+HUD = class('HUD')
 
-function HUD:Create(gameworld, level)
-    local this = {
-        gameworld = gameworld, 
-        level = level
-    }
-
-    setmetatable(this, self)
-    return(this)
+function HUD:initialize(gameworld, level)
+    self.gameworld = gameworld
+    self.level = level
 end 
 
 function HUD:update(dt)

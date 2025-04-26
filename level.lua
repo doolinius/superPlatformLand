@@ -77,7 +77,6 @@ function Level:initialize(level_id, player_id)
             for i=#entities, 1, -1 do -- loop BACKWARDS through each entity
                 local e = entities[i]
                 if e.remove then 
-                    -- remove from self table
                     e:onRemove()
                     table.remove(entities, i)
                     if e.type ~= 'effect' then

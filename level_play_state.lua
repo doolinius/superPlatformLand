@@ -15,7 +15,7 @@ function LevelPlayState:Create(level_id, character_id)
         hud = nil
     }
 
-    this.hud = HUD:Create(gameWorld, this.level)
+    this.hud = HUD:new(gameWorld, this.level)
     -- the Level needs a reference to the player, 
     -- and the player needs a reference to the level
     --this.player.level = this.level
