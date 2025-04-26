@@ -122,19 +122,58 @@ function Character:update(dt)
                 -level end
             ]]
             local c = cols[i]
-            if c.other.type == "terrain" then
-
-                log.trace("props: " .. inspect(c.other.properties))
+            if c.other.type == "terrain" then 
+                log.trace("Type: " .. c.other.type)
                 if c.other.properties.jump_through then 
-                    if c.normal.y == 1 or c.normal.y == 0 then
-                        log.trace("JUMP THROUGH " .. inspect(c.normal) .. " " .. c.type)
-                    else 
-                        self.velocity.y = 0
-                    end
-                elseif c.normal.y == -1 or c.normal.y == 1 then -- if we are touching ground 
+                    if c.type == "slide" then 
+                        --if c.normal.y == -1 then -- if we are touching ground
+                            log.trace("C Normal: " .. inspect(c.normal))
+                            self.velocity.y = 0
+                            --actualY = c.itemRect.y
+                            --actualX = c.itemRect.x
+                            if c.itemRect.y + self.hitbox.height <= c.other.y then
+                                self.grounded = true
+                            end
+                        --end
+                        end 
+                elseif c.normal.y == 1 then 
                     self.velocity.y = 0
-                    if c.normal.y == -1 then
+                elseif c.normal.y == -1 then 
+                    self.velocity.y = 0
+                    if self:bottom() <= c.other.y then
+                        self.grounded = true
+                    end
+                end
+            elseif c.other.type == "block" then
+                if c.other.jump_through then 
+                    if c.normal.y == -1 then -- if we are touching ground 
+                        log.trace("Type: " .. c.other.type)
+                        self.velocity.y = 0
                         self.grounded = true 
+                    end
+                elseif c.other.invisible then 
+                    if c.normal.y == 1 then -- if I hit invisible block from bottom
+                        actualX = c.itemRect.x 
+                        actualY = c.itemRect.y
+                        self.velocity.y = 0
+                        c.other:onBonk(self)
+                    end
+                else
+                    log.trace("Normal block")
+                    if c.normal.y == -1 then -- if we are touching ground 
+                        self.velocity.y = 0
+                        self.grounded = true
+                    elseif c.normal.y == 1 then 
+                        if c.other.breakable then
+                            -- TODO: only allow one break? 
+                            self.velocity.y = self.velocity.y * 0.5
+                            c.other:onBreak(self.level)
+                        elseif c.other.bonkable then
+                            self.velocity.y = 0
+                            c.other:onBonk(self)
+                        else 
+                            self.velocity.y = 0 
+                        end
                     end
                 end
             elseif c.other.type == 'enemy' then 
@@ -142,6 +181,8 @@ function Character:update(dt)
             elseif c.other.type == 'collectible' then 
                 --self:collect(c.other)
                 c.other:onCollect(self)
+            end
+            --[[
             elseif c.other.type == "block" then
 
                 if c.normal.y == -1 and not c.other.invisible then
@@ -181,6 +222,7 @@ function Character:update(dt)
                     self.velocity.y = 0
                 end
             end
+            ]]
         end
     end
     self.level.world:update(self, actualX, actualY)
