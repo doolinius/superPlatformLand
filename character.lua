@@ -123,11 +123,8 @@ function Character:update(dt)
             ]]
             local c = cols[i]
             if c.other.type == "terrain" then 
-                log.trace("Type: " .. c.other.type)
                 if c.other.properties.jump_through then 
                     if c.type == "slide" then 
-                        --if c.normal.y == -1 then -- if we are touching ground
-                            log.trace("C Normal: " .. inspect(c.normal))
                             self.velocity.y = 0
                             --actualY = c.itemRect.y
                             --actualX = c.itemRect.x
@@ -146,8 +143,7 @@ function Character:update(dt)
                 end
             elseif c.other.type == "block" then
                 if c.other.jump_through then 
-                    if c.normal.y == -1 then -- if we are touching ground 
-                        log.trace("Type: " .. c.other.type)
+                    if c.normal.y == -1 then
                         self.velocity.y = 0
                         self.grounded = true 
                     end

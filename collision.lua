@@ -11,23 +11,20 @@ gColFilters = {
   character = function (char, other)
     if other.type == 'terrain' then
       --log.trace("TERRAIN")
-      --if other.properties.jump_through then
-      --  if char:bottom() <= other.y then
-      --    log.trace("CF jumpthrough terrain CROSS")
-      --    return('cross')
-      --  end
-      --else
-      if char.velocity.y <= 0 then 
-        return('cross')
-      else
-        if char:bottom() > other.y then -- if character is moving UP
-          return('cross') -- allow character to pass through 
-      -- TODO: colliding with jump_through blocks from the side
+      if other.properties.jump_through then
+        if char.velocity.y <= 0 then 
+          return('cross')
         else
-          return('slide') -- stop character from moving
+          if char:bottom() > other.y then -- if character is moving UP
+            return('cross') -- allow character to pass through 
+        -- TODO: colliding with jump_through blocks from the side
+          else
+            return('slide') -- stop character from moving
+          end
         end
-      end
-      --end 
+      else 
+        return('slide')
+      end 
     elseif other.type == 'collectible' then 
       --log.trace("CF: collectible")
       return('cross')
