@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 12,
-  nextobjectid = 47,
+  nextobjectid = 92,
   properties = {
     ["bg_music"] = "",
     ["name"] = "1-1",
@@ -46,300 +46,749 @@ return {
       tilecount = 340,
       tiles = {
         {
-          id = 20,
-          type = "terrain"
+          id = 172,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              },
+              {
+                id = 3,
+                name = "",
+                type = "",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 4,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 8,
+                width = 7,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
-          id = 21,
-          type = "terrain"
+          id = 176,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              },
+              {
+                id = 2,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 9,
+                y = 7,
+                width = 7,
+                height = 9,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
-          id = 22,
-          type = "terrain"
-        },
-        {
-          id = 28,
-          type = "terrain"
-        },
-        {
-          id = 37,
-          type = "terrain"
-        },
-        {
-          id = 38,
-          type = "terrain"
-        },
-        {
-          id = 39,
-          type = "terrain"
-        },
-        {
-          id = 45,
-          type = "terrain"
-        },
-        {
-          id = 52,
-          type = "terrain"
-        },
-        {
-          id = 53,
-          type = "terrain"
-        },
-        {
-          id = 54,
-          type = "terrain"
-        },
-        {
-          id = 55,
-          type = "terrain"
-        },
-        {
-          id = 56,
-          type = "terrain"
-        },
-        {
-          id = 57,
-          type = "terrain"
-        },
-        {
-          id = 58,
-          type = "terrain"
-        },
-        {
-          id = 60,
-          type = "terrain"
-        },
-        {
-          id = 61,
-          type = "terrain"
-        },
-        {
-          id = 62,
-          type = "terrain"
-        },
-        {
-          id = 63,
-          type = "terrain"
-        },
-        {
-          id = 64,
-          type = "terrain"
-        },
-        {
-          id = 66,
-          type = "terrain"
-        },
-        {
-          id = 69,
-          type = "terrain"
-        },
-        {
-          id = 70,
-          type = "terrain"
-        },
-        {
-          id = 71,
-          type = "terrain"
-        },
-        {
-          id = 72,
-          type = "terrain"
-        },
-        {
-          id = 73,
-          type = "terrain"
-        },
-        {
-          id = 74,
-          type = "terrain"
-        },
-        {
-          id = 75,
-          type = "terrain"
-        },
-        {
-          id = 79,
-          type = "terrain"
-        },
-        {
-          id = 88,
-          type = "terrain"
-        },
-        {
-          id = 89,
-          type = "terrain"
-        },
-        {
-          id = 90,
-          type = "terrain"
-        },
-        {
-          id = 96,
-          type = "terrain"
-        },
-        {
-          id = 105,
-          type = "terrain"
-        },
-        {
-          id = 106,
-          type = "terrain"
-        },
-        {
-          id = 107,
-          type = "terrain"
-        },
-        {
-          id = 140,
-          type = "terrain"
+          id = 189,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 7,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
           id = 190,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 191,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 192,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 193,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 9,
+                y = 0,
+                width = 7,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
           id = 198,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
-          id = 207,
-          type = "terrain"
-        },
-        {
-          id = 208,
-          type = "terrain"
-        },
-        {
-          id = 209,
-          type = "terrain"
-        },
-        {
-          id = 215,
-          type = "terrain"
+          id = 210,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 9,
+                y = 0,
+                width = 7,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
           id = 222,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 223,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 224,
-          type = "terrain"
-        },
-        {
-          id = 225,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 6,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
           id = 226,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 10,
+                y = 0,
+                width = 6,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 227,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 228,
-          type = "terrain"
-        },
-        {
-          id = 230,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 231,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
           id = 232,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
           id = 233,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
           id = 234,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
         },
         {
           id = 236,
-          type = "terrain"
-        },
-        {
-          id = 239,
-          type = "terrain"
-        },
-        {
-          id = 240,
-          type = "terrain"
-        },
-        {
-          id = 241,
-          type = "terrain"
-        },
-        {
-          id = 242,
-          type = "terrain"
-        },
-        {
-          id = 243,
-          type = "terrain"
-        },
-        {
-          id = 244,
-          type = "terrain"
-        },
-        {
-          id = 245,
-          type = "terrain"
-        },
-        {
-          id = 249,
-          type = "terrain"
-        },
-        {
-          id = 258,
-          type = "terrain"
-        },
-        {
-          id = 259,
-          type = "terrain"
-        },
-        {
-          id = 260,
-          type = "terrain"
-        },
-        {
-          id = 266,
-          type = "terrain"
-        },
-        {
-          id = 275,
-          type = "terrain"
-        },
-        {
-          id = 276,
-          type = "terrain"
-        },
-        {
-          id = 277,
-          type = "terrain"
-        },
-        {
-          id = 310,
-          type = "terrain"
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -380,9 +829,9 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      columns = 11,
+      columns = 14,
       image = "../graphics/tilesets/blocks_tiles/blocks.png",
-      imagewidth = 176,
+      imagewidth = 224,
       imageheight = 128,
       objectalignment = "unspecified",
       tilerendersize = "tile",
@@ -398,271 +847,1531 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 88,
+      tilecount = 112,
       tiles = {
         {
           id = 0,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "grey_crumble"
+          }
         },
         {
           id = 1,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 2,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 3,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 4,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 5,
-          type = "block"
+          type = "terrain",
+          properties = {
+            ["collidable"] = true,
+            ["jump_through"] = false
+          }
         },
         {
           id = 6,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 7,
-          type = "block"
+          type = "terrain",
+          properties = {
+            ["collidable"] = true,
+            ["jump_through"] = false
+          }
         },
         {
           id = 8,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 9,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = true,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "spikes"
+          }
         },
         {
           id = 10,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = true,
+            ["replacement"] = "none",
+            ["type"] = "red_box"
+          }
         },
         {
           id = 11,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = true,
+            ["replacement"] = "none",
+            ["type"] = "orange_box"
+          }
         },
         {
           id = 12,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = true,
+            ["replacement"] = "none",
+            ["type"] = "green_box"
+          }
         },
         {
           id = 13,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = true,
+            ["replacement"] = "none",
+            ["type"] = "blue_box"
+          }
         },
         {
           id = 14,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "tan_crumble"
+          }
         },
         {
           id = 15,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 16,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 17,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 18,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 19,
-          type = "block"
+          type = "terrain",
+          properties = {
+            ["collidable"] = true,
+            ["jump_through"] = false
+          }
         },
         {
           id = 20,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 21,
-          type = "block"
+          type = "terrain",
+          properties = {
+            ["collidable"] = true,
+            ["jump_through"] = false
+          }
         },
         {
           id = 22,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 23,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 24,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 25,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "blue_brick_breakable"
+          }
         },
         {
           id = 26,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "blue_brick"
+          }
         },
         {
           id = 27,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "blue_brick_thin"
+          }
         },
         {
           id = 28,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "orange_brick_breakable"
+          }
         },
         {
           id = 29,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "orange_brick"
+          }
         },
         {
           id = 30,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 31,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "ice"
+          }
         },
         {
           id = 32,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 33,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "dk_green_brick_breakable"
+          }
         },
         {
           id = 34,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "dk_green_brick"
+          }
         },
         {
           id = 35,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 36,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "grey_brick_breakable"
+          }
         },
         {
           id = 37,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "grey_brick"
+          }
         },
         {
           id = 38,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 39,
-          type = "block"
+          type = "terrain",
+          properties = {
+            ["collidable"] = true,
+            ["jump_through"] = false,
+            ["type"] = "grey_solid"
+          }
         },
         {
           id = 40,
-          type = "block"
+          type = "terrain",
+          properties = {
+            ["collidable"] = true,
+            ["jump_through"] = true,
+            ["type"] = "grey_solid_thin"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 41,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = true,
+            ["replacement"] = "none",
+            ["type"] = "grey_box"
+          }
         },
         {
           id = 42,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "green_brick_breakable"
+          }
         },
         {
           id = 43,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "green_brick"
+          }
         },
         {
           id = 44,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 45,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = true,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "ice_spikes"
+          }
         },
         {
           id = 46,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "ice_breakable"
+          }
         },
         {
           id = 47,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick_breakable"
+          }
         },
         {
           id = 48,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 49,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 50,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = true,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick_breakable"
+          }
         },
         {
           id = 51,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
         },
         {
           id = 52,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 53,
-          type = "block"
+          type = "terrain",
+          properties = {
+            ["collidable"] = true,
+            ["jump_through"] = false,
+            ["type"] = "brown_solid"
+          }
         },
         {
           id = 54,
-          type = "block"
+          type = "terrain",
+          properties = {
+            ["collidable"] = false,
+            ["jump_through"] = true,
+            ["type"] = "brown_solid_thin"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
         },
         {
           id = 55,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = true,
+            ["replacement"] = "none",
+            ["type"] = "brown_box"
+          }
         },
         {
           id = 56,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 57,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 58,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 59,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 60,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 61,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 62,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 63,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 64,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
         },
         {
           id = 65,
-          type = "block"
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 66,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 70,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 71,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 72,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 73,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 74,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 75,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 76,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 77,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 78,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 79,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 80,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "red_brick"
+          }
+        },
+        {
+          id = 84,
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 85,
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 86,
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 87,
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 88,
+          type = "block",
+          properties = {
+            ["bonkable"] = false,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "dead"
+          }
+        },
+        {
+          id = 98,
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 99,
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 100,
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 101,
+          type = "block",
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
         }
       }
     }
@@ -791,10 +2500,10 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 527, 528, 0, 0, 0, 0, 0, 0, 0, 0, 0, 527, 528, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 0, 0, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 0, 0, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 531, 532, 0, 0, 0, 0, 0, 0, 538, 539, 0, 0, 0, 0, 0, 0, 0, 0, 0, 538, 539, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 0, 0, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 0, 0, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 527, 528, 0, 0, 0, 0, 0, 0, 0, 0, 527, 528, 0, 0, 0, 0, 0, 0, 527, 528, 0, 0, 0, 0, 0, 0, 0, 0, 0, 527, 528, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 0, 0, 488, 488, 488, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 0, 0, 488, 488, 488, 0, 0, 0, 0, 0, 527, 528, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 527, 528, 0, 488, 488, 488, 488, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 538, 539, 0, 0, 0, 0, 0, 0, 0, 0, 538, 539, 0, 0, 0, 0, 0, 0, 538, 539, 0, 0, 0, 0, 0, 0, 0, 0, 0, 538, 539, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 0, 0, 488, 488, 488, 488, 0, 0, 0, 0, 488, 488, 488, 488, 488, 0, 0, 488, 488, 488, 488, 0, 0, 0, 0, 538, 539, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 538, 539, 488, 488, 488, 488, 488, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 537, 538, 0, 0, 0, 0, 0, 0, 0, 0, 0, 537, 538, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 0, 0, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 0, 0, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 537, 538, 0, 0, 0, 0, 0, 0, 551, 552, 0, 0, 0, 0, 0, 0, 0, 0, 0, 551, 552, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 0, 0, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 0, 0, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 537, 538, 0, 0, 0, 0, 0, 0, 0, 0, 551, 552, 0, 0, 0, 0, 0, 0, 537, 538, 0, 0, 0, 0, 0, 0, 0, 0, 0, 537, 538, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 0, 0, 488, 488, 488, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 0, 0, 488, 488, 488, 0, 0, 0, 0, 0, 537, 538, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 537, 538, 0, 488, 488, 488, 488, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 551, 552, 0, 0, 0, 0, 0, 0, 0, 0, 551, 552, 0, 0, 0, 0, 0, 0, 551, 552, 0, 0, 0, 0, 0, 0, 0, 0, 0, 551, 552, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 488, 488, 488, 488, 0, 0, 488, 488, 488, 488, 0, 0, 0, 0, 488, 488, 488, 488, 488, 0, 0, 488, 488, 488, 488, 0, 0, 0, 0, 551, 552, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 551, 552, 488, 488, 488, 488, 488, 488, 488, 488, 488, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 193, 0, 0, 191, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 193, 0, 0, 0, 191, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 193, 0, 0, 191, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192,
         209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 210, 0, 0, 208, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 210, 0, 0, 0, 208, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 210, 0, 0, 208, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209, 209
       }
@@ -880,995 +2589,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 1,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 320,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 2,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 352,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 3,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 384,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 4,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1232,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 5,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1264,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 6,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1280,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 7,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1296,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 8,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1312,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 9,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1328,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 10,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1344,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 12,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1360,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 13,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1376,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 14,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1392,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 15,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1456,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 16,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1472,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 17,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1488,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 18,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1504,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 19,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1600,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 20,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1616,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 21,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1888,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 22,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1936,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 23,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1952,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 24,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1968,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 25,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2048,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 26,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2096,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 27,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2080,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 28,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2064,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 29,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2736,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 30,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2704,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 31,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2688,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 522,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["type"] = "brown_brick_breakable"
-          }
-        },
-        {
-          id = 32,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 256,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 33,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 336,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 34,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 368,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 35,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 352,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 36,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1248,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 37,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1504,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 38,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1696,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 39,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1744,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 40,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1792,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 41,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 1744,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 42,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2064,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 43,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2080,
-          y = 64,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
-          id = 44,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 2720,
-          y = 128,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 484,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = true,
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = false,
-            ["lethal"] = false,
-            ["movable"] = true,
-            ["type"] = "cardboard_box"
-          }
-        },
-        {
           id = 46,
           name = "",
           type = "spawn_point",
@@ -1880,6 +2600,1106 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 47,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 256,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 48,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 336,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 49,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 368,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 50,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 352,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 52,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 320,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 53,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 352,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 54,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 384,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 55,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1248,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 56,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1232,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 57,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1264,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 58,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1280,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 59,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1296,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 60,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1312,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 61,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1328,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 62,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1344,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 63,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1360,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 64,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1376,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 65,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1392,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 66,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1456,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 67,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1472,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 68,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1488,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 69,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1504,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 70,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1504,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 71,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1600,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 72,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1616,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 73,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1744,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 74,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1744,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 75,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1696,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 76,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1792,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 77,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1888,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 78,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1936,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 79,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1952,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 80,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 1968,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 81,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2064,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 82,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2080,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 83,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2064,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 84,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2080,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 85,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2048,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 86,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2096,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 87,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2096,
+          y = 64,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 88,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2720,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 579,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "dead",
+            ["type"] = "look"
+          }
+        },
+        {
+          id = 89,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2736,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 90,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2704,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
+        },
+        {
+          id = 91,
+          name = "",
+          type = "block",
+          shape = "rectangle",
+          x = 2688,
+          y = 128,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 532,
+          visible = true,
+          properties = {
+            ["bonkable"] = true,
+            ["breakable"] = false,
+            ["contains"] = "none",
+            ["crumbling"] = false,
+            ["friction"] = 1,
+            ["jump_through"] = false,
+            ["lethal"] = false,
+            ["movable"] = false,
+            ["replacement"] = "none",
+            ["type"] = "brown_brick"
+          }
         }
       }
     },
