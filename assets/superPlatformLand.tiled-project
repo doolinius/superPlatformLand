@@ -142,7 +142,9 @@
                 "blue_brick",
                 "blue_brick_thin",
                 "brown_solid_thin",
-                "grey_solid_thin"
+                "grey_solid_thin",
+                "grey_crumble_crack",
+                "tan_crumble_crack"
             ],
             "valuesAsFlags": false
         },

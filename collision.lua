@@ -15,7 +15,7 @@ gColFilters = {
         if char.velocity.y <= 0 then 
           return('cross')
         else
-          if char:bottom() > other.y then -- if character is moving UP
+          if char:bottom() > other.y and char.position.y > other.y then -- if character is moving UP
             return('cross') -- allow character to pass through 
         -- TODO: colliding with jump_through blocks from the side
           else

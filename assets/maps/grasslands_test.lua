@@ -2666,7 +2666,7 @@ return {
       tilecount = 340,
       tiles = {
         {
-          id = 172,
+          id = 2,
           objectGroup = {
             type = "objectgroup",
             draworder = "index",
@@ -2698,17 +2698,771 @@ return {
                 }
               },
               {
-                id = 3,
+                id = 2,
                 name = "",
-                type = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 8,
+                width = 7,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 6,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
                 shape = "rectangle",
                 x = 0,
                 y = 0,
                 width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              },
+              {
+                id = 2,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 9,
+                y = 7,
+                width = 7,
+                height = 9,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 19,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 7,
                 height = 16,
                 rotation = 0,
                 visible = true,
-                properties = {}
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 20,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 21,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 22,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 23,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 9,
+                y = 0,
+                width = 7,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 28,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 40,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 9,
+                y = 0,
+                width = 7,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 52,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 53,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 54,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 6,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 56,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 10,
+                y = 0,
+                width = 6,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 57,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 58,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 60,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 61,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 62,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 63,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 64,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 66,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = true
+                }
+              }
+            }
+          }
+        },
+        {
+          id = 172,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 16,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
               },
               {
                 id = 4,
@@ -2991,6 +3745,41 @@ return {
           }
         },
         {
+          id = 206,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 2,
+                name = "",
+                type = "terrain",
+                shape = "rectangle",
+                x = 0,
+                y = 0,
+                width = 7,
+                height = 7,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["collidable"] = true,
+                  ["jump_through"] = false
+                }
+              }
+            }
+          }
+        },
+        {
           id = 210,
           objectGroup = {
             type = "objectgroup",
@@ -3124,7 +3913,7 @@ return {
                 visible = true,
                 properties = {
                   ["collidable"] = true,
-                  ["jump_through"] = false
+                  ["jump_through"] = true
                 }
               }
             }
@@ -3565,7 +4354,7 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 776, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 211, 0, 0, 0, 0, 0, 0, 0, 211, 0, 0, 776, 0, 0, 0, 258, 258, 258, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 293, 293, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 211, 212, 212, 212, 212, 212, 212, 212, 211, 0, 0, 776, 0, 0, 0, 258, 258, 258, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 293, 293, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 762, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 731, 732, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -4191,181 +4980,6 @@ return {
             ["movable"] = false,
             ["replacement"] = "none",
             ["type"] = "spikes"
-          }
-        },
-        {
-          id = 129,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 256,
-          y = 344,
-          width = 16,
-          height = 8,
-          rotation = 0,
-          gid = 324,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = false,
-            ["contains"] = "none",
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = true,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["replacement"] = "none",
-            ["type"] = "orange_solid_thin"
-          }
-        },
-        {
-          id = 130,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 272,
-          y = 344,
-          width = 16,
-          height = 8,
-          rotation = 0,
-          gid = 324,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = false,
-            ["contains"] = "none",
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = true,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["replacement"] = "none",
-            ["type"] = "orange_solid_thin"
-          }
-        },
-        {
-          id = 132,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 288,
-          y = 344,
-          width = 16,
-          height = 8,
-          rotation = 0,
-          gid = 324,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = false,
-            ["contains"] = "none",
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = true,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["replacement"] = "none",
-            ["type"] = "orange_solid_thin"
-          }
-        },
-        {
-          id = 133,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 304,
-          y = 344,
-          width = 16,
-          height = 8,
-          rotation = 0,
-          gid = 324,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = false,
-            ["contains"] = "none",
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = true,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["replacement"] = "none",
-            ["type"] = "orange_solid_thin"
-          }
-        },
-        {
-          id = 134,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 320,
-          y = 344,
-          width = 16,
-          height = 8,
-          rotation = 0,
-          gid = 324,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = false,
-            ["contains"] = "none",
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = true,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["replacement"] = "none",
-            ["type"] = "orange_solid_thin"
-          }
-        },
-        {
-          id = 135,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 336,
-          y = 344,
-          width = 16,
-          height = 8,
-          rotation = 0,
-          gid = 324,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = false,
-            ["contains"] = "none",
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = true,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["replacement"] = "none",
-            ["type"] = "orange_solid_thin"
-          }
-        },
-        {
-          id = 136,
-          name = "",
-          type = "block",
-          shape = "rectangle",
-          x = 352,
-          y = 344,
-          width = 16,
-          height = 8,
-          rotation = 0,
-          gid = 324,
-          visible = true,
-          properties = {
-            ["bonkable"] = false,
-            ["breakable"] = false,
-            ["contains"] = "none",
-            ["crumbling"] = false,
-            ["friction"] = 1,
-            ["jump_through"] = true,
-            ["lethal"] = false,
-            ["movable"] = false,
-            ["replacement"] = "none",
-            ["type"] = "orange_solid_thin"
           }
         },
         {
