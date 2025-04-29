@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 15,
-  nextobjectid = 175,
+  nextobjectid = 176,
   properties = {
     ["bg_music"] = "bg_music2",
     ["name"] = "Sunny Day",
@@ -5528,7 +5528,7 @@ return {
       draworder = "topdown",
       id = 9,
       name = "other",
-      class = "",
+      class = "level_end",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -5554,6 +5554,19 @@ return {
             ["sound"] = "coin",
             ["type"] = "coin"
           }
+        },
+        {
+          id = 175,
+          name = "",
+          type = "level_end",
+          shape = "point",
+          x = 1296,
+          y = 368,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

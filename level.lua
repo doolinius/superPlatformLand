@@ -36,6 +36,9 @@ function Level:initialize(level_id, player_id)
                 self.player.hitbox.width, 
                 self.player.hitbox.height
             )
+        elseif o.type == 'level_end' then
+            self.level_end = LevelEnd(o.x, o.y)
+            self.world:add(self.level_end, o.x + 4, o.y+4, 16, 16)
         elseif o.type == 'block' then 
             --log.trace("Block type: " .. o.properties.type)
             --log.trace("Block Contains ID: " .. inspect(o.properties.contains))
@@ -73,6 +76,9 @@ function Level:initialize(level_id, player_id)
     local entityLayer = self.map:convertToCustomLayer('entities')
     entityLayer.update = function(layer, dt)
         --for _, e in ipairs(self.entities) do
+        if self.level_end then 
+            self.level_end:update(dt)
+        end
         for _, entities in pairs(self.entities) do -- loops through each entity subtable
             for i=#entities, 1, -1 do -- loop BACKWARDS through each entity
                 local e = entities[i]
@@ -94,6 +100,10 @@ function Level:initialize(level_id, player_id)
 
         for _, e in ipairs(self.entities.blocks) do 
             e:draw()
+        end
+
+        if self.level_end then 
+            self.level_end:draw()
         end
 
         for _, e in ipairs(self.entities.effects) do 

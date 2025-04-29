@@ -256,6 +256,26 @@
             "valuesAsFlags": false
         },
         {
+            "color": "#ff00f900",
+            "drawFill": true,
+            "id": 9,
+            "members": [
+            ],
+            "name": "level_end",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
             "color": "#ff2ec27e",
             "drawFill": true,
             "id": 1,

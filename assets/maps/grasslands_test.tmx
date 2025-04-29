@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="175">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="200" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="176">
  <editorsettings>
   <export target="grasslands_test.lua" format="lua"/>
  </editorsettings>
@@ -163,8 +163,11 @@
   <object id="168" gid="254" x="560" y="352" width="16" height="16"/>
   <object id="169" gid="254" x="560" y="352" width="16" height="16"/>
  </objectgroup>
- <objectgroup id="9" name="other">
+ <objectgroup id="9" name="other" class="level_end">
   <object id="156" template="../object_templates/collectibles/coin.tx" x="272" y="304" visible="1"/>
+  <object id="175" type="level_end" x="1296" y="368">
+   <point/>
+  </object>
  </objectgroup>
  <imagelayer id="10" name="fg1"/>
  <imagelayer id="11" name="fg2">
